@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang='en' prefix='og: http://ogp.me/ns#'>
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+	<meta name='description' content='{{ site.description }}'>
+	<meta name='url' content='{{ site.url }}{{ site.baseurl }}{{ page.url }}'>
+
+	{% seo %}
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha256-azvvU9xKluwHFJ0Cpgtf0CYzK7zgtOznnzxV4924X1w=" crossorigin="anonymous" />
+	{% for file in site.static_files %}
+	{% if file.path contains '/favicon/' %}
+	{%- assign name = file.path | remove: '/favicon/' | remove: file.extname -%}
+	<link rel='icon' href='{{ site.url }}{{ site.baseurl }}{{ file.path }}' sizes='{{ name }}x{{ name }}' type='image/png'>
+	{%- endif -%}
+	{%- endfor -%}
+	{% feed_meta %}
+
+	<base href='{{ site.url }}{{ site.baseurl }}'>
+	<style>
+		@font-face {
+			font-family: 'Handel Gothic';
+			src: local('Handel Gothic Regular'), local('HandelGothic-Regular'), url('{{ site.baseurl }}/fonts/hinted-subset-HandelGothic-Regular.woff2') format('woff2'), url('{{site.baseurl }}/fonts/hinted-subset-HandelGothic-Regular.woff') format('woff');
+			font-weight: normal;
+			font-style: normal;
+		}
+		.jumbotron > h1, .navbar-brand {
+			font-family: 'Handel Gothic';
+		}
+		.jumbotron > h1:first-letter, .navbar-brand:first-letter {
+			color: #4f8aff;
+		}
+		.avatar {
+			height: 1rem;
+			width: 1rem;
+		}
+	</style>
+
+	{% include javascript.html %}
+</head>

@@ -1,0 +1,41 @@
+title: mRemoteNG
+description: The next generation of mRemote, open source, tabbed, multi-protocol, remote connections manager.
+url: https://mremoteng.org
+baseurl: 
+repository: mRemoteNG/mRemoteNG
+exclude: [README.md, CNAME, Gemfile, Gemfile.lock]
+permalink: /posts/:categories/:year/:month/:day/:title/
+paginate: 5
+paginate_path: /posts/:num/
+excerpt_separator: <!--more-->
+logo: /favicon/256.png
+twitter:
+  username: mRemoteNG
+
+defaults:
+  -
+    scope:
+      path: ''
+    values:
+      image: /favicon/256.png
+  -
+    scope:
+      path: ''
+      type: pages
+    values:
+      layout: default
+  -
+    scope:
+      path: ''
+      type: posts
+    values:
+      layout: post
+
+gems:
+  - jekyll-avatar
+  - jekyll-feed
+  - jekyll-github-metadata
+  - jekyll-mentions
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jemoji

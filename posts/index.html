@@ -1,0 +1,70 @@
+---
+title: Posts
+---
+{% for post in paginator.posts %}
+{%- assign author = site.data.authors[post.author] -%}
+<div class='media' style='word-break: break-word'>
+	<div class='media-body'>
+		<h3>{{ post.title }}</h3>
+		<ul class='list-inline'>
+			<li class='list-inline-item'>
+				<time datetime='{{ post.date | date: "%Y-%m-%d" }}' pubdate>{{ post.date | date: '%B %-d, %Y'}}</time>
+			</li>
+			<li class='list-inline-item ml-3'>
+				<a href='https://github.com/{{ author.github }}' title='{{ author.name }} on GitHub'>
+					<img class='avatar align-baseline' src='{{ author.avatar }}'>
+					<strong>{{ author.name }}</strong>
+				</a>
+			</li>
+		</ul>
+		<div class='text-justify'>
+			{{ post.excerpt }}
+			<a href='{{ site.baseurl }}{{ post.url }}'>Read more…</a>
+		</div>
+	</div>
+</div>
+{%- unless forloop.last -%}
+<hr>
+{%- endunless -%}
+{%- endfor -%}
+{% if paginator.total_pages > 1 %}
+<nav aria-label='Post navigation'>
+	<ul class='pagination justify-content-end'>
+		{% if paginator.previous_page %}
+		<li class='page-item'>
+			<a class='page-link' href='{{ site.baseurl }}{{ paginator.previous_page_path }}' aria-label='Previous'>
+				<span aria-hidden='true'>&laquo;</span>
+			</a>
+		</li>
+		{% else %}
+		<li class='page-item disabled'>
+			<span class='page-link' aria-label='Previous'>
+				<span aria-hidden='true'>&laquo;</span>
+			</span>
+		</li>
+		{%- endif -%}
+		{% for page in (1..paginator.total_pages) %}
+		{% if page == paginator.page %}
+		<li class='page-item active'><a class='page-link'>{{ page | pnumber }}</a></li>
+		{% elsif page == 1 %}
+		<li class='page-item'><a class='page-link' href='{{ site.baseurl }}{{ site.paginate_path | remove: ":num/" }}'>{{ page | pnumber }}</a></li>
+		{% else %}
+		<li class='page-item'><a class='page-link' href='{{ site.baseurl }}{{ site.paginate_path | replace: ":num", page }}'>{{ page | pnumber }}</a></li>
+		{%- endif -%}
+		{%- endfor -%}
+		{% if paginator.next_page %}
+		<li class='page-item'>
+			<a class='page-link' href='{{ site.baseurl }}{{ paginator.next_page_path }}' aria-label='Next'>
+				<span aria-hidden='true'>&raquo;</span>
+			</a>
+		</li>
+		{% else %}
+		<li class='page-item disabled'>
+			<span class='page-link' arial-label='Next'>
+				<span aria-hidden='true'>&raquo;</span>
+			</span>
+		</li class='page-item'>
+		{%- endif -%}
+	</ul>
+</nav>
+{%- endif -%}

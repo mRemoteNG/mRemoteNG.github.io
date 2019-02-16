@@ -1,0 +1,5 @@
+---
+layout: none
+prerelease: true
+---
+{% include appcast.xml %}
