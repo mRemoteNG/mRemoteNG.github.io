@@ -19,79 +19,32 @@ permalink: /download
 		$('[data-toggle="tooltip"]').tooltip();
 	});
 </script>
-{%- assign msi = 'application/x-msdownload|application/x-msi|binary/octet-stream|application/octet-stream' | split: '|' -%}
-{%- assign zip = 'application/x-zip-compressed|application/zip' | split: '|' -%}
-{% for release in site.github.releases %}
-{% if release.draft == false and release.prerelease == true and preRelease == nil %}
-{%- assign preRelease = release -%}
-{%- endif -%}
-{%- endfor -%}
 <div class='card-deck text-center'>
 	<div class='card border-success'>
 		<div class='card-body'>
-			<h2 class='card-title'>Stable <small>
-			{% if site.github.latest_release.name == nil %}
-			{{ site.github.latest_release.tag_name }}
-			{%- else -%}
-			{{ site.github.latest_release.name }}
-			{%- endif -%}
-			</small></h2>
-			<h4>{{ site.github.latest_release.published_at | date: '%a, %b %d, %Y' }}</h4>
+			<h2 class='card-title'>Stable <small>{{ site.data.releases.stable.name }}</small></h2>
+			<h4>{{ site.data.releases.stable.published_at | date: '%a, %b %d, %Y' }}</h4>
 			<div>
-				{%- assign assets = site.github.latest_release.assets | sort: 'content_type' -%}
-				{% for asset in assets %}
-				{% if asset.state == 'uploaded' %}
-				{% if asset.label == 'Normal Edition (msi)' or asset.label == 'Portable Edition (zip)' %}
-				<a href='{{ asset.browser_download_url }}' class='btn btn-success' data-toggle='tooltip' data-placement='bottom' title='{{ asset.size | divided_by: 1048576.0 | round: 2 }} MiB'>
-					{% if msi contains asset.content_type %}
-					MSI
-					{%- elsif zip contains asset.content_type -%}
-					ZIP
-					{%- endif -%}
-				</a>
-				{%- endif -%}
-				{%- endif -%}
-				{%- endfor -%}
+				<a href='{{ site.data.releases.stable.assets.installer.browser_download_url }}' class='btn btn-success' data-toggle='tooltip' data-placement='bottom' title='{{ site.data.releases.stable.assets.installer.size | divided_by: 1048576.0 | round: 2 }} MiB'>MSI</a>
+				<a href='{{ site.data.releases.stable.assets.portable.browser_download_url }}' class='btn btn-success' data-toggle='tooltip' data-placement='bottom' title='{{ site.data.releases.stable.assets.portable.size | divided_by: 1048576.0 | round: 2 }} MiB'>ZIP</a>
 			</div>
-			{% unless site.github.latest_release.html_url == nil %}
-			<a href='{{ site.github.latest_release.html_url }}'>Changelog</a>
-			{%- endunless -%}
+			<a href='{{ site.data.releases.stable.html_url }}'>Changelog</a>
 		</div>
 	</div>
 	<div class='card border-warning'>
 		<div class='card-body'>
-			{% if site.github.latest_release.published_at > preRelease.published_at %}
+			{% if site.data.releases.stable.published_at > site.data.releases.prerelease.published_at %}
 			<div class='overlay'>
 				<h3 class='text-light'>Stable is newer</h3>
 			</div>
 			{%- endif -%}
-			<h2 class='card-title'>Prerelease <small>
-			{% if preRelease.name == nil %}
-			{{ preRelease.tag_name }}
-			{%- else -%}
-			{{ preRelease.name }}
-			{%- endif -%}
-			</small></h2>
-			<h4>{{ preRelease.published_at | date: '%a, %b %d, %Y' }}</h4>
-			{%- assign assets = preRelease.assets | sort: 'content_type' -%}
+			<h2 class='card-title'>Prerelease <small>{{ site.data.releases.prerelease.name }}</small></h2>
+			<h4>{{ site.data.releases.prerelease.published_at | date: '%a, %b %d, %Y' }}</h4>
 			<div>
-				{% for asset in assets %}
-				{% if asset.state == 'uploaded' %}
-				{% if asset.label == 'Normal Edition (msi)' or asset.label == 'Portable Edition (zip)' %}
-				<a href='{{ asset.browser_download_url }}' class='btn btn-warning' data-toggle='tooltip' data-placement='bottom' title='{{ asset.size | divided_by: 1048576.0 | round: 2 }} MiB'>
-					{% if msi contains asset.content_type %}
-					MSI
-					{%- elsif zip contains asset.content_type -%}
-					ZIP
-					{%- endif -%}
-				</a>
-				{%- endif -%}
-				{%- endif -%}
-				{%- endfor -%}
+				<a href='{{ site.data.releases.prerelease.assets.installer.browser_download_url }}' class='btn btn-warning' data-toggle='tooltip' data-placement='bottom' title='{{ site.data.releases.prerelease.assets.installer.size | divided_by: 1048576.0 | round: 2 }} MiB'>MSI</a>
+				<a href='{{ site.data.releases.prerelease.assets.portable.browser_download_url }}' class='btn btn-warning' data-toggle='tooltip' data-placement='bottom' title='{{ site.data.releases.prerelease.assets.portable.size | divided_by: 1048576.0 | round: 2 }} MiB'>ZIP</a>
 			</div>
-			{% unless preRelease.html_url == nil%}
-			<a href='{{ preRelease.html_url }}'>Changelog</a>
-			{%- endunless -%}
+			<a href='{{ site.data.releases.prerelease.html_url }}'>Changelog</a>
 		</div>
 	</div>
 </div>
