@@ -1,16 +1,16 @@
 {
 	"stable": {
-		"name": "v1.76.11",
-		"published_at": "2018-10-18 22:47:28 UTC",
-		"html_url": "https://github.com/mRemoteNG/mRemoteNG/releases/tag/v1.76.11",
+		"name": "v1.76.15",
+		"published_at": "2019-03-09T17:32:29Z",
+		"html_url": "https://github.com/mRemoteNG/mRemoteNG/releases/tag/v1.76.15,
 		"assets": {
 			"installer": {
-				"browser_download_url": "https://github.com/mRemoteNG/mRemoteNG/releases/download/v1.76.11/mRemoteNG-Installer-1.76.11.40527.msi",
-				"size": 43458560
+				"browser_download_url": "https://github.com/mRemoteNG/mRemoteNG/releases/download/v1.76.15/mRemoteNG-Installer-1.76.15.31277.msi",
+				"size": 43470848
 			},
 			"portable": {
-				"browser_download_url": "https://github.com/mRemoteNG/mRemoteNG/releases/download/v1.76.11/mRemoteNG-Portable-1.76.11.40592.zip",
-				"size": 38971041
+				"browser_download_url": "https://github.com/mRemoteNG/mRemoteNG/releases/download/v1.76.15/mRemoteNG-Portable-1.76.15.31330.zip",
+				"size": 38976000
 			}
 		}
 	},
