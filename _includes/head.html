@@ -8,8 +8,8 @@
 	<meta name='url' content='{{ site.url }}{{ site.baseurl }}{{ page.url }}'>
 
 	{% seo %}
-
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous" />
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha256-aAr2Zpq8MZ+YA/D6JtRD3xtrwpEz2IqOS+pWD/7XKIw=" crossorigin="anonymous" />
 	{% for file in site.static_files %}
 	{% if file.path contains '/favicon/' %}
 	{%- assign name = file.path | remove: '/favicon/' | remove: file.extname -%}
