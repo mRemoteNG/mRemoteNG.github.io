@@ -9,6 +9,6 @@ mRemoteNG Website
 1. Run
    ```bash
    bundle install
-   bundle exec jekyll serve --config _config.yaml,_config-dev.yaml
+   bundle exec jekyll serve --incremental --config _config.yaml,_config-dev.yaml
    ```
 2. Open http://localhost:4000/
