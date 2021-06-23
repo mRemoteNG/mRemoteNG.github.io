@@ -49,16 +49,10 @@ permalink: /download
 	</div>
 	<div class='card border-danger'>
 		<div class='card-body'>
-			{% if site.data.releases.stable.published_at > site.data.releases.prerelease.published_at %}
-			<div class='overlay'>
-				<h3 class='text-light'>Seems working</h3>
-			</div>
-			{%- endif -%}
 			<h2 class='card-title'>Nightly build <small>{{ site.data.releases.prerelease.name }}</small></h2>
 			<h4>{{ site.data.releases.prerelease.published_at | date: '%a, %b %d, %Y' }}</h4>
 			<div>
-				<a href='{{ site.data.releases.prerelease.assets.installer.browser_download_url }}' class='btn btn-warning' data-toggle='tooltip' data-placement='bottom' title='{{ site.data.releases.prerelease.assets.installer.size | divided_by: 1048576.0 | round: 2 }} MiB'>MSI</a>
-				<a href='{{ site.data.releases.prerelease.assets.portable.browser_download_url }}' class='btn btn-warning' data-toggle='tooltip' data-placement='bottom' title='{{ site.data.releases.prerelease.assets.portable.size | divided_by: 1048576.0 | round: 2 }} MiB'>ZIP</a>
+				<a href='{{ site.data.releases.prerelease.assets.installer.browser_download_url }}' class='btn btn-danger' data-toggle='tooltip' data-placement='bottom' title='{{ site.data.releases.prerelease.assets.installer.size | divided_by: 1048576.0 | round: 2 }} MiB'>RAR</a>
 			</div>
 			<a href='{{ site.data.releases.prerelease.html_url }}'>Changelog</a>
 		</div>
