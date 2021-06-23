@@ -52,9 +52,9 @@ permalink: /download
 			<h2 class='card-title'>Nightly build <small>{{ site.data.releases.nightlybuild.name }}</small></h2>
 			<h4>{{ site.data.releases.nightlybuild.published_at | date: '%a, %b %d, %Y' }}</h4>
 			<div>
-				<a href='{{ site.data.releases.prerelease.assets.installer.browser_download_url }}' class='btn btn-danger' data-toggle='tooltip' data-placement='bottom' title='{{ site.data.releases.nightlybuild.assets.installer.size | divided_by: 1048576.0 | round: 2 }} MiB'>RAR</a>
+				<a href='{{ site.data.releases.nightlybuild.assets.installer.browser_download_url }}' class='btn btn-danger' data-toggle='tooltip' data-placement='bottom' title='{{ site.data.releases.nightlybuild.assets.installer.size | divided_by: 1048576.0 | round: 2 }} MiB'>RAR</a>
 			</div>
-			<a href='{{ site.data.releases.prerelease.html_url }}'>Changelog</a>
+			<a href='{{ site.data.releases.nightlybuild.html_url }}'>Changelog</a>
 		</div>
 	</div>
 </div>
