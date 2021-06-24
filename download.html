@@ -22,7 +22,8 @@ permalink: /download
 <div class='card-deck text-center'>
 	<div class='card border-success'>
 		<div class='card-body'>
-			<h2 class='card-title'>Stable <small>{{ site.data.releases.stable.name }}</small></h2>
+			<h2 class='card-title'>Stable</h2>
+			<h3><small>{{ site.data.releases.stable.name }}</small></h3>
 			<h4>{{ site.data.releases.stable.published_at | date: '%a, %b %d, %Y' }}</h4>
 			<div>
 				<a href='{{ site.data.releases.stable.assets.installer.browser_download_url }}' class='btn btn-success' data-toggle='tooltip' data-placement='bottom' title='{{ site.data.releases.stable.assets.installer.size | divided_by: 1048576.0 | round: 2 }} MiB'>MSI</a>
@@ -38,7 +39,8 @@ permalink: /download
 				<h3 class='text-light'>Stable is newer</h3>
 			</div>
 			{%- endif -%}
-			<h2 class='card-title'>Prerelease <small>{{ site.data.releases.prerelease.name }}</small></h2>
+			<h2 class='card-title'>Prerelease</h2>
+			<h3><small>{{ site.data.releases.prerelease.name }}</small></h3>
 			<h4>{{ site.data.releases.prerelease.published_at | date: '%a, %b %d, %Y' }}</h4>
 			<div>
 				<a href='{{ site.data.releases.prerelease.assets.installer.browser_download_url }}' class='btn btn-warning' data-toggle='tooltip' data-placement='bottom' title='{{ site.data.releases.prerelease.assets.installer.size | divided_by: 1048576.0 | round: 2 }} MiB'>MSI</a>
@@ -49,7 +51,8 @@ permalink: /download
 	</div>
 	<div class='card border-danger'>
 		<div class='card-body'>
-			<h2 class='card-title'>Nightly build <small>{{ site.data.releases.nightlybuild.name }}</small></h2>
+			<h2 class='card-title'>Nightly build </h2>
+			<h3><small>{{ site.data.releases.nightlybuild.name }}</small></h3>
 			<h4>{{ site.data.releases.nightlybuild.published_at | date: '%a, %b %d, %Y' }}</h4>
 			<div>
 				<a href='{{ site.data.releases.nightlybuild.assets.installer.browser_download_url }}' class='btn btn-danger' data-toggle='tooltip' data-placement='bottom' title='{{ site.data.releases.nightlybuild.assets.installer.size | divided_by: 1048576.0 | round: 2 }} MiB'>RAR</a>
