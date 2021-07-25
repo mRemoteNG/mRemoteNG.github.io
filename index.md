@@ -17,6 +17,23 @@ mRemoteNG supports the following protocols:
 * rlogin
 * Raw Socket Connections
 
-If you are a programmer, graphic designer or technical writer and would like to help with mRemoteNG, [please let us know](mailto:support@mremoteng.org).
+mRemoteNG supports the following languages:
+
+* English
+* Deutsch
+* Français
+* Italiano
+* Español
+* Português
+* Nederlands
+* Ελληνικά
+* Magyar
+* Norsk
+* Polski
+* Русский
+* Українська
+* 中文
+
+If you are a programmer, graphic designer, technical writer or translator and would like to help with mRemoteNG, [please let us know](mailto:support@mremoteng.org).
 
 mRemoteNG is open source software and is released under the terms of the [GNU General Public License Version 2](https://www.gnu.org/licenses/old-licenses/gpl-2.0-standalone.html).
