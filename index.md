@@ -2,11 +2,11 @@
 title: Home
 permalink: /
 ---
-mRemoteNG is a fork of mRemote: an open source, tabbed, multi-protocol, remote connections manager for Windows. mRemoteNG adds bug fixes and new features to mRemote.
+mRemoteNG is a fork of mRemote: an open source, tabbed, multi-protocol, remote connections manager for Windows. mRemoteNG adds bug fixes and new features to mRemote and allows you to view all of your remote connections in a simple yet powerful tabbed interface.
 
-It allows you to view all of your remote connections in a simple yet powerful tabbed interface.
+mRemoteNG is open source software and is released under the terms of the [GNU General Public License Version 2](https://www.gnu.org/licenses/old-licenses/gpl-2.0-standalone.html).
 
-mRemoteNG supports the following protocols:
+**Supported protocols:**
 
 * RDP (Remote Desktop/Terminal Server)
 * VNC (Virtual Network Computing)
@@ -17,23 +17,20 @@ mRemoteNG supports the following protocols:
 * rlogin
 * Raw Socket Connections
 
-mRemoteNG supports the following languages:
-
-* English
-* Deutsch
-* Français
-* Italiano
-* Español
-* Português
-* Nederlands
-* Ελληνικά
-* Magyar
-* Norsk
-* Polski
-* Русский
-* Українська
-* 中文
-
-If you are a programmer, graphic designer, technical writer or translator and would like to help with mRemoteNG, [please let us know](mailto:support@mremoteng.org).
-
-mRemoteNG is open source software and is released under the terms of the [GNU General Public License Version 2](https://www.gnu.org/licenses/old-licenses/gpl-2.0-standalone.html).
+**Supported languages:**
+<ul class='list-inline'>
+	<li class='list-inline-item'>English</li>
+	<li class='list-inline-item'>中文</li>
+	<li class='list-inline-item'>Nederlands</li>
+	<li class='list-inline-item'>Français</li>
+	<li class='list-inline-item'>Deutsch</li>
+	<li class='list-inline-item'>Ελληνικά</li>
+	<li class='list-inline-item'>Magyar</li>
+	<li class='list-inline-item'>Italiano</li>
+	<li class='list-inline-item'>Norsk</li>
+	<li class='list-inline-item'>Polski</li>
+	<li class='list-inline-item'>Português</li>
+	<li class='list-inline-item'>Русский</li>
+	<li class='list-inline-item'>Español</li>
+	<li class='list-inline-item'>Українська</li>
+</ul>
