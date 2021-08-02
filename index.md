@@ -4,6 +4,8 @@ permalink: /
 ---
 mRemoteNG is a fork of mRemote: an open source, tabbed, multi-protocol, remote connections manager for Windows. mRemoteNG adds bug fixes and new features to mRemote and allows you to view all of your remote connections in a simple yet powerful tabbed interface.
 
+<img src="{{site.baseurl}}/images/lightbox.png" width="100%">
+
 mRemoteNG is open source software and is released under the terms of the [GNU General Public License Version 2](https://www.gnu.org/licenses/old-licenses/gpl-2.0-standalone.html).
 
 **Supported protocols:**
