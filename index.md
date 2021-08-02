@@ -10,14 +10,14 @@ mRemoteNG is open source software and is released under the terms of the [GNU Ge
 
 **Supported protocols:**
 
-* RDP (Remote Desktop/Terminal Server)
+* RDP (Remote Desktop Protocol)
 * VNC (Virtual Network Computing)
-* ICA (Citrix Independent Computing Architecture)
 * SSH (Secure Shell)
 * Telnet (TELecommunication NETwork)
 * HTTP/HTTPS (Hypertext Transfer Protocol)
-* rlogin
+* rlogin (Remote Login)
 * Raw Socket Connections
+* Powershell remoting
 
 **Supported languages:**
 <ul class='list-inline'>
