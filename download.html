@@ -39,7 +39,7 @@ permalink: /download
 				<h3 class='text-light'>Stable is newer</h3>
 			</div>
 			{%- endif -%}
-			<h2 class='card-title'>Prerelease</h2>
+			<h2 class='card-title'>Preview</h2>
 			<h3><small>{{ site.data.releases.prerelease.name }}</small></h3>
 			<h4>{{ site.data.releases.prerelease.published_at | date: '%a, %b %d, %Y' }}</h4>
 			<div>
@@ -51,7 +51,7 @@ permalink: /download
 	</div>
 	<div class='card border-danger'>
 		<div class='card-body'>
-			<h2 class='card-title'>Nightly build </h2>
+			<h2 class='card-title'>Nightly</h2>
 			<h3><small>{{ site.data.releases.nightlybuild.name }}</small></h3>
 			<h4>{{ site.data.releases.nightlybuild.published_at | date: '%a, %b %d, %Y' }}</h4>
 			<div>
@@ -61,21 +61,4 @@ permalink: /download
 		</div>
 	</div>
 </div>
-<p>View installation requirements at the <a href='{{ site.github_alt.wiki_url }}/Prerequisites'>Wiki</a></p>
-<h2>Languages <small><a href='{{ site.github_alt.wiki_url }}/How to Help Translating mRemoteNG'>Help us translate!</a></small></h2>
-<ul class='list-inline'>
-	<li class='list-inline-item'>English</li>
-	<li class='list-inline-item'>中文</li>
-	<li class='list-inline-item'>Nederlands</li>
-	<li class='list-inline-item'>Français</li>
-	<li class='list-inline-item'>Deutsch</li>
-	<li class='list-inline-item'>Ελληνικά</li>
-	<li class='list-inline-item'>Magyar</li>
-	<li class='list-inline-item'>Italiano</li>
-	<li class='list-inline-item'>Norsk</li>
-	<li class='list-inline-item'>Polski</li>
-	<li class='list-inline-item'>Português</li>
-	<li class='list-inline-item'>Русский</li>
-	<li class='list-inline-item'>Español</li>
-	<li class='list-inline-item'>Українська</li>
-</ul>
+<p><a href='{{ site.github_alt.repository_url }}#minimum-requirements'>View installation requirements</a></p>
