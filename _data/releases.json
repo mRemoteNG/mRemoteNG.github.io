@@ -36,12 +36,15 @@
 	"nightlybuild": {
 		"name": "v1.77.2-nb",
 		"published_at": "2021-06-24T23:35:09Z",
-		"html_url": "https://github.com/mRemoteNG/mRemoteNG/releases/tag/v1.77.2-nb",
+		"html_url": "https://github.com/mRemoteNG/mRemoteNG/releases/tag/2022.01.07-1.77.2-nb",
 		"assets": {
 			"installer": {
-				"browser_download_url": "https://github.com/mRemoteNG/mRemoteNG/releases/download/v1.77.2-nb/mRemoteNG.24062021NB.rar",
-				"checksum": "D1CB29BA505B59E0CB6729DC4056F482F66D0287FD22286D657A4D827844285921FC589C7E8A1DE694FE862C197DD768ECF657EC713DADA3CBB86EC5CB33AE89",
-				"size": 77973357
+				"browser_download_url": "https://github.com/mRemoteNG/mRemoteNG/releases/download/2022.01.07-1.77.2-nb/2022.01.07-1.77.2-nb.mRemoteNG-Installer.msi",
+				"size": 7941226
+			},
+			"portable": {
+				"browser_download_url": "https://github.com/mRemoteNG/mRemoteNG/releases/download/2022.01.07-1.77.2-nb/2022.01.07-1.77.2-nb.mRemoteNG.Portable.rar",
+				"size": 8141912
 			}
 		}
 	}
