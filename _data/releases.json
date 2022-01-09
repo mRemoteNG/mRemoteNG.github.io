@@ -35,7 +35,7 @@
 	},
 	"nightlybuild": {
 		"name": "v1.77.2-nb",
-		"published_at": "2021-06-24T23:35:09Z",
+		"published_at": "2022-01-07T15:11:00Z",
 		"html_url": "https://github.com/mRemoteNG/mRemoteNG/releases/tag/2022.01.07-1.77.2-nb",
 		"assets": {
 			"installer": {
