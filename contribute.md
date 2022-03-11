@@ -70,7 +70,7 @@ If you find mRemoteNG useful and would like to contribute, it would be greatly a
 				<script>
 					PayPal.Donation.Button({
 						env:'production',
-						hosted_button_id:'2N5HY54ZTT9TC ',
+						hosted_button_id:'2N5HY54ZTT9TC',
 						image: {
 							src:'https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif',
 							alt:'Donate with PayPal button',
