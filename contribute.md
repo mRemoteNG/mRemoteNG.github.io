@@ -23,31 +23,21 @@ If you find mRemoteNG useful and would like to contribute, it would be greatly a
 	<div class='card'>
 		<div class='card-body'>
 			<h2 class='card-title'>PayPal</h2>
-			<form action='https://www.paypal.com/cgi-bin/webscr' method='post'>
-				<input type='hidden' name='cmd' value='_xclick'>
-				<input type='hidden' name='charset' value='utf-8'>
-				<input type='hidden' name='business' value='CHQY3Q3ST9H4U'>
-				<input type='hidden' name='return' value='{{ site.url }}{{ site.baseurl }}'>
-				<input type='hidden' name='cancel_return' value='{{ site.url }}{{ site.baseurl }}'>
-				<input type='hidden' name='currency_code' value='USD'>
-				<input type='hidden' name='image_url' value='{{ site.url }}{{ site.baseurl }}/favicon/256.png'>
-				<input type='hidden' name='no_shipping' value='1'>
-				<div class='form-group'>
-					<input type='text' class='form-control' name='item_name' value='mRemoteNG Contribution' readonly>
-				</div>
-				<div class='form-group'>
-					<div class='input-group'>
-						<div class='input-group-prepend'>
-							<span class='input-group-text'>$</span>
-						</div>
-						<input type='text' class='form-control' id='amount' name='amount' placeholder='Amount' autocomplete='off'>
-						<div class='input-group-append'>
-							<span class='input-group-text'>USD</span>
-						</div>
-					</div>
-				</div>
-				<button type='submit' class='btn btn-block btn-primary' id='submitBtn' disabled>Donate</button>
-			</form>
+			<div id="donate-button-container">
+				<div id="donate-button">Donate in $</div>
+				<script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+				<script>
+					PayPal.Donation.Button({
+						env:'production',
+						hosted_button_id:'CHQY3Q3ST9H4U',
+						image: {
+							src:'https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif',
+							alt:'Donate with PayPal button',
+							title:'PayPal - The safer, easier way to pay online!',
+						}
+					}).render('#donate-button');
+				</script>
+			</div>
 		</div>
 	</div>
 	<div class='card'>
