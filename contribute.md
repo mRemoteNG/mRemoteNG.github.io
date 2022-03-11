@@ -26,22 +26,22 @@ If you find mRemoteNG useful and would like to contribute, it would be greatly a
 			<div id="donate-button-container">
 				<div class='form-group'>
 					<input type='text' class='form-control' name='item_name' value='mRemoteNG $ Contribution' readonly>
-					<p class='card-text'><img class='img-responsive' alt='PayPal QR Code' src='{{ site.baseurl }}/images/donations/PayPal QR Code (1).png' height='100px'>
+					<p class='card-text'><img class='img-responsive' alt='PayPal QR Code' src='{{ site.baseurl }}/images/donations/PayPal QR Code (1).png' height='100px'></p>
 				</div>
 				<div id="donate-button1"></div>
 				<div class='form-group'>
 					<input type='text' class='form-control' name='item_name' value='mRemoteNG € Contribution' readonly>
-					<p class='card-text'><img class='img-responsive' alt='PayPal QR Code' src='{{ site.baseurl }}/images/donations/PayPal QR Code (2).png' height='100px'>
+					<p class='card-text'><img class='img-responsive' alt='PayPal QR Code' src='{{ site.baseurl }}/images/donations/PayPal QR Code (2).png' height='100px'></p>
 				</div>
 				<div id="donate-button2"></div>
 				<div class='form-group'>
 					<input type='text' class='form-control' name='item_name' value='mRemoteNG £ Contribution' readonly>
-					<p class='card-text'><img class='img-responsive' alt='PayPal QR Code' src='{{ site.baseurl }}/images/donations/PayPal QR Code (3).png' height='100px'>
+					<p class='card-text'><img class='img-responsive' alt='PayPal QR Code' src='{{ site.baseurl }}/images/donations/PayPal QR Code (3).png' height='100px'></p>
 				</div>
 				<div id="donate-button3"></div>
 				<div class='form-group'>
 					<input type='text' class='form-control' name='item_name' value='mRemoteNG ₽ Contribution' readonly>
-					<p class='card-text'><img class='img-responsive' alt='PayPal QR Code' src='{{ site.baseurl }}/images/donations/PayPal QR Code (4).png' height='100px'>
+					<p class='card-text'><img class='img-responsive' alt='PayPal QR Code' src='{{ site.baseurl }}/images/donations/PayPal QR Code (4).png' height='100px'></p>
 				</div>
 				<div id="donate-button4"></div>
 				<script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
@@ -95,9 +95,11 @@ If you find mRemoteNG useful and would like to contribute, it would be greatly a
 	<div class='card'>
 		<div class='card-body'>
 			<h2 class='card-title'>Bitcoin</h2>
-			<p class='card-text'>You may also make a contribution by sending <a href='https://www.bitcoin.org/'>Bitcoins</a> to <a href='bitcoin:16fUnHUM3k7W9Fvpc6dug7TAdfeGEcLbSg'><code style='word-break: break-word;'>16fUnHUM3k7W9Fvpc6dug7TAdfeGEcLbSg</code></a>.</p>
-			<p class='card-text'><img class='img-responsive' alt='Bitcoin QR Code' src='{{ site.baseurl }}/16fUnHUM3k7W9Fvpc6dug7TAdfeGEcLbSg.png' srcset='{{ site.baseurl }}/16fUnHUM3k7W9Fvpc6dug7TAdfeGEcLbSg.svg' height='100px'>
-			</p>
+			<p class='card-text'>You may also make a contribution by sending <a href='https://www.bitcoin.org/'>Bitcoins</a> to <a href='bitcoin:3GzzNcMnkMpRREhvP6SxgWWzq58Q7zHk7p'><code style='word-break: break-word;'>16fUnHUM3k7W9Fvpc6dug7TAdfeGEcLbSg</code></a>.</p>
+			<p class='card-text'><img class='img-responsive' alt='Bitcoin QR Code' src='{{ site.baseurl }}/images/donations/BTC QR Code.jpg' height='100px'></p>
+			<h2 class='card-title'>Ethereum</h2>
+			<p class='card-text'>You may also make a contribution by sending <a href='https://www.bitcoin.org/'>Ethereum</a> to <a href='ethereum:0xdf4151f161ff33d6bfd846ce29032fb325969f9b'><code style='word-break: break-word;'>16fUnHUM3k7W9Fvpc6dug7TAdfeGEcLbSg</code></a>.</p>
+			<p class='card-text'><img class='img-responsive' alt='Ethereum QR Code' src='{{ site.baseurl }}/images/donations/ETH QR Code.jpg' height='100px'></p>
 		</div>
 	</div>
 </div>
