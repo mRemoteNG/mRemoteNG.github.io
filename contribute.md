@@ -24,7 +24,22 @@ If you find mRemoteNG useful and would like to contribute, it would be greatly a
 		<div class='card-body'>
 			<h2 class='card-title'>PayPal</h2>
 			<div id="donate-button-container">
-				<div id="donate-button">Donate in $</div>
+				<div class='form-group'>
+					<input type='text' class='form-control' name='item_name' value='mRemoteNG $ Contribution' readonly>
+				</div>
+				<div id="donate-button1"></div>
+				<div class='form-group'>
+					<input type='text' class='form-control' name='item_name' value='mRemoteNG € Contribution' readonly>
+				</div>
+				<div id="donate-button2"></div>
+				<div class='form-group'>
+					<input type='text' class='form-control' name='item_name' value='mRemoteNG £ Contribution' readonly>
+				</div>
+				<div id="donate-button3"></div>
+				<div class='form-group'>
+					<input type='text' class='form-control' name='item_name' value='mRemoteNG ₽ Contribution' readonly>
+				</div>
+				<div id="donate-button4"></div>
 				<script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
 				<script>
 					PayPal.Donation.Button({
@@ -35,7 +50,40 @@ If you find mRemoteNG useful and would like to contribute, it would be greatly a
 							alt:'Donate with PayPal button',
 							title:'PayPal - The safer, easier way to pay online!',
 						}
-					}).render('#donate-button');
+					}).render('#donate-button1');
+				</script>
+				<script>
+					PayPal.Donation.Button({
+						env:'production',
+						hosted_button_id:'UK75QBUYNPYKN',
+						image: {
+							src:'https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif',
+							alt:'Donate with PayPal button',
+							title:'PayPal - The safer, easier way to pay online!',
+						}
+					}).render('#donate-button2');
+				</script>
+				<script>
+					PayPal.Donation.Button({
+						env:'production',
+						hosted_button_id:'2N5HY54ZTT9TC ',
+						image: {
+							src:'https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif',
+							alt:'Donate with PayPal button',
+							title:'PayPal - The safer, easier way to pay online!',
+						}
+					}).render('#donate-button3');
+				</script>
+				<script>
+					PayPal.Donation.Button({
+						env:'production',
+						hosted_button_id:'CBQ54US7EFX68',
+						image: {
+							src:'https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif',
+							alt:'Donate with PayPal button',
+							title:'PayPal - The safer, easier way to pay online!',
+						}
+					}).render('#donate-button1');
 				</script>
 			</div>
 		</div>
