@@ -94,12 +94,13 @@ If you find mRemoteNG useful and would like to contribute, it would be greatly a
 	</div>
 	<div class='card'>
 		<div class='card-body'>
-			<h2 class='card-title'>Bitcoin</h2>
+			<h2 class='card-title'><img class='img-responsive' alt='btc' src='{{ site.baseurl }}/images/donations/btc.png'>Bitcoin</h2>
 			<p class='card-text'>You may also make a contribution by sending <a href='https://bitcoin.org/'>Bitcoins</a> to <a href='bitcoin:3GzzNcMnkMpRREhvP6SxgWWzq58Q7zHk7p'><code style='word-break: break-word;'>3GzzNcMnkMpRREhvP6SxgWWzq58Q7zHk7p</code></a>.</p>
 			<p class='card-text'><img class='img-responsive' alt='Bitcoin QR Code' src='{{ site.baseurl }}/images/donations/BTC QR Code.jpg' height='100px'></p>
-			<h2 class='card-title'>Ethereum</h2>
+			<h2 class='card-title'><img class='img-responsive' alt='eth' src='{{ site.baseurl }}/images/donations/eth.png'>Ethereum</h2>
 			<p class='card-text'>You may also make a contribution by sending <a href='https://ethereum.org//'>Ethereum</a> to <a href='ethereum:0xdf4151f161ff33d6bfd846ce29032fb325969f9b'><code style='word-break: break-word;'>0xdf4151f161ff33d6bfd846ce29032fb325969f9b</code></a>.</p>
 			<p class='card-text'><img class='img-responsive' alt='Ethereum QR Code' src='{{ site.baseurl }}/images/donations/ETH QR Code.jpg' height='100px'></p>
+			<h2 class='card-title'><img class='img-responsive' alt='usdt' src='{{ site.baseurl }}/images/donations/tether-usdt.png'>Tether</h2>
 			<p class='card-text'>You may also make a contribution by sending <a href='https://tether.to//'>Tether</a> to <a href='tether:TSBpMwkon1XUm6gLHpPWQ9NpELpnpx9bNn'><code style='word-break: break-word;'>TSBpMwkon1XUm6gLHpPWQ9NpELpnpx9bNn</code></a>.</p>
 			<p class='card-text'><img class='img-responsive' alt='USDT QR Code' src='{{ site.baseurl }}/images/donations/USDT QR Code.jpg' height='100px'></p>
 		</div>
