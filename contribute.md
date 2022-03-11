@@ -100,6 +100,8 @@ If you find mRemoteNG useful and would like to contribute, it would be greatly a
 			<h2 class='card-title'>Ethereum</h2>
 			<p class='card-text'>You may also make a contribution by sending <a href='https://ethereum.org//'>Ethereum</a> to <a href='ethereum:0xdf4151f161ff33d6bfd846ce29032fb325969f9b'><code style='word-break: break-word;'>0xdf4151f161ff33d6bfd846ce29032fb325969f9b</code></a>.</p>
 			<p class='card-text'><img class='img-responsive' alt='Ethereum QR Code' src='{{ site.baseurl }}/images/donations/ETH QR Code.jpg' height='100px'></p>
+			<p class='card-text'>You may also make a contribution by sending <a href='https://tether.to//'>Tether</a> to <a href='tether:TSBpMwkon1XUm6gLHpPWQ9NpELpnpx9bNn'><code style='word-break: break-word;'>TSBpMwkon1XUm6gLHpPWQ9NpELpnpx9bNn</code></a>.</p>
+			<p class='card-text'><img class='img-responsive' alt='USDT QR Code' src='{{ site.baseurl }}/images/donations/USDT QR Code.jpg' height='100px'></p>
 		</div>
 	</div>
 </div>
