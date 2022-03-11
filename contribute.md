@@ -26,7 +26,7 @@ If you find mRemoteNG useful and would like to contribute, it would be greatly a
 			<form action='https://www.paypal.com/cgi-bin/webscr' method='post'>
 				<input type='hidden' name='cmd' value='_xclick'>
 				<input type='hidden' name='charset' value='utf-8'>
-				<input type='hidden' name='business' value='QANUEL2A38KFQ'>
+				<input type='hidden' name='business' value='CHQY3Q3ST9H4U'>
 				<input type='hidden' name='return' value='{{ site.url }}{{ site.baseurl }}'>
 				<input type='hidden' name='cancel_return' value='{{ site.url }}{{ site.baseurl }}'>
 				<input type='hidden' name='currency_code' value='USD'>
