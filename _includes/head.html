@@ -35,8 +35,19 @@
 			width: 1rem;
 		}
 		
-		/* Responsive Font Scaling patch until 5.x */
-		@media (max-width: 1200px) {
+		/* From 320px | 20em  to  30px @ 1920px */
+		@media (min-width: 20em) {
+		  :root {
+			font-size: calc(1rem + ((1vw - .2em) / 1.37142857)); 
+		  }
+		}
+		
+		/* 1rem(16px) @ 48em(768px) increasing to 2rem(32px) @ 120em(1920px) */
+		@media (min-width: 48em) {
+			:root {
+				font-size: calc(1rem + ((1vw - .48rem) * 1.389));
+			}
+		/*
 			legend {
 				font-size: calc(1.275rem + 0.3vw);
 			}
@@ -67,6 +78,14 @@
 			.close {
 				font-size: calc(1.275rem + 0.3vw);
 			}
+		*/
+		}
+		/* Prevent font scaling beyond this breakpoint */
+		@media (min-width: 120em) {
+		  :root {
+			font-size: 2em;
+			/* Setting font-size to a fixed value */
+		  }
 		}
 	</style>
 
