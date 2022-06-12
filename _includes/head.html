@@ -35,19 +35,8 @@
 			width: 1rem;
 		}
 		
-		/* From 320px | 20em  to  30px @ 1920px */
-		@media (min-width: 20em) {
-		  :root {
-			font-size: calc(1rem + ((1vw - .2em) / 1.37142857)); 
-		  }
-		}
-		
 		/* 1rem(16px) @ 48em(768px) increasing to 2rem(32px) @ 120em(1920px) */
-		@media (min-width: 48em) {
-			:root {
-				font-size: calc(1rem + ((1vw - .48rem) * 1.389));
-			}
-		
+		@media (min-width: 48em) {		
 			legend {
 				font-size: calc(1.275rem + 0.3vw);
 			}
