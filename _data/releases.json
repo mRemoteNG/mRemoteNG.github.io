@@ -36,7 +36,7 @@
 	"nightlybuild": {
 		"name": "v1.77.3-nb",
 		"published_at": "2022-06-13T12:11:00Z",
-		"html_url": "https://github.com/mRemoteNG/mRemoteNG/releases/download/v1.77.3-nb/Portable.-.1.77.3.NB.rar",
+		"html_url": "https://github.com/mRemoteNG/mRemoteNG/releases/tag/v1.77.3-nb",
 		"assets": {
 			"portable": {
 				"browser_download_url": "https://github.com/mRemoteNG/mRemoteNG/releases/download/v1.77.3-nb/Portable.-.1.77.3.NB.rar",
