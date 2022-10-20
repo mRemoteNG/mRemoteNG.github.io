@@ -14,7 +14,7 @@ GEM
       execjs
     coffee-script-source (1.11.1)
     colorator (1.1.0)
-    commonmarker (0.17.13)
+    commonmarker (0.23.6)
       ruby-enum (~> 0.5)
     concurrent-ruby (1.1.10)
     dnsruby (1.61.7)
@@ -55,7 +55,7 @@ GEM
       jekyll (= 3.9.0)
       jekyll-avatar (= 0.7.0)
       jekyll-coffeescript (= 1.1.1)
-      jekyll-commonmark-ghpages (= 0.1.6)
+      jekyll-commonmark-ghpages (= 0.2.0)
       jekyll-default-layout (= 0.1.4)
       jekyll-feed (= 0.15.1)
       jekyll-gist (= 1.5.0)
