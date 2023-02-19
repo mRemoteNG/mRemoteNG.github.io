@@ -105,6 +105,11 @@ If you find mRemoteNG useful and would like to contribute, it would be greatly a
 			<p class='card-text'><img class='img-responsive' alt='USDT QR Code' src='{{ site.baseurl }}/images/donations/USDT QR Code.jpg' height='100px'></p>
 		</div>
 	</div>
+	<div class='card'>
+		<div class='card-body'>
+			<p class='card-text'>Big thanks!</p>
+		</div>
+	</div>
 </div>
 
 The mRemoteNG Project is **NOT** considered a non-profit organization and contributions are **NOT** tax deductible.
