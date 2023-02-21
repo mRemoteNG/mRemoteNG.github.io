@@ -107,7 +107,45 @@ If you find mRemoteNG useful and would like to contribute, it would be greatly a
 	</div>
 	<div class='card'>
 		<div class='card-body'>
-			<p class='card-text'>Big thanks!</p>
+			<h2 class='card-title'>Big thanks who donate and support us!</h2>
+			<p class='card-text'><b>Ivan Vaselli<b/></p>
+			<p class='card-text'>Andrew Warham</p>
+			<p class='card-text'><b>Matteo Menozzi<b/></p>
+			<p class='card-text'><b>Marlon Diering<b/></p>
+			<p class='card-text'>Sergei Shir</p>
+			<p class='card-text'>Magnus Fagertun</p>
+			<p class='card-text'>Loeper Matthias</p>
+			<p class='card-text'>Dosinas.net WEb creations</p>
+			<p class='card-text'>Cristina Guevarra</p>
+			<p class='card-text'>Ziga Jenko</p>
+			<p class='card-text'><u>Sylvain Pepoli<u/></p>
+			<p class='card-text'>Bart De Boeck</p>
+			<p class='card-text'>Charles Veillon</p>
+			<p class='card-text'>Christopher Letcher</p>
+			<p class='card-text'>Pietro Luca Savorosi</p>
+			<p class='card-text'>Marc Gutt</p>
+			<p class='card-text'>Richard Abogado</p>
+			<p class='card-text'>Marcelo Ferreira da Costa</p>
+			<p class='card-text'>David Teske</p>
+			<p class='card-text'>Kilian Rauner</p>
+			<p class='card-text'>Eckard Wille</p>
+			<p class='card-text'>Marlon Diering</p>
+			<p class='card-text'>Elliott Marvin</p>
+			<p class='card-text'>Benjamin Truninger</p>
+			<p class='card-text'>James Hart</p>
+			<p class='card-text'>Kai Ulrich</p>
+			<p class='card-text'>Sean Nelson</p>
+			<p class='card-text'>Guy Lincoln</p>
+			<p class='card-text'>Stephen Friedl</p>
+			<p class='card-text'>Jeremy Holder</p>
+			<p class='card-text'>Daniel Khumalo</p>
+			<p class='card-text'>Danatas Gervi</p>
+			<p class='card-text'>Matteo Menozzi</p>
+			<p class='card-text'>John Harrison</p>
+			<p class='card-text'>Neilhighley.com ltd.</p>
+			<p class='card-text'>Rafał Kurc</p>
+			<p class='card-text'>Sebastian Ulrich</p>
+			<p class='card-text'>Profi-KOM ltd.</p>
 		</div>
 	</div>
 </div>
