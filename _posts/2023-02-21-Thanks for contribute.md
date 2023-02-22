@@ -25,6 +25,6 @@ Sylvain Pepoli - you're rock! ![skel](https://profi-kom.lt/smiles/drinks.gif)
 
 You may see names under our Contribute [page](https://mremoteng.org/contribute) and if you wish be there as well - please donate, every little helps!
 
-I am back to work on Nitghtly build preparation, will post about it soon, stay tuned!
+I am back to work on Nightly build preparation, will post about it soon, stay tuned!
 
 ![Hi5](https://reklama-no.ru/smiles/high-five.gif)
