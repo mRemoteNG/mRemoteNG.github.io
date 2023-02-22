@@ -107,7 +107,7 @@ If you find mRemoteNG useful and would like to contribute, it would be greatly a
 	</div>
 	<div class='card'>
 		<div class='card-body'>
-			<h2 class='card-title'>Big thanks who donate and support us!</h2>
+			<h2 class='card-title'>BIG thanks!</h2>
 			<p class='card-text'><b>Ivan Vaselli</b></p>
 			<p class='card-text'>Andrew Warham</p>
 			<p class='card-text'><b>Matteo Menozzi</b></p>
@@ -118,7 +118,7 @@ If you find mRemoteNG useful and would like to contribute, it would be greatly a
 			<p class='card-text'>Dosinas.net WEb creations</p>
 			<p class='card-text'>Cristina Guevarra</p>
 			<p class='card-text'>Ziga Jenko</p>
-			<p class='card-text'><u>Sylvain Pepoli</u></p>
+			<p class='card-text'><b><u>Sylvain Pepoli</u></b></p>
 			<p class='card-text'>Bart De Boeck</p>
 			<p class='card-text'>Charles Veillon</p>
 			<p class='card-text'>Christopher Letcher</p>
@@ -140,7 +140,6 @@ If you find mRemoteNG useful and would like to contribute, it would be greatly a
 			<p class='card-text'>Jeremy Holder</p>
 			<p class='card-text'>Daniel Khumalo</p>
 			<p class='card-text'>Danatas Gervi</p>
-			<p class='card-text'>Matteo Menozzi</p>
 			<p class='card-text'>John Harrison</p>
 			<p class='card-text'>Neilhighley.com ltd.</p>
 			<p class='card-text'>Rafał Kurc</p>
