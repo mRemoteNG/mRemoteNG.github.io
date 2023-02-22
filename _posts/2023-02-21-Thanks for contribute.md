@@ -16,11 +16,14 @@ But first let me say:
 #### BIG THANKS for yours [donations](https://mremoteng.org/contribute)!
 
 Its really important for mRemoteNG, and realy helps on development! 
-Glad to see not only personal contribution, but also companies! 
-And special gratitude who do donations on regular basis (marked bold).
-Sylvain Pepoli - you're rock! ![skel](http://www.kolobok.us/smiles/standart/drinks.gif)
 
-You may see names under our Contribute[page](https://mremoteng.org/contribute) and if you wish be there as well - please donate, every little helps!
+Glad to see not only personal contribution, but also companies! 
+
+And special gratitude who do donations on regular basis (marked bold).
+
+Sylvain Pepoli - you're rock! ![skel](https://profi-kom.lt/smiles/drinks.gif)
+
+You may see names under our Contribute [page](https://mremoteng.org/contribute) and if you wish be there as well - please donate, every little helps!
 
 I am back to work on Nitghtly build preparation, will post about it soon, stay tuned!
 
