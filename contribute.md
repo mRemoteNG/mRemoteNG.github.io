@@ -108,43 +108,46 @@ If you find mRemoteNG useful and would like to contribute, it would be greatly a
 	<div class='card'>
 		<div class='card-body'>
 			<h2 class='card-title'>BIG thanks!</h2>
-			<p class='card-text'><b>Ivan Vaselli</b></p>
-			<p class='card-text'>Andrew Warham</p>
-			<p class='card-text'><b>Matteo Menozzi</b></p>
-			<p class='card-text'><b>Marlon Diering</b></p>
-			<p class='card-text'>Sergei Shir</p>
-			<p class='card-text'>Magnus Fagertun</p>
-			<p class='card-text'>Loeper Matthias</p>
-			<p class='card-text'>Dosinas.net WEb creations</p>
-			<p class='card-text'>Cristina Guevarra</p>
-			<p class='card-text'>Ziga Jenko</p>
-			<p class='card-text'><b><u>Sylvain Pepoli</u></b></p>
-			<p class='card-text'>Bart De Boeck</p>
-			<p class='card-text'>Charles Veillon</p>
-			<p class='card-text'>Christopher Letcher</p>
-			<p class='card-text'>Pietro Luca Savorosi</p>
-			<p class='card-text'>Marc Gutt</p>
-			<p class='card-text'>Richard Abogado</p>
-			<p class='card-text'>Marcelo Ferreira da Costa</p>
-			<p class='card-text'>David Teske</p>
-			<p class='card-text'>Kilian Rauner</p>
-			<p class='card-text'>Eckard Wille</p>
-			<p class='card-text'>Marlon Diering</p>
-			<p class='card-text'>Elliott Marvin</p>
-			<p class='card-text'>Benjamin Truninger</p>
-			<p class='card-text'>James Hart</p>
-			<p class='card-text'>Kai Ulrich</p>
-			<p class='card-text'>Sean Nelson</p>
-			<p class='card-text'>Guy Lincoln</p>
-			<p class='card-text'>Stephen Friedl</p>
-			<p class='card-text'>Jeremy Holder</p>
-			<p class='card-text'>Daniel Khumalo</p>
-			<p class='card-text'>Danatas Gervi</p>
-			<p class='card-text'>John Harrison</p>
-			<p class='card-text'>Neilhighley.com ltd.</p>
-			<p class='card-text'>Rafał Kurc</p>
-			<p class='card-text'>Sebastian Ulrich</p>
-			<p class='card-text'>Profi-KOM ltd.</p>
+			<ul style="list-style-type: none">
+				<li><b>Ivan Vaselli</b></li>
+				<li>Michael Gaul</li>
+				<li><b>Matteo Menozzi</b></li>
+				<li><b>Marlon Diering</b></li>
+				<li>Andrew Warham</li>
+				<li>Sergei Shir</li>
+				<li>Magnus Fagertun</li>
+				<li>Loeper Matthias</li>
+				<li>Dosinas.net WEb creations</li>
+				<li>Cristina Guevarra</li>
+				<li>Ziga Jenko</li>
+				<li><b><u>Sylvain Pepoli</u></b></li>
+				<li>Bart De Boeck</li>
+				<li>Charles Veillon</li>
+				<li>Christopher Letcher</li>
+				<li>Pietro Luca Savorosi</li>
+				<li>Marc Gutt</li>
+				<li>Richard Abogado</li>
+				<li>Marcelo Ferreira da Costa</li>
+				<li>David Teske</li>
+				<li>Kilian Rauner</li>
+				<li>Eckard Wille</li>
+				<li>Marlon Diering</li>
+				<li>Elliott Marvin</li>
+				<li>Benjamin Truninger</li>
+				<li>James Hart</li>
+				<li>Kai Ulrich</li>
+				<li>Sean Nelson</li>
+				<li>Guy Lincoln</li>
+				<li>Stephen Friedl</li>
+				<li>Jeremy Holder</li>
+				<li>Daniel Khumalo</li>
+				<li>Danatas Gervi</li>
+				<li>John Harrison</li>
+				<li>Neilhighley.com ltd.</li>
+				<li>Rafał Kurc</li>
+				<li>Sebastian Ulrich</li>
+				<li>Profi-KOM ltd.</li>
+			</ul>
 		</div>
 	</div>
 </div>
