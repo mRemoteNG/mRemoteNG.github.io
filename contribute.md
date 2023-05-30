@@ -109,13 +109,18 @@ If you find mRemoteNG useful and would like to contribute, it would be greatly a
 		<div class='card-body'>
 			<h2 class='card-title'>BIG thanks!</h2>
 			<ul style="list-style-type: none">
+				<li><b>Marlon Diering</b></li>
+				<li><b>Ivan Vaselli</b></li>
+				<li>Joel Grimes</li>
+				<li>Jürgen Busch</li>
+				<li><b>Matteo Menozzi</b></li>
+				<li>Łukasz Milata</li>
+				<li>Charles Fletcher</li>
+				<li>Frank Mandrell</li>
 				<li>Michal Krupa</li>
 				<li>Tianpeng Wang</li>
 				<li>Dylan Giovanni Gambino</li>
-				<li><b>Ivan Vaselli</b></li>
 				<li>Michael Gaul</li>
-				<li><b>Matteo Menozzi</b></li>
-				<li><b>Marlon Diering</b></li>
 				<li>Andrew Warham</li>
 				<li>Sergei Shir</li>
 				<li>Magnus Fagertun</li>
