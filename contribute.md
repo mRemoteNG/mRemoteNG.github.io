@@ -114,7 +114,7 @@ If you find mRemoteNG useful and would like to contribute, it would be greatly a
 				<li>James Hart</li>
 				<li>Meetstream USA</li>
 				<li><b>Ivan Vaselli</b></li>
-				<li><b>Cory Theurer<b></li>
+				<li><b>Cory Theurer</b></li>
 				<li>Brenton Homer</li>
 				<li>Michael Gricksch</li>
 				<li><i>Denis Iakunin</i></li>
