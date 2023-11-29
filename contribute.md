@@ -109,10 +109,25 @@ If you find mRemoteNG useful and would like to contribute, it would be greatly a
 		<div class='card-body'>
 			<h2 class='card-title'>BIG thanks!</h2>
 			<ul style="list-style-type: none">
-				<li>Paweł Iżykowski</li>
-				<li><b>Matteo Menozzi</b></li>
-				<li><b>Marlon Diering</b></li>
+				<li><b><u>Jason Davis</u></b></li>
+				<li>Schwarz Fabrice</li>
+				<li>James Hart</li>
+				<li>Meetstream USA</li>
 				<li><b>Ivan Vaselli</b></li>
+				<li><b>Cory Theurer<b></li>
+				<li>Brenton Homer</li>
+				<li>Michael Gricksch</li>
+				<li><i>Denis Iakunin</i></li>
+				<li>Vito Mattera</li>
+				<li>Sören Calvert</li>
+				<li><i>Shaun Cronin</i></li>
+				<li><b>Matteo Menozzi</b></li>
+				<li><i>Russell Thompson</i></li>
+				<li><b>Marlon Diering</b></li>
+				<li>Gerald Osterkon</li>
+				<li>Daniel Anthes</li>
+				<li>Daniel Rusek</li>
+				<li>Paweł Iżykowski</li>
 				<li>Joel Grimes</li>
 				<li>Jürgen Busch</li>
 				<li>Łukasz Milata</li>
