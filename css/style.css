@@ -20,4 +20,20 @@
 	height: 1rem;
 	width: 1rem;
 }
-	
+
+.pagination button {
+  margin: 5px;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.pagination button:hover {
+  background-color: #0056b3;
+}
+
+#records-list li {
+  display: none; /* Hide all items by default */
+}

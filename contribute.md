@@ -3,186 +3,226 @@ title: Contribute
 permalink: /contribute
 ---
 <style>
-	#submitBtn {
-		transition: opacity 0.35s ease;
-	}
+ #submitBtn {
+  transition: opacity 0.35s ease;
+ }
 </style>
 <script>
-	$(document).ready(function() {
-		var cleave = new Cleave('#amount', {
-			numeral: true
-		});
-		$('#amount').keyup(function(evt) {
-			$('#submitBtn').prop('disabled', ($(this).val() ? false : true));
-		});
-	});
+ $(document).ready(function() {
+  var cleave = new Cleave('#amount', {
+   numeral: true
+  });
+  $('#amount').keyup(function(evt) {
+   $('#submitBtn').prop('disabled', ($(this).val() ? false : true));
+  });
+ });
 </script>
+
 ## Donate
+
 If you find mRemoteNG useful and would like to contribute, it would be greatly appreciated.  When you contribute, you make it possible for the team to cover the costs of producing mRemoteNG.
 <div class='card-deck text-center'>
-	<div class='card'>
-		<div class='card-body'>
-			<h2 class='card-title'>PayPal</h2>
-			<div id="donate-button-container">
-				<div class='form-group'>
-					<input type='text' class='form-control' name='item_name' value='mRemoteNG $ Contribution' readonly>
-					<p class='card-text'><img class='img-responsive' alt='PayPal QR Code' src='{{ site.baseurl }}/images/donations/PayPal QR Code (1).png' height='100px'></p>
-				</div>
-				<div id="donate-button1"></div>
-				<div class='form-group'>
-					<input type='text' class='form-control' name='item_name' value='mRemoteNG € Contribution' readonly>
-					<p class='card-text'><img class='img-responsive' alt='PayPal QR Code' src='{{ site.baseurl }}/images/donations/PayPal QR Code (2).png' height='100px'></p>
-				</div>
-				<div id="donate-button2"></div>
-				<div class='form-group'>
-					<input type='text' class='form-control' name='item_name' value='mRemoteNG £ Contribution' readonly>
-					<p class='card-text'><img class='img-responsive' alt='PayPal QR Code' src='{{ site.baseurl }}/images/donations/PayPal QR Code (3).png' height='100px'></p>
-				</div>
-				<div id="donate-button3"></div>
-				<div class='form-group'>
-					<input type='text' class='form-control' name='item_name' value='mRemoteNG ₽ Contribution' readonly>
-					<p class='card-text'><img class='img-responsive' alt='PayPal QR Code' src='{{ site.baseurl }}/images/donations/PayPal QR Code (4).png' height='100px'></p>
-				</div>
-				<div id="donate-button4"></div>
-				<script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
-				<script>
-					PayPal.Donation.Button({
-						env:'production',
-						hosted_button_id:'CHQY3Q3ST9H4U',
-						image: {
-							src:'https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif',
-							alt:'Donate with PayPal button',
-							title:'PayPal - The safer, easier way to pay online!',
-						}
-					}).render('#donate-button1');
-				</script>
-				<script>
-					PayPal.Donation.Button({
-						env:'production',
-						hosted_button_id:'UK75QBUYNPYKN',
-						image: {
-							src:'https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif',
-							alt:'Donate with PayPal button',
-							title:'PayPal - The safer, easier way to pay online!',
-						}
-					}).render('#donate-button2');
-				</script>
-				<script>
-					PayPal.Donation.Button({
-						env:'production',
-						hosted_button_id:'2N5HY54ZTT9TC',
-						image: {
-							src:'https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif',
-							alt:'Donate with PayPal button',
-							title:'PayPal - The safer, easier way to pay online!',
-						}
-					}).render('#donate-button3');
-				</script>
-				<script>
-					PayPal.Donation.Button({
-						env:'production',
-						hosted_button_id:'CBQ54US7EFX68',
-						image: {
-							src:'https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif',
-							alt:'Donate with PayPal button',
-							title:'PayPal - The safer, easier way to pay online!',
-						}
-					}).render('#donate-button4');
-				</script>
-			</div>
-		</div>
-	</div>
-	<div class='card'>
-		<div class='card-body'>
-			<h2 class='card-title'><img class='img-responsive' alt='btc' src='{{ site.baseurl }}/images/donations/btc.png'>Bitcoin</h2>
-			<p class='card-text'>You may also make a contribution by sending <a href='https://bitcoin.org/'>Bitcoins</a> to <a href='bitcoin:3GzzNcMnkMpRREhvP6SxgWWzq58Q7zHk7p'><code style='word-break: break-word;'>3GzzNcMnkMpRREhvP6SxgWWzq58Q7zHk7p</code></a>.</p>
-			<p class='card-text'><img class='img-responsive' alt='Bitcoin QR Code' src='{{ site.baseurl }}/images/donations/BTC QR Code.jpg' height='100px'></p>
-			<h2 class='card-title'><img class='img-responsive' alt='eth' src='{{ site.baseurl }}/images/donations/eth.png'>Ethereum</h2>
-			<p class='card-text'>You may also make a contribution by sending <a href='https://ethereum.org//'>Ethereum</a> to <a href='ethereum:0xdf4151f161ff33d6bfd846ce29032fb325969f9b'><code style='word-break: break-word;'>0xdf4151f161ff33d6bfd846ce29032fb325969f9b</code></a>.</p>
-			<p class='card-text'><img class='img-responsive' alt='Ethereum QR Code' src='{{ site.baseurl }}/images/donations/ETH QR Code.jpg' height='100px'></p>
-			<h2 class='card-title'><img class='img-responsive' alt='usdt' src='{{ site.baseurl }}/images/donations/tether-usdt.png'>Tether</h2>
-			<p class='card-text'>You may also make a contribution by sending <a href='https://tether.to//'>Tether</a> to <a href='tether:TSBpMwkon1XUm6gLHpPWQ9NpELpnpx9bNn'><code style='word-break: break-word;'>TSBpMwkon1XUm6gLHpPWQ9NpELpnpx9bNn</code></a>.</p>
-			<p class='card-text'><img class='img-responsive' alt='USDT QR Code' src='{{ site.baseurl }}/images/donations/USDT QR Code.jpg' height='100px'></p>
-		</div>
-	</div>
-	<div class='card'>
-		<div class='card-body'>
-			<h2 class='card-title'>BIG thanks!</h2>
-			<ul style="list-style-type: none">
-				<li><b><u>Jason Davis</u></b></li>
-				<li>Schwarz Fabrice</li>
-				<li>James Hart</li>
-				<li>Meetstream USA</li>
-				<li><b>Ivan Vaselli</b></li>
-				<li><b>Cory Theurer</b></li>
-				<li>Brenton Homer</li>
-				<li>Michael Gricksch</li>
-				<li><i>Denis Iakunin</i></li>
-				<li>Vito Mattera</li>
-				<li>Sören Calvert</li>
-				<li><i>Shaun Cronin</i></li>
-				<li><b>Matteo Menozzi</b></li>
-				<li><i>Russell Thompson</i></li>
-				<li><b>Marlon Diering</b></li>
-				<li>Gerald Osterkon</li>
-				<li>Daniel Anthes</li>
-				<li>Daniel Rusek</li>
-				<li>Paweł Iżykowski</li>
-				<li>Joel Grimes</li>
-				<li>Jürgen Busch</li>
-				<li>Łukasz Milata</li>
-				<li>Charles Fletcher</li>
-				<li>Frank Mandrell</li>
-				<li>Michal Krupa</li>
-				<li>Tianpeng Wang</li>
-				<li>Dylan Giovanni Gambino</li>
-				<li>Michael Gaul</li>
-				<li>Andrew Warham</li>
-				<li>Sergei Shir</li>
-				<li>Magnus Fagertun</li>
-				<li>Loeper Matthias</li>
-				<li>Dosinas.net WEb creations</li>
-				<li>Cristina Guevarra</li>
-				<li>Ziga Jenko</li>
-				<li><b><u>Sylvain Pepoli</u></b></li>
-				<li>Bart De Boeck</li>
-				<li>Charles Veillon</li>
-				<li>Christopher Letcher</li>
-				<li>Pietro Luca Savorosi</li>
-				<li>Marc Gutt</li>
-				<li>Richard Abogado</li>
-				<li>Marcelo Ferreira da Costa</li>
-				<li>David Teske</li>
-				<li>Kilian Rauner</li>
-				<li>Eckard Wille</li>
-				<li>Marlon Diering</li>
-				<li>Elliott Marvin</li>
-				<li>Benjamin Truninger</li>
-				<li>James Hart</li>
-				<li>Kai Ulrich</li>
-				<li>Sean Nelson</li>
-				<li>Guy Lincoln</li>
-				<li>Stephen Friedl</li>
-				<li>Jeremy Holder</li>
-				<li>Daniel Khumalo</li>
-				<li>Danatas Gervi</li>
-				<li>John Harrison</li>
-				<li>Neilhighley.com ltd.</li>
-				<li>Rafał Kurc</li>
-				<li>Sebastian Ulrich</li>
-				<li>Profi-KOM ltd.</li>
-			</ul>
-		</div>
-	</div>
+ <div class='card'>
+  <div class='card-body'>
+   <h2 class='card-title'>PayPal</h2>
+   <div id="donate-button-container">
+    <div class='form-group'>
+     <input type='text' class='form-control' name='item_name' value='mRemoteNG $ Contribution' readonly>
+     <p class='card-text'><img class='img-responsive' alt='PayPal QR Code' src='{{ site.baseurl }}/images/donations/PayPal QR Code (1).png' height='100px'></p>
+    </div>
+    <div id="donate-button1"></div>
+    <div class='form-group'>
+     <input type='text' class='form-control' name='item_name' value='mRemoteNG € Contribution' readonly>
+     <p class='card-text'><img class='img-responsive' alt='PayPal QR Code' src='{{ site.baseurl }}/images/donations/PayPal QR Code (2).png' height='100px'></p>
+    </div>
+    <div id="donate-button2"></div>
+    <div class='form-group'>
+     <input type='text' class='form-control' name='item_name' value='mRemoteNG £ Contribution' readonly>
+     <p class='card-text'><img class='img-responsive' alt='PayPal QR Code' src='{{ site.baseurl }}/images/donations/PayPal QR Code (3).png' height='100px'></p>
+    </div>
+    <div id="donate-button3"></div>
+    <div class='form-group'>
+     <input type='text' class='form-control' name='item_name' value='mRemoteNG ₽ Contribution' readonly>
+     <p class='card-text'><img class='img-responsive' alt='PayPal QR Code' src='{{ site.baseurl }}/images/donations/PayPal QR Code (4).png' height='100px'></p>
+    </div>
+    <div id="donate-button4"></div>
+    <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+    <script>
+     PayPal.Donation.Button({
+      env:'production',
+      hosted_button_id:'CHQY3Q3ST9H4U',
+      image: {
+       src:'https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif',
+       alt:'Donate with PayPal button',
+       title:'PayPal - The safer, easier way to pay online!',
+      }
+     }).render('#donate-button1');
+    </script>
+    <script>
+     PayPal.Donation.Button({
+      env:'production',
+      hosted_button_id:'UK75QBUYNPYKN',
+      image: {
+       src:'https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif',
+       alt:'Donate with PayPal button',
+       title:'PayPal - The safer, easier way to pay online!',
+      }
+     }).render('#donate-button2');
+    </script>
+    <script>
+     PayPal.Donation.Button({
+      env:'production',
+      hosted_button_id:'2N5HY54ZTT9TC',
+      image: {
+       src:'https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif',
+       alt:'Donate with PayPal button',
+       title:'PayPal - The safer, easier way to pay online!',
+      }
+     }).render('#donate-button3');
+    </script>
+    <script>
+     PayPal.Donation.Button({
+      env:'production',
+      hosted_button_id:'CBQ54US7EFX68',
+      image: {
+       src:'https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif',
+       alt:'Donate with PayPal button',
+       title:'PayPal - The safer, easier way to pay online!',
+      }
+     }).render('#donate-button4');
+    </script>
+   </div>
+  </div>
+ </div>
+<div class="card">
+  <div class="card-body">
+    <h2 class="card-title">BIG thanks!</h2>
+    <!-- Pagination Buttons -->
+    <div class="pagination">
+      <button onclick="filterRecords('2025')">2025</button>
+      <button onclick="filterRecords('2024')">2024</button>
+      <button onclick="filterRecords('earlier')">Earlier Dates</button>
+    </div>
+    <!-- List Container -->
+    <ul id="records-list" style="list-style-type: none">
+      <li data-year="2025"><b>2025</b></li>
+      <li data-year="2025">Christopher Puschmann</li>
+      <li data-year="2025">Stefano Biloslavo</li>
+      <li data-year="2024"><b>2024</b></li>
+      <li data-year="2024">Michael Logies</li>
+      <li data-year="2024">Koffi TOGLO</li>
+      <li data-year="2024">Helge Weber</li>
+      <li data-year="2024">Volnet Odza</li>
+      <li data-year="2024"><b>Alexander Raithel</b></li>
+      <li data-year="2024">Raffaello Bruno Freire</li>
+      <li data-year="2024"><b>Denis Iakunin</b></li>
+      <li data-year="2024">Janne Saarinen</li>
+      <li data-year="2024">Pedro Lopes</li>
+      <li data-year="2024">James Higgs - Computer Services</li>
+      <li data-year="2024"><b>Stephen Friedl</b></li>
+      <li data-year="2024">Christopher Radi</li>
+      <li data-year="2024"><b><u>MC-Software</u></b></li>
+      <li data-year="2024"><b>Ivan Vaselli</b></li>
+      <li data-year="2024"><b>Robert Harrington</b></li>
+      <li data-year="2024">Alberto Jarquin Hernandez</li>
+      <li data-year="2024">Paweł Iżykowski</li>
+      <li data-year="2024">Alan Graham</li>
+      <li data-year="2024">Michael J Kehrli</li>
+      <li data-year="2024">Joseph Orlik</li>
+      <li data-year="2024">Nicolai Serup</li>
+      <li data-year="2024">Martin Dropmann</li>
+      <li data-year="earlier"><b>Erly dates</b></li>
+      <li data-year="earlier"><b><u>Jason Davis</u></b></li>
+      <li data-year="earlier">Schwarz Fabrice</li>
+      <li data-year="earlier">James Hart</li>
+      <li data-year="earlier">Meetstream USA</li>
+      <li data-year="earlier"><b>Ivan Vaselli</b></li>
+      <li data-year="earlier"><b>Cory Theurer</b></li>
+      <li data-year="earlier">Brenton Homer</li>
+      <li data-year="earlier">Michael Gricksch</li>
+      <li data-year="earlier"><i>Denis Iakunin</i></li>
+      <li data-year="earlier">Vito Mattera</li>
+      <li data-year="earlier">Sören Calvert</li>
+      <li data-year="earlier"><i>Shaun Cronin</i></li>
+      <li data-year="earlier"><b>Matteo Menozzi</b></li>
+      <li data-year="earlier"><i>Russell Thompson</i></li>
+      <li data-year="earlier"><b>Marlon Diering</b></li>
+      <li data-year="earlier">Gerald Osterkon</li>
+      <li data-year="earlier">Daniel Anthes</li>
+      <li data-year="earlier">Daniel Rusek</li>
+      <li data-year="earlier">Paweł Iżykowski</li>
+      <li data-year="earlier">Joel Grimes</li>
+      <li data-year="earlier">Jürgen Busch</li>
+      <li data-year="earlier">Łukasz Milata</li>
+      <li data-year="earlier">Charles Fletcher</li>
+      <li data-year="earlier">Frank Mandrell</li>
+      <li data-year="earlier">Michal Krupa</li>
+      <li data-year="earlier">Tianpeng Wang</li>
+      <li data-year="earlier">Dylan Giovanni Gambino</li>
+      <li data-year="earlier">Michael Gaul</li>
+      <li data-year="earlier">Andrew Warham</li>
+      <li data-year="earlier">Sergei Shir</li>
+      <li data-year="earlier">Magnus Fagertun</li>
+      <li data-year="earlier">Loeper Matthias</li>
+      <li data-year="earlier">Dosinas.net WEb creations</li>
+      <li data-year="earlier">Cristina Guevarra</li>
+      <li data-year="earlier">Ziga Jenko</li>
+      <li data-year="earlier"><b><u>Sylvain Pepoli</u></b></li>
+      <li data-year="earlier">Bart De Boeck</li>
+      <li data-year="earlier">Charles Veillon</li>
+      <li data-year="earlier">Christopher Letcher</li>
+      <li data-year="earlier">Pietro Luca Savorosi</li>
+      <li data-year="earlier">Marc Gutt</li>
+      <li data-year="earlier">Richard Abogado</li>
+      <li data-year="earlier">Marcelo Ferreira da Costa</li>
+      <li data-year="earlier">David Teske</li>
+      <li data-year="earlier">Kilian Rauner</li>
+      <li data-year="earlier">Eckard Wille</li>
+      <li data-year="earlier">Marlon Diering</li>
+      <li data-year="earlier">Elliott Marvin</li>
+      <li data-year="earlier">Benjamin Truninger</li>
+      <li data-year="earlier">James Hart</li>
+      <li data-year="earlier">Kai Ulrich</li>
+      <li data-year="earlier">Sean Nelson</li>
+      <li data-year="earlier">Guy Lincoln</li>
+      <li data-year="earlier">Stephen Friedl</li>
+      <li data-year="earlier">Jeremy Holder</li>
+      <li data-year="earlier">Daniel Khumalo</li>
+      <li data-year="earlier">Danatas Gervi</li>
+      <li data-year="earlier">John Harrison</li>
+      <li data-year="earlier">Neilhighley.com ltd.</li>
+      <li data-year="earlier">Rafał Kurc</li>
+      <li data-year="earlier">Sebastian Ulrich</li>
+      <li data-year="earlier">Profi-KOM ltd.</li>
+    </ul>
+  </div>
+  <script>
+    function filterRecords(year) {
+  const listItems = document.querySelectorAll("#records-list li");
+  listItems.forEach(item => {
+  if (item.getAttribute("data-year") === year || item.textContent.includes(year)) {
+   item.style.display = "block"; // Show matching items
+  } else {
+   item.style.display = "none"; // Hide non-matching items
+  }
+  });
+ }
+
+ // Default view: Show all records
+ window.onload = () => filterRecords("2025"); // Or set to "all" to show everything initially
+ </script>
 </div>
 
 The mRemoteNG Project is **NOT** considered a non-profit organization and contributions are **NOT** tax deductible.
 
 ## Submit code
+
 Check out our [source code]({{ site.github_alt.repository_url }}) and submit a pull request or two.
 
 ## Translate
+
 Check out the [Wiki page]({{ site.github_alt.wiki_url }}/Translate) on how to help make mRemoteNG a polyglot.
 
 ## Other
+
 If you are a technical writer, translator or just feel like there is something you can contribute to mRemoteNG, please feel free to contact us.
