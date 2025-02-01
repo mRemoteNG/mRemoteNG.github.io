@@ -41,11 +41,6 @@ If you find mRemoteNG useful and would like to contribute, it would be greatly a
      <p class='card-text'><img class='img-responsive' alt='PayPal QR Code' src='{{ site.baseurl }}/images/donations/PayPal QR Code (3).png' height='100px'></p>
     </div>
     <div id="donate-button3"></div>
-    <div class='form-group'>
-     <input type='text' class='form-control' name='item_name' value='mRemoteNG ₽ Contribution' readonly>
-     <p class='card-text'><img class='img-responsive' alt='PayPal QR Code' src='{{ site.baseurl }}/images/donations/PayPal QR Code (4).png' height='100px'></p>
-    </div>
-    <div id="donate-button4"></div>
     <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
     <script>
      PayPal.Donation.Button({
