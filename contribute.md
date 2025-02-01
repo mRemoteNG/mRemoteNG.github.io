@@ -95,7 +95,7 @@ If you find mRemoteNG useful and would like to contribute, it would be greatly a
         <li data-year="2025">Christopher Puschmann</li>
         <li data-year="2025">Stefano Biloslavo</li>
         <li data-year="2024">Michael Logies</li>
-        <li data-year="2024">Koffi TOGLO</li>
+        <li data-year="2024">Koffi Toglo</li>
         <li data-year="2024">Helge Weber</li>
         <li data-year="2024">Volnet Odza</li>
         <li data-year="2024"><b>Alexander Raithel</b></li>
