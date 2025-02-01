@@ -31,11 +31,13 @@ If you find mRemoteNG useful and would like to contribute, it would be greatly a
      <p class='card-text'><img class='img-responsive' alt='PayPal QR Code' src='{{ site.baseurl }}/images/donations/PayPal QR Code (1).png' height='100px'></p>
     </div>
     <div id="donate-button1"></div>
+    <br>
     <div class='form-group'>
      <input type='text' class='form-control' name='item_name' value='mRemoteNG € Contribution' readonly>
      <p class='card-text'><img class='img-responsive' alt='PayPal QR Code' src='{{ site.baseurl }}/images/donations/PayPal QR Code (2).png' height='100px'></p>
     </div>
     <div id="donate-button2"></div>
+    <br>
     <div class='form-group'>
      <input type='text' class='form-control' name='item_name' value='mRemoteNG £ Contribution' readonly>
      <p class='card-text'><img class='img-responsive' alt='PayPal QR Code' src='{{ site.baseurl }}/images/donations/PayPal QR Code (3).png' height='100px'></p>
