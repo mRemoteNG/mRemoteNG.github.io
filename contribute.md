@@ -91,7 +91,7 @@ If you find mRemoteNG useful and would like to contribute, it would be greatly a
       <div class="pagination">
         <button onclick="filterRecords('2025')">2025</button>
         <button onclick="filterRecords('2024')">2024</button>
-        <button onclick="filterRecords('earlier')">Earlier Dates</button>
+        <button onclick="filterRecords('earlier')">Earlier</button>
       </div>
       <!-- List Container -->
       <ul id="records-list" style="list-style-type: none">
@@ -194,7 +194,6 @@ If you find mRemoteNG useful and would like to contribute, it would be greatly a
           }
         });
       }
-
       // Default view: Show all records
       window.onload = () => filterRecords("2025"); // Or set to "all" to show everything initially
     </script>
