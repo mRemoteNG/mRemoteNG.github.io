@@ -92,6 +92,8 @@ If you find mRemoteNG useful and would like to contribute, it would be greatly a
       </div>
       <!-- List Container -->
       <ul id="records-list" style="list-style-type: none">
+        <li data-year="2025">Simon Ferguson</li>
+        <li data-year="2025">Paweł Iżykowski</li>
         <li data-year="2025">Christopher Puschmann</li>
         <li data-year="2025">Stefano Biloslavo</li>
         <li data-year="2024">Michael Logies</li>
