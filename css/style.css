@@ -37,3 +37,16 @@
 #records-list li {
   display: none; /* Hide all items by default */
 }
+
+#main-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+#ssl-seal img {
+    cursor: pointer;
+    width: 211px;
+    height: 64px;
+}

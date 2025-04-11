@@ -1,8 +1,12 @@
-<footer class='mt-auto py-3 bg-dark text-light'>
-	<div class='container'>
+<footer id="main-footer" class='mt-auto py-3 bg-dark text-light'>
+	<div class='container' id="copyright">
 		<p>Copyright &copy; {{ 'now' | date: '%Y' }} mRemoteNG. Maintainer Dimitrij Gorodeckij</p>
 	</div>
-	<a><img style="cursor: pointer; width: 211px; height: 64px;" onclick="sealInfoLink_Y2VydHVt('certum_pl_dv.svg')" src="https://sslseal.certum.pl/seal/public/img/certum_pl_dv.svg"></a>
+	<div id="ssl-seal">
+		<a>
+			<img style="cursor: pointer; width: 211px; height: 64px;" onclick="sealInfoLink_Y2VydHVt('certum_pl_dv.svg')" src="https://sslseal.certum.pl/seal/public/img/certum_pl_dv.svg">
+		</a>
+	<div>
 </footer>
 {% if jekyll.environment == 'production' %}
 {%- endif -%}
