@@ -1,0 +1,74 @@
+{
+	"localeFlag": "../flags/flag_germany.png",
+	"siteTitle": "mRemoteNG",
+	"header": {
+		"about": "Über uns",
+		"news": "Nachricht",
+		"contribute": "Beitragen",
+		"contact": "Kontakt",
+		"downloads": "Downloads",
+		"github": "GitHub",
+		"x": "X",
+		"documentation": "Dokumentation"
+	},
+	"footer": {
+		"rights": "Alle Rechte vorbehalten. Betreuer Dimitrij Gorodeckij"
+	},
+	"homepage": {
+		"title": "Startseite",
+		"welcome": "Willkommen auf Meiner SvelteKit Seite!",
+		"intro": "Dies ist eine einfache Website, die mit SvelteKit erstellt wurde und einige coole Funktionen demonstriert:",
+		"feature1": "Dunkel-/Hell-Theme-Umschalter",
+		"feature2": "Mehrsprachige Unterstützung (EN, RU, DE)",
+		"feature3": "Responsiver Header mit Navigation",
+		"feature4": "Sticky Footer",
+		"feature5": "Bereit für die Bereitstellung auf GitHub Pages",
+		"placeholderTitle": "Platzhalterinhalt",
+		"placeholderText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+		"scrollNote": "Scrollen Sie nach unten, um den Sticky Footer in Aktion zu sehen, wenn der Inhalt nicht lang genug ist.",
+		"moreContent": "Weiterer Platzhalterabsatz {count}, um die Seite scrollbar zu machen. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",
+		"genericButton": "Ein Generischer Knopf"
+	},
+	"aboutPage": {
+		"title": "Über uns",
+		"heading": "Über uns",
+		"text1": "Dies ist die Über-uns-Seite. Wir sind ein fiktives Unternehmen, das fiktive Dinge tut.",
+		"text2": "Unsere Mission ist es, exzellenten Platzhalterinhalt für Demo-Websites bereitzustellen."
+	},
+	"servicesPage": {
+		"title": "Dienste",
+		"heading": "Unsere Dienste",
+		"intro": "Wir bieten eine breite Palette fiktiver Dienstleistungen an, darunter:",
+		"service1": "Platzhaltertextgenerierung",
+		"service2": "Imaginäre Produktentwicklung",
+		"service3": "Konzeptionelle Designlösungen"
+	},
+	"portfolioPage": {
+		"title": "Portfolio",
+		"heading": "Portfolio",
+		"intro": "Hier sind einige unserer erstaunlichen fiktiven Projekte:",
+		"projectAlpha": "Projekt Alpha (Konzeptionell)",
+		"projectBeta": "Projekt Beta (Imaginär)",
+		"projectGamma": "Projekt Gamma (Platzhalter)"
+	},
+	"contactPage": {
+		"title": "Kontaktieren Sie uns",
+		"heading": "Kontaktieren Sie uns",
+		"intro": "Sie können uns nicht wirklich kontaktieren, da dies eine Demo ist. Aber wenn Sie könnten, wären hier das Kontaktformular oder die Details!",
+		"formName": "Name:",
+		"formEmail": "Email:",
+		"formMessage": "Nachricht:",
+		"formSend": "Nachricht senden",
+		"formAlert": "Formular gesendet (nicht wirklich!)"
+	},
+	"languages": {
+		"en": "English",
+		"ru": "Русский",
+		"de": "Deutsch"
+	},
+	"themeSwitcher": {
+		"toggleLabel": "Theme wechseln",
+		"dark": "Dunkel",
+		"light": "Hell"
+	}
+}
