@@ -1,0 +1,46 @@
+
+
+
+@import url(//db.onlinewebfonts.com/c/8eea7efc212b74ac89dcf5cd3d0e0572?family=HandelGotDBol); 
+@import url(//fonts.googleapis.com/css2?family=HandelGotDBol&display=swap);
+
+body {
+	
+	margin: 0;
+	
+	
+	
+	
+	color: #fff;
+}
+
+
+#ssl-seal img {
+    cursor: pointer;
+    width: 211px;
+    height: 64px;
+}
+
+.navbar-brand {
+	font-family: 'HandelGotDBol';
+}
+
+.navbar-brand:first-letter {
+	color: #4f8aff;
+}
+
+li:hover{
+	cursor:pointer;
+}
+
+ul {
+    width:100%;
+    margin-left: 0;
+    margin-bottom: 0
+} 
+
+li { 
+     list-style-type: none;
+    display: inline-block;
+    margin-right: 20px;
+}
