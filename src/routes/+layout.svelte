@@ -24,12 +24,12 @@
 		
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="icon" type="image/png" href="{assets}/favicon/favicon-96x96.png" sizes="96x96" />
-	<link rel="icon" type="image/svg+xml" href="{assets}/favicon/favicon.svg" />
-	<link rel="icon" type="image/x-icon" href="{assets}/static/favicon.ico" />
+	<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+	<link rel="icon" type="image/x-icon" href="/favicon/favicon.ico" /> 
 	<link rel="shortcut icon" href="/favicon/favicon.ico" />
 	<link rel="apple-touch-icon" sizes="180x180" href="{assets}/favicon/apple-touch-icon.png" />
 	<link rel="manifest" href="{assets}/favicon/site.webmanifest" />
-	<title>{$t('siteTitle')}</title> 
+	<title>{$t('siteTitle')}</title>    
 	<meta name="description" content="mRemoteNG - Remote Connections Manager" />
 
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
