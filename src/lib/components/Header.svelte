@@ -22,6 +22,11 @@
 	function closeMobileMenu() {
 		mobileMenuOpen = false;
 	}
+
+
+
+
+	
 </script>
 
 <header class="site-header">

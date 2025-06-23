@@ -8,7 +8,7 @@
 	// i18n store (currentLocale) is also initialized in its own file
 	// Accessing them here ensures they are part of the component tree if needed,
 	// but their primary setup is self-contained.
-	import { theme } from '$lib/theme.js'; 
+    import { theme, toggleTheme } from '$lib/stores/theme';
 	import { currentLocale, t } from '$lib/i18n/store.js';
 
 	// Reactive assignments to ensure Svelte tracks changes
