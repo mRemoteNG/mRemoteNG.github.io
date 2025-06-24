@@ -23,8 +23,17 @@
 		mobileMenuOpen = false;
 	}
 
+  let isDropdownOpen = false;
 
-
+  const socialLinks = [
+    { name: 'Twitter', icon: 'bi bi-twitter', url: 'https://x.com/mremoteng' },
+    { name: 'Telegram', icon: 'bi bi-telegram', url: 'https://t.me/yourchannel' },
+    { name: 'Reddit', icon: 'bi bi-reddit', url: 'https://reddit.com/yourpage' }
+    // Добавьте другие соцсети по необходимости
+  ];
+    const toggleDropdown = () => {
+    isDropdownOpen = !isDropdownOpen;
+  };
 
 	
 </script>
@@ -63,8 +72,36 @@
 								<i class="bi bi-github"></i><span class="d-lg-none ms-2">{$t('header.github')}</span>
 							</a>
 						</li>
-						<li class="nav-item">
-							<a target="_blank" rel="noopener" class="nav-link" href="https://x.com/mremoteng"><i class="bi bi-twitter"></i><span class="d-lg-none ms-2">{$t('header.x')}</span></a>
+						<li class="nav-item nav-item dropdown">
+
+
+ 								<a 
+									class="nav-link dropdown-toggle" 
+									href="#" 
+									role="button" 
+									on:click|preventDefault={toggleDropdown}
+									aria-expanded={isDropdownOpen}
+								>
+									<i class="bi bi-share"></i> <!-- Иконка для открытия dropdown -->
+								</a>
+								
+								<ul class="dropdown-menu {isDropdownOpen ? 'show' : ''}" style="right: 0; left: auto;">
+									{#each socialLinks as link}
+									<li>
+										<a 
+										class="dropdown-item" 
+										target="_blank" 
+										rel="noopener" 
+										href={link.url}
+										>
+										<i class={link.icon}></i>
+										<span class="ms-2">{link.name}</span>
+										</a>
+									</li>
+									{/each}
+								</ul>
+ 
+
 						</li>
 						<li class="nav-item">
 							<a target="_blank" rel="noopener" class="nav-link" href="https://mremoteng.readthedocs.io/"><i class="bi-file-text-fill"></i><span class="d-lg-none ms-2">{$t('header.documentation')}</span></a>
@@ -99,3 +136,36 @@
 		</div>
 	</div>
 </header>
+
+
+
+
+
+
+<style>
+  .dropdown-menu {
+    position: absolute;
+    z-index: 1000;
+    background: white;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 0.25rem;
+    padding: 0.5rem 0;
+    list-style: none;
+  }
+  
+  .dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: 0.25rem 1.5rem;
+    color: #212529;
+    text-decoration: none;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f8f9fa;
+  }
+  
+  .show {
+    display: block;
+  }
+</style>
