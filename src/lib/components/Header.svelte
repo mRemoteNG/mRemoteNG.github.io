@@ -26,9 +26,9 @@
   let isDropdownOpen = false;
 
   const socialLinks = [
-    { name: 'Twitter', icon: 'bi bi-twitter', url: 'https://x.com/mremoteng' },
-    { name: 'Telegram', icon: 'bi bi-telegram', url: 'https://t.me/yourchannel' },
-    { name: 'Reddit', icon: 'bi bi-reddit', url: 'https://reddit.com/yourpage' }
+    { name: 'Twitter', icon: 'bi bi-twitter', url: 'https://x.com/mremoteng', tooltip: "X ( Twitter)" },
+    { name: 'Telegram', icon: 'bi bi-telegram', url: 'https://t.me/yourchannel', tooltip: "Tg" },
+    { name: 'Reddit', icon: 'bi bi-reddit', url: 'https://reddit.com/yourpage', tooltip:"Reddit" }
     // Добавьте другие соцсети по необходимости
   ];
     const toggleDropdown = () => {
@@ -63,12 +63,12 @@
 					<!-- Right side of the navbar -->
 					<ul class="navbar-nav ms-md-auto">
 						<li class="nav-item">
-							<a target="_blank" rel="noopener" class="nav-link" href="/downloads">
+							<a target="_blank" rel="noopener" class="nav-link" href="/downloads"  title= "Donwloads">
 								<i class="bi bi-download"></i><span class="d-lg-none ms-2">{$t('header.downloads')}</span>
 							</a>
 						</li>
 						<li class="nav-item">
-							<a target="_blank" rel="noopener" class="nav-link" href="https://github.com/mRemoteNG/mRemoteNG">
+							<a target="_blank" rel="noopener" class="nav-link" href="https://github.com/mRemoteNG/mRemoteNG" title= "GitHub" >
 								<i class="bi bi-github"></i><span class="d-lg-none ms-2">{$t('header.github')}</span>
 							</a>
 						</li>
@@ -79,6 +79,7 @@
 									class="nav-link dropdown-toggle" 
 									href="#" 
 									role="button" 
+									title= "Social links"
 									on:click|preventDefault={toggleDropdown}
 									aria-expanded={isDropdownOpen}
 								>
@@ -92,7 +93,8 @@
 										class="dropdown-item" 
 										target="_blank" 
 										rel="noopener" 
-										href={link.url}
+										title ={link.tooltip}
+ 										href={link.url}
 										>
 										<i class={link.icon}></i>
 										<span class="ms-2">{link.name}</span>
@@ -104,7 +106,7 @@
 
 						</li>
 						<li class="nav-item">
-							<a target="_blank" rel="noopener" class="nav-link" href="https://mremoteng.readthedocs.io/"><i class="bi-file-text-fill"></i><span class="d-lg-none ms-2">{$t('header.documentation')}</span></a>
+							<a target="_blank" rel="noopener" class="nav-link" href="https://mremoteng.readthedocs.io/" title = "Docs"><i class="bi-file-text-fill"></i><span class="d-lg-none ms-2">{$t('header.documentation')}</span></a>
 						</li>
 						<li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
 							<div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
