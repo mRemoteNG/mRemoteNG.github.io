@@ -9,7 +9,8 @@
 		<img
 			src="{base}/images/lightbox.png"
 			alt="Screenshot of mRemoteNG interface"
-			style="max-width:600px;width:100%;height:auto;display:block;margin:0 auto;"
+			style="max-width:800px;width:100%;height:auto;display:block;margin:0 auto;"
+			loading="lazy"
 		>
 	</p>
 </section>
