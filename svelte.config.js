@@ -1,10 +1,12 @@
 import adapter from '@sveltejs/adapter-static';
-import { vitePreprocess } from 'sveltekit/vite';
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 const dev = process.argv.includes('dev');
 const config = {
   kit: {
-    adapter: adapter(),
+    adapter: adapter({
+      fallback: '200.html' // or 'index.html'
+    }),
     paths: {
       base: dev ? '' : '/mRemoteNG.github.io' // replace with your actual repo name
     },

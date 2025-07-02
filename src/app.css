@@ -53,3 +53,30 @@ section {
 section.d-flex {
   min-height: 100vh;
 }
+
+
+  .dropdown-menu {
+    position: absolute;
+    z-index: 1000;
+    background: white;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 0.25rem;
+    padding: 0.5rem 0;
+    list-style: none;
+  }
+  
+  .dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: 0.25rem 1.5rem;
+    color: #212529;
+    text-decoration: none;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f8f9fa;
+  }
+  
+  .show {
+    display: block;
+  }

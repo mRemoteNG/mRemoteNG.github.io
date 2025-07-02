@@ -7,11 +7,11 @@
 
 	// Menu items now use translation keys
 	const menuItems = [
-		{ titleKey: 'header.about', path: '/' },
-		{ titleKey: 'header.feed', path: '/feed' },
-		{ titleKey: 'header.contribute', path: '/contribute' },
-		{ titleKey: 'header.contact', path: '/contact' },
-		
+		{ titleKey: 'header.about', path: `` },
+		{ titleKey: 'header.feed', path: `/feed` },
+		{ titleKey: 'header.contribute', path: `/contribute` },
+		{ titleKey: 'header.contact', path: `/contact` },
+
 	];
 
 	let mobileMenuOpen = false;
@@ -29,7 +29,7 @@
     { name: 'Twitter', icon: 'bi bi-twitter', url: 'https://x.com/mremoteng', tooltip: "X ( Twitter)" },
     { name: 'Telegram', icon: 'bi bi-telegram', url: 'https://t.me/yourchannel', tooltip: "Tg" },
     { name: 'Reddit', icon: 'bi bi-reddit', url: 'https://reddit.com/yourpage', tooltip:"Reddit" }
-    // Добавьте другие соцсети по необходимости
+    
   ];
     const toggleDropdown = () => {
     isDropdownOpen = !isDropdownOpen;
@@ -42,7 +42,7 @@
 	<div class="header-content">
 		<div class="navbar navbar-expand-lg fixed-top bg-primary" data-bs-theme="dark">
 			<div class="container">
-				<a href="../" class="navbar-brand" on:click={closeMobileMenu}>
+				<a href="{base}" class="navbar-brand" on:click={closeMobileMenu}>
 					mRemoteNG
 				</a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="true" aria-label="Toggle navigation">
@@ -63,7 +63,7 @@
 					<!-- Right side of the navbar -->
 					<ul class="navbar-nav ms-md-auto">
 						<li class="nav-item">
-							<a target="_blank" rel="noopener" class="nav-link" href="/downloads"  title= "Donwloads">
+							<a rel="noopener" class="nav-link" href="{base}/downloads"  title= "Donwloads">
 								<i class="bi bi-download"></i><span class="d-lg-none ms-2">{$t('header.downloads')}</span>
 							</a>
 						</li>
@@ -73,16 +73,15 @@
 							</a>
 						</li>
 						<li class="nav-item nav-item dropdown">
- 								<a 
-									class="nav-link dropdown-toggle" 
-									href="#" 
-									role="button" 
-									title= "Social links"
-									on:click|preventDefault={toggleDropdown}
+ 								<button
+									class="nav-link dropdown-toggle"
+									type="button"
+									title="Social links"
 									aria-expanded={isDropdownOpen}
+									on:click={toggleDropdown}
 								>
 									<i class="bi bi-share"></i> <!-- Иконка для открытия dropdown -->
-								</a>
+								</button>
 								
 								<ul class="dropdown-menu {isDropdownOpen ? 'show' : ''}" style="right: 0; left: auto;">
 									{#each socialLinks as link}
@@ -136,36 +135,3 @@
 		</div>
 	</div>
 </header>
-
-
-
-
-
-
-<style>
-  .dropdown-menu {
-    position: absolute;
-    z-index: 1000;
-    background: white;
-    border: 1px solid rgba(0,0,0,.15);
-    border-radius: 0.25rem;
-    padding: 0.5rem 0;
-    list-style: none;
-  }
-  
-  .dropdown-item {
-    display: flex;
-    align-items: center;
-    padding: 0.25rem 1.5rem;
-    color: #212529;
-    text-decoration: none;
-  }
-  
-  .dropdown-item:hover {
-    background-color: #f8f9fa;
-  }
-  
-  .show {
-    display: block;
-  }
-</style>
