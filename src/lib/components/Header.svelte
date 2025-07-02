@@ -42,7 +42,7 @@
 	<div class="header-content">
 		<div class="navbar navbar-expand-lg fixed-top bg-primary" data-bs-theme="dark">
 			<div class="container">
-				<a href="{base}" class="navbar-brand" on:click={closeMobileMenu}>
+				<a href="{base}/" class="navbar-brand" on:click={closeMobileMenu}>
 					mRemoteNG
 				</a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="true" aria-label="Toggle navigation">
