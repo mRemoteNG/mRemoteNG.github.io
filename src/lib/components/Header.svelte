@@ -7,7 +7,7 @@
 
 	// Menu items now use translation keys
 	const menuItems = [
-		{ titleKey: 'header.about', path: `` },
+		{ titleKey: 'header.about', path: `/` },
 		{ titleKey: 'header.feed', path: `/feed` },
 		{ titleKey: 'header.contribute', path: `/contribute` },
 		{ titleKey: 'header.contact', path: `/contact` },
