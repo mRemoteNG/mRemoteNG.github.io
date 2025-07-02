@@ -2,7 +2,7 @@
 
 
 @import url(//db.onlinewebfonts.com/c/8eea7efc212b74ac89dcf5cd3d0e0572?family=HandelGotDBol); 
-@import url(//https://fonts.cdnfonts.com/css/handelgotdbol);
+
 
 body {
 	
@@ -43,4 +43,13 @@ li {
      list-style-type: none;
     display: inline-block;
     margin-right: 20px;
+}
+
+section {
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+section.d-flex {
+  min-height: 100vh;
 }

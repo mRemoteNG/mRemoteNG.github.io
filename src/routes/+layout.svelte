@@ -45,7 +45,7 @@
 </svelte:head>
 
 
-<div class="app-layout">
+<div class="app-layout container">
 	<Header />
 	<main>
 		{@render children()}

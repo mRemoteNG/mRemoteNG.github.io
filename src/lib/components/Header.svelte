@@ -8,7 +8,7 @@
 	// Menu items now use translation keys
 	const menuItems = [
 		{ titleKey: 'header.about', path: '/' },
-		{ titleKey: 'header.news', path: '/about' },
+		{ titleKey: 'header.feed', path: '/feed' },
 		{ titleKey: 'header.contribute', path: '/contribute' },
 		{ titleKey: 'header.contact', path: '/contact' },
 		
@@ -73,8 +73,6 @@
 							</a>
 						</li>
 						<li class="nav-item nav-item dropdown">
-
-
  								<a 
 									class="nav-link dropdown-toggle" 
 									href="#" 
@@ -90,14 +88,14 @@
 									{#each socialLinks as link}
 									<li>
 										<a 
-										class="dropdown-item" 
-										target="_blank" 
-										rel="noopener" 
-										title ={link.tooltip}
- 										href={link.url}
+											class="dropdown-item" 
+											target="_blank" 
+											rel="noopener" 
+											title ={link.tooltip}
+											href={link.url}
 										>
-										<i class={link.icon}></i>
-										<span class="ms-2">{link.name}</span>
+											<i class={link.icon}></i>
+											<span class="ms-2">{link.name}</span>
 										</a>
 									</li>
 									{/each}
