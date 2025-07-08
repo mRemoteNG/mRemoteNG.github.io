@@ -33,6 +33,13 @@
 	<link rel="apple-touch-icon" sizes="180x180" href="{assets}/favicon/apple-touch-icon.png" />
 	<link rel="manifest" href="{assets}/favicon/site.webmanifest" />
 	
+	<!-- Bootstrap CSS -->
+	<link
+		rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+		integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+		crossorigin="anonymous" />
+
 	<!-- Bootswatch: Darkly theme -->
 	<link
 		rel="stylesheet"
