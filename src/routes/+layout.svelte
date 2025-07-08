@@ -27,6 +27,14 @@
 	<meta name="author" content="mRemoteNG Team" />
 
 	<link 
+		rel="preload" 
+		href="/fonts/HandelGotDBol/HandelGotDBol.woff2" 
+		as="font" 
+		type="font/woff2" 
+		crossorigin="anonymous"
+	/>
+
+	<link 
 		rel="icon" 
 		type="image/png" 
 		href="{assets}/favicon/favicon-96x96.png" 

@@ -1,10 +1,19 @@
 
 
-
-@import url(//db.onlinewebfonts.com/c/8eea7efc212b74ac89dcf5cd3d0e0572?family=HandelGotDBol); 
+@font-face {
+  font-family: "HandelGotDBol";
+  src: url("/fonts/HandelGotDBol/HandelGotDBol.eot"),
+       url("/fonts/HandelGotDBol/HandelGotDBol.woff2") format("woff2"),
+       url("/fonts/HandelGotDBol/HandelGotDBol.woff") format("woff"),
+       url("/fonts/HandelGotDBol/HandelGotDBol.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 
 body {  
+  font-family: 'HandelGotDBol', sans-serif;
   background: #f0f0f0;
   font-family: 'Open Sans', sans-serif;
   margin: 0;
