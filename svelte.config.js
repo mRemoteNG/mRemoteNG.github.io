@@ -7,6 +7,7 @@ const config = {
     adapter: adapter({
       fallback: '200.html' // or 'index.html'
     }),
+    inlineStyleThreshold: 0, // Disables all inline styles
     paths: {
       base: dev ? '' : '/mRemoteNG.github.io' // replace with your actual repo name
     },
