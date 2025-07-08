@@ -7,7 +7,7 @@
     if (theme === 'dark') {
       const darkThemeLink = document.createElement('link');
       darkThemeLink.rel = 'stylesheet';
-      darkThemeLink.href = '{base}/css/darkly.css';
+      darkThemeLink.href = '/css/darkly.css';
       darkThemeLink.integrity = 'sha384-mXM+8P9BUwTXMBS6pzZaBva0g/sZsdn7ZdBimWWpF/1K2kVhkyjQrBznOTf31ui7';
       darkThemeLink.crossOrigin = 'anonymous';
       darkThemeLink.setAttribute('data-theme', 'dark');
