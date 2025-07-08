@@ -2,8 +2,7 @@
 
 @font-face {
   font-family: "HandelGotDBol";
-  src: url("/fonts/HandelGotDBol/HandelGotDBol.eot"),
-       url("/fonts/HandelGotDBol/HandelGotDBol.woff2") format("woff2"),
+  src: url("/fonts/HandelGotDBol/HandelGotDBol.woff2") format("woff2"),
        url("/fonts/HandelGotDBol/HandelGotDBol.woff") format("woff"),
        url("/fonts/HandelGotDBol/HandelGotDBol.ttf") format("truetype");
   font-weight: normal;
