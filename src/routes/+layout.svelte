@@ -28,7 +28,7 @@
 
 	<link 
 		rel="preload" 
-		href="/fonts/HandelGotDBol/HandelGotDBol.woff2" 
+		href="{base}/fonts/HandelGotDBol/HandelGotDBol.woff2" 
 		as="font" 
 		type="font/woff2" 
 		crossorigin="anonymous"
