@@ -72,6 +72,18 @@
 		integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" 
 		crossorigin="anonymous"
 	/>
+	<!-- Preload for faster execution -->
+  	<link 
+		rel="preload" 
+		href="{base}/js/theme-loader.js" 
+		as="script"
+	/>
+  
+  	<!-- Load with async to avoid render-blocking -->
+  	<script 
+		src="{base}/js/theme-loader.js" 
+		async>
+	</script>
 	
 </svelte:head>
 
