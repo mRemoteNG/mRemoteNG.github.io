@@ -64,8 +64,28 @@
 		href="{assets}/favicon/site.webmanifest" 
 	/>
 
+	<!-- Bootstrap CSS -->
+	<link
+		rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+		integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+		crossorigin="anonymous" />
 
+	<!-- Bootstrap Icons -->
+	<link
+		rel="stylesheet"
+		href="https://bootswatch.com/_vendor/bootstrap-icons/font/bootstrap-icons.min.css"
+		integrity="sha384-CK2SzKma4jA5H/MXDUU7i1TqZlCFaD4T01vtyDFvPlD97JQyS+IsSh1nI2EFbpyk"
+		crossorigin="anonymous" 
+	/>	
 	
+	<!-- Bootswatch: Darkly theme -->
+	<link
+		rel="stylesheet"
+		href="https://bootswatch.com/5/darkly/bootstrap.css"
+		integrity="sha384-mXM+8P9BUwTXMBS6pzZaBva0g/sZsdn7ZdBimWWpF/1K2kVhkyjQrBznOTf31ui7"
+		crossorigin="anonymous" />
+
 	<!-- Preload for faster execution -->
   	<link 
 		rel="preload" 
@@ -77,6 +97,13 @@
   	<script 
 		src="{base}/js/theme-loader.js" 
 		async>
+	</script>
+
+	<!-- Bootstrap JS -->
+	<script 
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js" 
+		integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK" 
+		crossorigin="anonymous">
 	</script>
 	
 </svelte:head>
