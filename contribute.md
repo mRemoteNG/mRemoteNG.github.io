@@ -185,13 +185,19 @@ If you find mRemoteNG useful and would like to contribute, it would be greatly a
     <script>
       function filterRecords(year) {
         const listItems = document.querySelectorAll("#records-list li");
-        listItems.forEach(item => {
-          if (item.getAttribute("data-year") === year) {
-            item.style.display = "block"; // Show matching items
-          } else {
-            item.style.display = "none"; // Hide non-matching items
-          }
-        });
+        if (year === "all") {
+          listItems.forEach(item => {
+            item.style.display = "block"; // Show all items
+          });
+        } else {
+          listItems.forEach(item => {
+            if (item.getAttribute("data-year") === year) {
+              item.style.display = "block"; // Show matching items
+            } else {
+              item.style.display = "none"; // Hide non-matching items
+            }
+          });
+        }
       }
       // Default view: Show all records
       window.onload = () => filterRecords("2025"); // Or set to "all" to show everything initially
