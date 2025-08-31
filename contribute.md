@@ -186,7 +186,7 @@ If you find mRemoteNG useful and would like to contribute, it would be greatly a
       function filterRecords(year) {
         const listItems = document.querySelectorAll("#records-list li");
         listItems.forEach(item => {
-          if (item.getAttribute("data-year") === year || item.textContent.includes(year)) {
+          if (item.getAttribute("data-year") === year) {
             item.style.display = "block"; // Show matching items
           } else {
             item.style.display = "none"; // Hide non-matching items
