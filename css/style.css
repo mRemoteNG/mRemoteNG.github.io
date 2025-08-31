@@ -24,14 +24,14 @@
 .pagination button {
   margin: 5px;
   padding: 10px;
-  background-color: #007bff;
+  background-color: var(--primary-color);
   color: white;
   border: none;
   cursor: pointer;
 }
 
 .pagination button:hover {
-  background-color: #0056b3;
+  background-color: var(--primary-hover-color);
 }
 
 #records-list li {
