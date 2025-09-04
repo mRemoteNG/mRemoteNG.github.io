@@ -63,7 +63,7 @@
 					<!-- Right side of the navbar -->
 					<ul class="navbar-nav ms-md-auto">
 						<li class="nav-item">
-							<a rel="noopener" class="nav-link" href="{base}/downloads"  title= "Downloads">
+							<a rel="noopener" class="nav-link" href="{base}/downloads"  title= "Donwloads">
 								<i class="bi bi-download"></i><span class="d-lg-none ms-2">{$t('header.downloads')}</span>
 							</a>
 						</li>
