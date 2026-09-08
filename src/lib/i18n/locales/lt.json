@@ -1,0 +1,84 @@
+{
+  "siteTitle": "mRemoteNG",
+  "header": {
+    "about": "Apie",
+    "feed": "Naujienos",
+    "contribute": "Prisidėti",
+    "contact": "Kontaktai",
+    "downloads": "Atsisiuntimai",
+    "github": "GitHub",
+    "community": "Bendruomenė",
+    "documentation": "Dokumentacija"
+  },
+  "footer": {
+    "rights": "Visos teisės saugomos. Prižiūrėtojas Dimitrij Gorodeckij"
+  },
+  "homepage": {
+    "intro1": "mRemoteNG (Multi-Remote Next Generation), sutrumpintai mR, yra atvirojo kodo nuotolinių ryšių tvarkyklė su skirtukais, skirta Windows.",
+    "intro2": "Ji leidžia patogiai valdyti nuotolinius ryšius vienoje vietoje ir palaiko RDP, VNC, SSH, HTTP/S ir kitus protokolus.",
+    "sliderTitle": "Projekto ekrano nuotraukos"
+  },
+  "feed": {
+    "title": "Kūrėjų tinklaraštis",
+    "empty": "Įrašų dar nėra."
+  },
+  "downloads": {
+    "title": "Atsisiuntimai",
+    "subtitle": "Multi-Remote Next Generation Connection Manager",
+    "description": "Pasirinkite kanalą žemiau, kad atsisiųstumėte mRemoteNG diegimo arba nešiojamąjį (portable) paketą.",
+    "stable": "Stabili",
+    "preview": "Priešperžiūra",
+    "nightly": "Naktinis leidimas (Nightly)",
+    "msi": "MSI",
+    "zip": "ZIP",
+    "changelog": "Pakeitimų sąrašas",
+    "requirements": "Rodyti diegimo reikalavimus"
+  },
+  "contactPage": {
+    "title": "Kontaktai",
+    "heading": "Susisiekite su mumis",
+    "intro": "Susisiekite su mRemoteNG komanda.",
+    "formName": "Vardas",
+    "formEmail": "El. paštas",
+    "formMessage": "Žinutė",
+    "formSend": "Siųsti žinutę",
+    "sending": "Siunčiama žinutė...",
+    "formAlert": "Jūsų žinutė sėkmingai išsiųsta į support@mremote.org!",
+    "errRequired": "Visi laukai (Vardas, El. paštas, Žinutė) yra privalomi.",
+    "errMinWords": "Žinutę turi sudaryti bent 5 žodžiai.",
+    "errSend": "Nepavyko išsiųsti žinutės. Bandykite vėliau."
+  },
+  "contributePage": {
+    "title": "Prisidėti prie mRemoteNG",
+    "heading": "Prisidėjimas ir Parama",
+    "intro": "mRemoteNG yra atvirojo kodo programa, kuriamas bendruomenės. Yra daug būdų prisidėti prie projekto!",
+    "donateTitle": "Finansinė parama",
+    "donateText": "Aukos padeda padengti projekto infrastruktūros, kūrimo, prieglobos (hosting) ir AI programavimo įrankių (pvz., GitHub Copilot / LLM) prenumeratų išlaidas, kurios pagreitina programos plėtrą.",
+    "donateDisclaimer": "mRemoteNG yra atvirojo kodo projektas, aukoms mokesčių lengvatos netaikomos.",
+    "paypalUSD": "Parama USD ($)",
+    "paypalEUR": "Parama EUR (€)",
+    "paypalGBP": "Parama GBP (£)",
+    "paypalRUB": "Parama RUB (₽)",
+    "kofi": "Pavaišinti kava per Ko-fi",
+    "codeTitle": "Programavimo kodas",
+    "codeText": "Apsilankykite GitHub saugykloje, peržiūrėkite užduotis bei klaidas ir pateikite Pull Request.",
+    "translateTitle": "Vertimas",
+    "translateText": "Padėkite išversti mRemoteNG sąsają bei dokumentaciją į įvairias kalbas.",
+    "ideasTitle": "Idėjos ir Pasiūlymai",
+    "ideasText": "Jei turite idėjų ar pasiūlymų, susisiekite su mumis per kontaktų puslapį.",
+    "ideasLink": "Susisiekti",
+    "thanksTitle": "Didelis ačiū visiems rėmėjams ir kūrėjams!",
+    "thanksText": "Nuoširdžiai dėkojame visiems, kurie teikia kodo patobulinimus, praneša apie klaidas, verčia ir remia projektą finansiskai.",
+    "backersTitle": "Projekto rėmėjai ir pagalbininkai",
+    "backersSubtitle": "Ačiū mūsų bendruomenės nariams ir rėmėjams per visus gyvavimo metus."
+  },
+  "languages": {
+    "en": "English",
+    "de": "Deutsch",
+    "ru": "Русский",
+    "lt": "Lietuvių"
+  },
+  "themeSwitcher": {
+    "toggleLabel": "Perjungti temą"
+  }
+}

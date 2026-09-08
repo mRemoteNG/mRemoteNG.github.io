@@ -1,17 +1,16 @@
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
-const dev = process.argv.includes('dev');
 const config = {
   kit: {
     adapter: adapter({
-      fallback: '200.html' // or 'index.html'
+      fallback: '200.html'
     }),
-    inlineStyleThreshold: 0, // Disables all inline styles
+    inlineStyleThreshold: 0,
     paths: {
-      base: dev ? '' : '/mRemoteNG.github.io' // replace with your actual repo name
+      base: process.env.BASE_PATH || ''
     },
-    appDir: 'app' // avoids issues with GitHub Pages and underscores
+    appDir: 'app'
   },
   preprocess: vitePreprocess()
 };
