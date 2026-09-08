@@ -156,7 +156,15 @@
 
 	<!-- Mobile Menu Dropdown -->
 	{#if mobileMenuOpen}
-		<div class="lg:hidden border-t border-slate-300 dark:border-slate-800 bg-[#CBD5E1] dark:bg-[#0F172A] px-4 pt-3 pb-6 space-y-3">
+		<div class="lg:hidden border-t border-slate-300 dark:border-slate-800 bg-[#CBD5E1] dark:bg-[#0F172A] px-4 pt-3 pb-24 space-y-3 max-h-[calc(100vh-4rem)] overflow-y-auto shadow-2xl">
+			<!-- Language Bar at top of Mobile Drawer for instant access -->
+			<div class="flex items-center justify-between pb-2 border-b border-slate-300 dark:border-slate-800">
+				<span class="text-xs font-semibold text-slate-600 dark:text-slate-400 uppercase tracking-wider">
+					Language
+				</span>
+				<LanguageSwitcher />
+			</div>
+
 			<nav class="flex flex-col gap-1">
 				{#each menuItems as item}
 					<a
@@ -205,7 +213,7 @@
 				</a>
 
 				<div class="pt-2 border-t border-slate-300 dark:border-slate-800 flex items-center justify-between">
-					<LanguageSwitcher />
+					<LanguageSwitcher dropUp={true} />
 				</div>
 			</div>
 		</div>

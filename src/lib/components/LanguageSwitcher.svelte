@@ -7,6 +7,8 @@
 	import flagRu from '$lib/i18n/flags/flag_russia.png';
 	import flagLt from '$lib/i18n/flags/flag_lithuania.png';
 
+	export let dropUp = false;
+
 	const flags: Record<string, string> = {
 		en: flagEn,
 		de: flagDe,
@@ -50,11 +52,11 @@
 			{/if}
 			<span class="lang-text truncate">{$languageNames[$currentLocale]}</span>
 		</div>
-		<i class="bi bi-chevron-down text-xs text-slate-600 dark:text-slate-300 shrink-0 ml-1"></i>
+		<i class="bi {isOpen ? (dropUp ? 'bi-chevron-down' : 'bi-chevron-up') : (dropUp ? 'bi-chevron-up' : 'bi-chevron-down')} text-xs text-slate-600 dark:text-slate-300 shrink-0 ml-1"></i>
 	</button>
 
 	{#if isOpen}
-		<div class="absolute right-0 top-full pt-1.5 w-40 z-50">
+		<div class="absolute right-0 {dropUp ? 'bottom-full pb-1.5' : 'top-full pt-1.5'} w-40 z-50">
 			<div class="bg-slate-200 dark:bg-[#0F172A] border border-slate-300 dark:border-slate-800 rounded-xl shadow-2xl py-1">
 				{#each availableLocales as localeCode (localeCode)}
 					<button
