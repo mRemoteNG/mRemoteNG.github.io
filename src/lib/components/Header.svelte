@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import { base } from '$app/paths';
+	import { onMount } from 'svelte';
 	import ThemeSwitcher from './ThemeSwitcher.svelte';
 	import LanguageSwitcher from './LanguageSwitcher.svelte';
 	import { t } from '$lib/i18n/store';
@@ -14,6 +15,7 @@
 
 	let mobileMenuOpen = false;
 	let isDropdownOpen = false;
+	let dropdownRef: HTMLDivElement;
 
 	function toggleMobileMenu() {
 		mobileMenuOpen = !mobileMenuOpen;
@@ -32,6 +34,19 @@
 	const toggleDropdown = () => {
 		isDropdownOpen = !isDropdownOpen;
 	};
+
+	function handleClickOutside(event: MouseEvent) {
+		if (dropdownRef && !dropdownRef.contains(event.target as Node)) {
+			isDropdownOpen = false;
+		}
+	}
+
+	onMount(() => {
+		window.addEventListener('click', handleClickOutside);
+		return () => {
+			window.removeEventListener('click', handleClickOutside);
+		};
+	});
 </script>
 
 <header class="fixed top-0 left-0 right-0 z-50 bg-[#CBD5E1]/95 dark:bg-[#0F172A]/95 backdrop-blur-md border-b border-slate-300 dark:border-slate-800 text-slate-800 dark:text-slate-100 shadow-sm">
@@ -75,7 +90,7 @@
 				</a>
 
 				<!-- Community / Social Dropdown (Reddit, X, Element Chat) -->
-				<div class="relative">
+				<div class="relative" bind:this={dropdownRef} on:mouseleave={() => (isDropdownOpen = false)}>
 					<button
 						type="button"
 						class="px-1.5 py-1 xl:px-2 xl:py-1.5 rounded-lg text-slate-700 hover:text-slate-900 hover:bg-slate-300/60 dark:text-slate-300 dark:hover:text-white dark:hover:bg-slate-800/70 transition-colors flex items-center gap-1 text-xs xl:text-sm font-medium cursor-pointer whitespace-nowrap"
