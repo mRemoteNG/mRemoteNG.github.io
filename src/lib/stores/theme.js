@@ -1,32 +1,33 @@
 import { writable } from 'svelte/store';
 
-// Функция для безопасного доступа к localStorage
+const isBrowser = typeof window !== 'undefined';
+
 const getInitialTheme = () => {
-    if (typeof window === 'undefined') return 'light'; // Для SSR
-    
+    if (!isBrowser) return 'light';
+
     const storedTheme = localStorage.getItem('theme');
-    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    return storedTheme || (systemPrefersDark ? 'dark' : 'light');
+    if (storedTheme === 'light' || storedTheme === 'dark') {
+        return storedTheme;
+    }
+
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+};
+
+const applyTheme = (value) => {
+    if (!isBrowser) return;
+
+    document.documentElement.classList.toggle('dark', value === 'dark');
+    localStorage.setItem('theme', value);
 };
 
 export const theme = writable(getInitialTheme());
 
 export function toggleTheme() {
-    theme.update(current => {
-        const newTheme = current === 'light' ? 'dark' : 'light';
-        
-        if (typeof window !== 'undefined') {
-            localStorage.setItem('theme', newTheme);
-            document.documentElement.classList.toggle('dark', newTheme === 'dark');
-        }
-        
-        return newTheme;
-    });
+    theme.update((current) => (current === 'dark' ? 'light' : 'dark'));
 }
 
-// Инициализация только на клиенте
-if (typeof window !== 'undefined') {
-    theme.subscribe($theme => {
-        document.documentElement.classList.toggle('dark', $theme === 'dark');
+if (isBrowser) {
+    theme.subscribe((value) => {
+        applyTheme(value);
     });
 }

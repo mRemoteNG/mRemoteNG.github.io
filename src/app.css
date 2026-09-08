@@ -1,88 +1,48 @@
 
+@import "tailwindcss";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@font-face {
+  font-family: "HandelGot";
+  src: url("/fonts/HandelGotDBol/HandelGotDBol.woff2") format("woff2"),
+       url("/fonts/HandelGotDBol/HandelGotDBol.woff") format("woff"),
+       url("/fonts/HandelGotDBol/HandelGotDBol.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 @font-face {
   font-family: "HandelGotDBol";
   src: url("/fonts/HandelGotDBol/HandelGotDBol.woff2") format("woff2"),
        url("/fonts/HandelGotDBol/HandelGotDBol.woff") format("woff"),
        url("/fonts/HandelGotDBol/HandelGotDBol.ttf") format("truetype");
-  font-weight: normal;
+  font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
 
-
 body {  
-  font-family: 'HandelGotDBol', sans-serif;
-  background: #f0f0f0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', system-ui, -apple-system, sans-serif;
   margin: 0;
   padding: 0;
-	margin: 0;
-	color: #fff;
-}
-
-
-#ssl-seal img {
-    cursor: pointer;
-    width: 211px;
-    height: 64px;
-}
-
-.navbar-brand {
-	font-family: 'HandelGotDBol';
-}
-
-.navbar-brand:first-letter {
-	color: #4f8aff;
-}
-
-li:hover{
-	cursor:pointer;
-}
-
-ul {
-    width:100%;
-    margin-left: 0;
-    margin-bottom: 0
-} 
-
-li { 
-     list-style-type: none;
-    display: inline-block;
-    margin-right: 20px;
-}
-
-section {
-  max-height: 100%;
-  overflow-y: auto;
-}
-
-section.d-flex {
+  background-color: #E2E8F0;
+  color: #1E293B;
   min-height: 100vh;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
+.dark body {
+  background-color: #1E293B;
+  color: #F1F5F9;
+}
 
-  .dropdown-menu {
-    position: absolute;
-    z-index: 1000;
-    background: white;
-    border: 1px solid rgba(0,0,0,.15);
-    border-radius: 0.25rem;
-    padding: 0.5rem 0;
-    list-style: none;
-  }
-  
-  .dropdown-item {
-    display: flex;
-    align-items: center;
-    padding: 0.25rem 1.5rem;
-    color: #212529;
-    text-decoration: none;
-  }
-  
-  .dropdown-item:hover {
-    background-color: #f8f9fa;
-  }
-  
-  .show {
-    display: block;
-  }
+.brand-font {
+  font-family: 'HandelGot', 'HandelGotDBol', sans-serif;
+  font-weight: 400 !important; /* Prevent browser synthetic/faux-bolding */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}

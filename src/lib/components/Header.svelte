@@ -1,20 +1,19 @@
-<script>
+<script lang="ts">
 	import { page } from '$app/state';
 	import { base } from '$app/paths';
 	import ThemeSwitcher from './ThemeSwitcher.svelte';
 	import LanguageSwitcher from './LanguageSwitcher.svelte';
 	import { t } from '$lib/i18n/store';
 
-	// Menu items now use translation keys
 	const menuItems = [
 		{ titleKey: 'header.about', path: `/` },
 		{ titleKey: 'header.feed', path: `/feed` },
 		{ titleKey: 'header.contribute', path: `/contribute` },
-		{ titleKey: 'header.contact', path: `/contact` },
-
+		{ titleKey: 'header.contact', path: `/contact` }
 	];
 
 	let mobileMenuOpen = false;
+	let isDropdownOpen = false;
 
 	function toggleMobileMenu() {
 		mobileMenuOpen = !mobileMenuOpen;
@@ -23,115 +22,175 @@
 		mobileMenuOpen = false;
 	}
 
-  let isDropdownOpen = false;
+	const socialLinks = [
+		{ name: 'Discussions', icon: 'bi bi-chat-square-text-fill', url: 'https://github.com/orgs/mRemoteNG/discussions', tooltip: 'GitHub Discussions' },
+		{ name: 'Reddit', icon: 'bi bi-reddit', url: 'https://www.reddit.com/r/mRemoteNG/', tooltip: 'Reddit' },
+		{ name: 'X (Twitter)', icon: 'bi bi-twitter-x', url: 'https://x.com/mremoteng', tooltip: 'X' },
+		{ name: 'Element Chat', icon: 'bi bi-chat-dots-fill', url: 'https://matrix.to/#/#mRemoteNG_PublicChat:gitter.im', tooltip: 'Element Chat' }
+	];
 
-  const socialLinks = [
-    { name: 'Twitter', icon: 'bi bi-twitter', url: 'https://x.com/mremoteng', tooltip: "X ( Twitter)" },
-    { name: 'Telegram', icon: 'bi bi-telegram', url: 'https://t.me/yourchannel', tooltip: "Tg" },
-    { name: 'Reddit', icon: 'bi bi-reddit', url: 'https://reddit.com/yourpage', tooltip:"Reddit" }
-    
-  ];
-    const toggleDropdown = () => {
-    isDropdownOpen = !isDropdownOpen;
-  };
-
-	
+	const toggleDropdown = () => {
+		isDropdownOpen = !isDropdownOpen;
+	};
 </script>
 
-<header class="site-header">
-	<div class="header-content">
-		<div class="navbar navbar-expand-lg fixed-top bg-primary" data-bs-theme="dark">
-			<div class="container">
-				<a href="{base}/" class="navbar-brand" on:click={closeMobileMenu}>
-					mRemoteNG
+<header class="fixed top-0 left-0 right-0 z-50 bg-[#CBD5E1]/95 dark:bg-[#0F172A]/95 backdrop-blur-md border-b border-slate-300 dark:border-slate-800 text-slate-800 dark:text-slate-100 shadow-sm">
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		<div class="flex items-center justify-between h-16">
+			<!-- Left Side: Brand + Left Menu -->
+			<div class="flex items-center gap-1 lg:gap-1.5 xl:gap-2 shrink-0">
+				<!-- Brand Logo -->
+				<a href="{base}/" class="group brand-font text-2xl tracking-wide flex items-center gap-0.5 whitespace-nowrap shrink-0 pr-1 lg:pr-2" on:click={closeMobileMenu}>
+					<span class="text-blue-600 dark:text-[#f4a261] group-hover:text-blue-500 dark:group-hover:text-[#f6b27d] transition-colors">m</span><span class="text-slate-900 dark:text-white group-hover:text-blue-400 dark:group-hover:text-[#f8c499] transition-colors">RemoteNG</span>
 				</a>
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="true" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				
-				<div class="navbar-collapse collapse show" id="navbarResponsive">
-					<!-- Left side of the navbar -->
-					<ul class="navbar-nav">
-						{#each menuItems as item}
-							<li class='nav-item' data-bs-theme="light">
-								<a class="nav-link" href="{base}{item.path}">
-									{$t(item.titleKey)}
-								</a>
-							</li>
-						{/each}
-					</ul>
-					<!-- Right side of the navbar -->
-					<ul class="navbar-nav ms-md-auto">
-						<li class="nav-item">
-							<a rel="noopener" class="nav-link" href="{base}/downloads"  title= "Downloads">
-								<i class="bi bi-download"></i><span class="d-lg-none ms-2">{$t('header.downloads')}</span>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a target="_blank" rel="noopener" class="nav-link" href="https://github.com/mRemoteNG/mRemoteNG" title= "GitHub" >
-								<i class="bi bi-github"></i><span class="d-lg-none ms-2">{$t('header.github')}</span>
-							</a>
-						</li>
-						<li class="nav-item nav-item dropdown">
- 								<button
-									class="nav-link dropdown-toggle"
-									type="button"
-									title="Social links"
-									aria-expanded={isDropdownOpen}
-									on:click={toggleDropdown}
-								>
-									<i class="bi bi-share"></i> <!-- Иконка для открытия dropdown -->
-								</button>
-								
-								<ul class="dropdown-menu {isDropdownOpen ? 'show' : ''}" style="right: 0; left: auto;">
-									{#each socialLinks as link}
-									<li>
-										<a 
-											class="dropdown-item" 
-											target="_blank" 
-											rel="noopener" 
-											title ={link.tooltip}
-											href={link.url}
-										>
-											<i class={link.icon}></i>
-											<span class="ms-2">{link.name}</span>
-										</a>
-									</li>
-									{/each}
-								</ul>
- 
 
-						</li>
-						<li class="nav-item">
-							<a target="_blank" rel="noopener" class="nav-link" href="https://mremoteng.readthedocs.io/" title = "Docs"><i class="bi-file-text-fill"></i><span class="d-lg-none ms-2">{$t('header.documentation')}</span></a>
-						</li>
-						<li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
-							<div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
-							<hr class="d-lg-none my-2 text-white-50">
-						</li>
-						<LanguageSwitcher />
-						<li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
-							<div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
-							<hr class="d-lg-none my-2 text-white-50">
-						</li>
-						<ThemeSwitcher />
-					</ul>
-				</div>
-				{#if mobileMenuOpen}
-					<div class="mobile-nav" role="dialog" aria-modal="true">
-						<button class="mobile-menu-close" on:click={closeMobileMenu} aria-label="Close menu">×</button>
-							{#each menuItems as item}
-								<a 
-									href="{base}{item.path}" 
-									on:click={closeMobileMenu}
-									class:active={page.url.pathname === (base + item.path).replace(/\/$/, '') || (page.url.pathname === base && item.path === '/')}
+				<!-- Left Aligned Navigation Menu -->
+				<nav class="hidden lg:flex items-center gap-0">
+					{#each menuItems as item}
+						<a
+							href="{base}{item.path}"
+							class="px-1.5 py-1 xl:px-2 xl:py-1.5 rounded-lg text-xs xl:text-sm font-medium text-slate-700 hover:text-slate-900 hover:bg-slate-300/60 dark:text-slate-300 dark:hover:text-white dark:hover:bg-slate-800/70 transition-colors whitespace-nowrap"
+							class:text-blue-600={page.url.pathname === (base + item.path).replace(/\/$/, '') || (page.url.pathname === base && item.path === '/')}
+							class:dark:text-[#f4a261]={page.url.pathname === (base + item.path).replace(/\/$/, '') || (page.url.pathname === base && item.path === '/')}
+							class:font-semibold={page.url.pathname === (base + item.path).replace(/\/$/, '') || (page.url.pathname === base && item.path === '/')}
+						>
+							{$t(item.titleKey)}
+						</a>
+					{/each}
+				</nav>
+			</div>
+
+			<!-- Right Side Actions Menu -->
+			<div class="hidden lg:flex items-center gap-0.5 xl:gap-1 shrink-0">
+				<!-- Download -->
+				<a rel="noopener" class="px-1.5 py-1 xl:px-2 xl:py-1.5 rounded-lg text-slate-700 hover:text-slate-900 hover:bg-slate-300/60 dark:text-slate-300 dark:hover:text-white dark:hover:bg-slate-800/70 transition-colors flex items-center gap-1 text-xs xl:text-sm font-medium whitespace-nowrap" href="{base}/downloads" title="Download">
+					<i class="bi bi-download text-base xl:text-lg text-blue-600 dark:text-[#f4a261]"></i>
+					<span>{$t('header.downloads')}</span>
+				</a>
+
+				<!-- GitHub -->
+				<a target="_blank" rel="noopener" class="px-1.5 py-1 xl:px-2 xl:py-1.5 rounded-lg text-slate-700 hover:text-slate-900 hover:bg-slate-300/60 dark:text-slate-300 dark:hover:text-white dark:hover:bg-slate-800/70 transition-colors flex items-center gap-1 text-xs xl:text-sm font-medium whitespace-nowrap" href="https://github.com/mRemoteNG/mRemoteNG" title="GitHub">
+					<i class="bi bi-github text-base xl:text-lg text-blue-600 dark:text-[#f4a261]"></i>
+					<span>GitHub</span>
+				</a>
+
+				<!-- Community / Social Dropdown (Reddit, X, Element Chat) -->
+				<div class="relative">
+					<button
+						type="button"
+						class="px-1.5 py-1 xl:px-2 xl:py-1.5 rounded-lg text-slate-700 hover:text-slate-900 hover:bg-slate-300/60 dark:text-slate-300 dark:hover:text-white dark:hover:bg-slate-800/70 transition-colors flex items-center gap-1 text-xs xl:text-sm font-medium cursor-pointer whitespace-nowrap"
+						title={$t('header.community')}
+						aria-expanded={isDropdownOpen}
+						on:click={toggleDropdown}
+					>
+						<i class="bi bi-share text-base xl:text-lg text-blue-600 dark:text-[#f4a261]"></i>
+						<span>{$t('header.community')}</span>
+						<i class="bi {isDropdownOpen ? 'bi-chevron-up' : 'bi-chevron-down'} text-xs text-slate-500 dark:text-slate-400"></i>
+					</button>
+
+					{#if isDropdownOpen}
+						<div class="absolute right-0 mt-2 w-48 bg-slate-200 dark:bg-[#0F172A] border border-slate-300 dark:border-slate-800 rounded-xl shadow-2xl py-1 z-50">
+							{#each socialLinks as link}
+								<a
+									class="flex items-center gap-3 px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-300/60 hover:text-slate-900 dark:text-slate-200 dark:hover:bg-slate-800 dark:hover:text-white transition-colors whitespace-nowrap"
+									target="_blank"
+									rel="noopener"
+									title={link.tooltip}
+									href={link.url}
+									on:click={() => (isDropdownOpen = false)}
 								>
-									{$t(item.titleKey)}
+									<i class="{link.icon} text-blue-600 dark:text-[#f4a261]"></i>
+									<span>{link.name}</span>
 								</a>
 							{/each}
-					</div>
-				{/if}
+						</div>
+					{/if}
+				</div>
+
+				<!-- Docs -->
+				<a target="_blank" rel="noopener" class="px-1.5 py-1 xl:px-2 xl:py-1.5 rounded-lg text-slate-700 hover:text-slate-900 hover:bg-slate-300/60 dark:text-slate-300 dark:hover:text-white dark:hover:bg-slate-800/70 transition-colors flex items-center gap-1 text-xs xl:text-sm font-medium whitespace-nowrap" href="https://mremoteng.readthedocs.io/en/v1.77.3-dev/" title="Docs">
+					<i class="bi bi-file-text-fill text-base xl:text-lg text-blue-600 dark:text-[#f4a261]"></i>
+					<span>{$t('header.documentation')}</span>
+				</a>
+
+				<div class="h-5 w-px bg-slate-400/40 dark:bg-white/20 mx-0.5 xl:mx-1"></div>
+
+				<LanguageSwitcher />
+
+				<div class="h-5 w-px bg-slate-400/40 dark:bg-white/20 mx-0.5 xl:mx-1"></div>
+
+				<ThemeSwitcher />
+			</div>
+
+			<!-- Mobile menu button -->
+			<div class="flex items-center gap-2 lg:hidden">
+				<ThemeSwitcher />
+				<button
+					type="button"
+					on:click={toggleMobileMenu}
+					class="p-2 rounded-lg text-slate-700 hover:text-slate-900 hover:bg-slate-300/60 dark:text-slate-300 dark:hover:text-white dark:hover:bg-slate-800 focus:outline-none"
+					aria-label="Toggle navigation"
+				>
+					<i class="bi {mobileMenuOpen ? 'bi-x-lg' : 'bi-list'} text-2xl"></i>
+				</button>
 			</div>
 		</div>
 	</div>
+
+	<!-- Mobile Menu Dropdown -->
+	{#if mobileMenuOpen}
+		<div class="lg:hidden border-t border-slate-300 dark:border-slate-800 bg-[#CBD5E1] dark:bg-[#0F172A] px-4 pt-3 pb-6 space-y-3">
+			<nav class="flex flex-col gap-1">
+				{#each menuItems as item}
+					<a
+						href="{base}{item.path}"
+						on:click={closeMobileMenu}
+						class="px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-300/60 dark:text-slate-200 dark:hover:bg-slate-800 transition-colors"
+						class:text-blue-600={page.url.pathname === (base + item.path).replace(/\/$/, '') || (page.url.pathname === base && item.path === '/')}
+						class:dark:text-[#f4a261]={page.url.pathname === (base + item.path).replace(/\/$/, '') || (page.url.pathname === base && item.path === '/')}
+					>
+						{$t(item.titleKey)}
+					</a>
+				{/each}
+			</nav>
+
+			<div class="pt-3 border-t border-slate-300 dark:border-slate-800 flex flex-col gap-2">
+				<a rel="noopener" class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-700 hover:bg-slate-300/60 dark:text-slate-200 dark:hover:bg-slate-800" href="{base}/downloads" on:click={closeMobileMenu}>
+					<i class="bi bi-download text-lg text-blue-600 dark:text-[#f4a261]"></i>
+					<span>{$t('header.downloads')}</span>
+				</a>
+				<a target="_blank" rel="noopener" class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-700 hover:bg-slate-300/60 dark:text-slate-200 dark:hover:bg-slate-800" href="https://github.com/mRemoteNG/mRemoteNG" on:click={closeMobileMenu}>
+					<i class="bi bi-github text-lg text-blue-600 dark:text-[#f4a261]"></i>
+					<span>GitHub</span>
+				</a>
+
+				<div class="border-t border-slate-300 dark:border-slate-800 pt-2 my-1">
+					<div class="px-3 py-1 text-xs font-semibold text-slate-600 dark:text-slate-400 uppercase tracking-wider">
+						{$t('header.community')}
+					</div>
+					{#each socialLinks as link}
+						<a
+							target="_blank"
+							rel="noopener"
+							class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-700 hover:bg-slate-300/60 dark:text-slate-200 dark:hover:bg-slate-800"
+							href={link.url}
+							on:click={closeMobileMenu}
+						>
+							<i class="{link.icon} text-lg text-blue-600 dark:text-[#f4a261]"></i>
+							<span>{link.name}</span>
+						</a>
+					{/each}
+				</div>
+
+				<a target="_blank" rel="noopener" class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-700 hover:bg-slate-300/60 dark:text-slate-200 dark:hover:bg-slate-800" href="https://mremoteng.readthedocs.io/en/v1.77.3-dev/" on:click={closeMobileMenu}>
+					<i class="bi bi-file-text-fill text-lg text-blue-600 dark:text-[#f4a261]"></i>
+					<span>{$t('header.documentation')}</span>
+				</a>
+
+				<div class="pt-2 border-t border-slate-300 dark:border-slate-800 flex items-center justify-between">
+					<LanguageSwitcher />
+				</div>
+			</div>
+		</div>
+	{/if}
 </header>

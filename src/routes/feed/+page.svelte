@@ -1,11 +1,29 @@
+<script lang="ts">
+	import { t } from '$lib/i18n/store';
+
+	let { data } = $props();
+</script>
+
 <svelte:head>
-	<title>Feed</title>
-	<meta name="feed" content="News feed" />
+	<title>{$t('feed.title')}</title>
+	<meta name="feed" content="Developer updates" />
 </svelte:head>
 
-<div class="text-column">
-	<p>
-		tbc
-	</p>
+<section class="feed-page py-6">
+	<h1 class="text-3xl font-bold mb-6 text-slate-900 dark:text-white">{$t('feed.title')}</h1>
 
-</div>
+	{#if data.posts.length === 0}
+		<p class="text-slate-600 dark:text-slate-400">{$t('feed.empty')}</p>
+	{:else}
+		<div class="space-y-6">
+			{#each data.posts as post}
+				<article class="p-6 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/80 shadow-sm space-y-3">
+					<div class="text-xs font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400">{post.date}</div>
+					<h2 class="text-2xl font-bold text-slate-900 dark:text-white">{post.title}</h2>
+					<p class="text-slate-700 dark:text-slate-300 font-medium">{post.summary}</p>
+					<div class="text-sm text-slate-700 dark:text-slate-300 whitespace-pre-line leading-relaxed pt-2 border-t border-slate-100 dark:border-slate-700/60">{post.content}</div>
+				</article>
+			{/each}
+		</div>
+	{/if}
+</section>

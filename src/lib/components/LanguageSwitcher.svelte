@@ -1,63 +1,57 @@
 <script lang="ts">
 	import { currentLocale, setLocale, availableLocales, languageNames } from '$lib/i18n/store';
-	
-	// Subscribe to the languageNames store to get its value
-	import { get } from 'svelte/store';
-	const languageNamesTyped: Record<string, string> = get(languageNames);
-	import { onMount } from 'svelte';
-	import { browser } from '$app/environment';
 
-	let showDropdown = false;
-	let switcherElement: HTMLElement | null = null; // To detect clicks outside
+	import flagEn from '$lib/i18n/flags/flag_great_britain.png';
+	import flagDe from '$lib/i18n/flags/flag_germany.png';
+	import flagRu from '$lib/i18n/flags/flag_russia.png';
+	import flagLt from '$lib/i18n/flags/flag_lithuania.png';
 
-	const flags = {
-		en: '🇬🇧', // Using UK flag for English example
-		ru: '🇷🇺',
-		de: '🇩🇪'
+	const flags: Record<string, string> = {
+		en: flagEn,
+		de: flagDe,
+		ru: flagRu,
+		lt: flagLt
 	};
 
-	function toggleDropdown() {
-		showDropdown = !showDropdown;
-	}
+	let isOpen = false;
 
-	function selectLocale(locale: string) {
-		setLocale(locale);
-		showDropdown = false;
+	function selectLocale(code: string) {
+		setLocale(code);
+		isOpen = false;
 	}
-	
-	function handleClickOutside(event: MouseEvent) {
-		if (browser && switcherElement && !switcherElement.contains(event.target as Node)) {
-			showDropdown = false;
-		}
-	}
-
-	onMount(() => {
-		if (browser) {
-			document.addEventListener('click', handleClickOutside, true);
-			return () => {
-				document.removeEventListener('click', handleClickOutside, true);
-			};
-		}
-	});
 </script>
 
-<li class="nav-item dropdown" data-bs-theme="light">
-	<button type="button" class="nav-link dropdown-toggle d-flex align-items-center" id="version-menu" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme">
-		<span class="lang-text">{languageNamesTyped[$currentLocale]}</span>
+<div class="relative inline-block text-left">
+	<button
+		type="button"
+		class="flex items-center justify-between gap-2 px-3 py-1.5 min-w-[135px] whitespace-nowrap rounded-lg bg-slate-300/80 dark:bg-white/10 hover:bg-slate-300 dark:hover:bg-white/20 border border-slate-400/50 dark:border-white/20 text-slate-800 dark:text-slate-200 text-sm font-medium transition-colors cursor-pointer"
+		id="language-menu"
+		aria-expanded={isOpen}
+		on:click={() => (isOpen = !isOpen)}
+	>
+		<div class="flex items-center gap-2 overflow-hidden">
+			{#if flags[$currentLocale]}
+				<img src={flags[$currentLocale]} alt={$currentLocale} class="w-5 h-3.5 object-cover rounded-xs shrink-0" />
+			{/if}
+			<span class="lang-text truncate">{$languageNames[$currentLocale]}</span>
+		</div>
+		<i class="bi bi-chevron-down text-xs text-slate-600 dark:text-slate-300 shrink-0 ml-1"></i>
 	</button>
-	<ul class="dropdown-menu">
-		{#each availableLocales as localeCode (localeCode)}
-			<li style="width: 150px;">
+
+	{#if isOpen}
+		<div class="absolute right-0 mt-2 w-40 bg-slate-200 dark:bg-[#0F172A] border border-slate-300 dark:border-slate-800 rounded-xl shadow-2xl py-1 z-50">
+			{#each availableLocales as localeCode (localeCode)}
 				<button
 					type="button"
 					on:click={() => selectLocale(localeCode)}
-					class:active-lang={$currentLocale === localeCode}
-					role="menuitem"
-					style="width: 100%; text-align: left; background: none; border: none; padding: 0.5em 1em; cursor: pointer;"
+					class="w-full flex items-center gap-2.5 px-3 py-2 text-sm text-left transition-colors cursor-pointer {$currentLocale === localeCode ? 'bg-blue-600 text-white dark:bg-[#f4a261] dark:text-slate-900 font-semibold' : 'text-slate-700 hover:bg-slate-300/60 dark:text-slate-200 dark:hover:bg-slate-800'}"
 				>
-					{languageNamesTyped[localeCode]}
+					{#if flags[localeCode]}
+						<img src={flags[localeCode]} alt={localeCode} class="w-5 h-3.5 object-cover rounded-xs" />
+					{/if}
+					<span>{$languageNames[localeCode]}</span>
 				</button>
-			</li>
-		{/each}
-	</ul>
-</li>
+			{/each}
+		</div>
+	{/if}
+</div>

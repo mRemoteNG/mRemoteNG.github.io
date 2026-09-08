@@ -1,74 +1,84 @@
 {
-	"localeFlag": "../flags/flag_russia.png",
 	"siteTitle": "mRemoteNG",
 	"header": {
 		"about": "О проекте",
 		"feed": "Новости",
 		"contribute": "Помощь проекту",
 		"contact": "Контакты",
-		"downloads": "Скачивания",
-		"github": "ГитХаб",
-		"x"	: "Х",
+		"downloads": "Загрузки",
+		"github": "GitHub",
+		"community": "Сообщество",
 		"documentation": "Документация"
 	},
 	"footer": {
-		"rights": "Все права защищены. Куратор Димитрий Городецкий"
+		"rights": "Все права защищены. Куратор Dimitrij Gorodeckij"
 	},
 	"homepage": {
-		"title": "Главная",
-		"welcome": "Добро пожаловать на Мой Сайт на SvelteKit!",
-		"intro": "Это простой сайт, созданный с помощью SvelteKit, демонстрирующий несколько интересных функций:",
-		"feature1": "Переключатель темной/светлой темы",
-		"feature2": "Многоязычная поддержка (EN, RU, DE)",
-		"feature3": "Адаптивный заголовок с навигацией",
-		"feature4": "Прилипающий футер",
-		"feature5": "Готов к развертыванию на GitHub Pages",
-		"placeholderTitle": "Пример содержимого",
-		"placeholderText": "Лорем ипсум долор сит амет, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-		"scrollNote": "Прокрутите вниз, чтобы увидеть прилипающий футер в действии, если содержимое недостаточно длинное.",
-		"moreContent": "Еще один абзац {count} для прокрутки страницы. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",
-		"genericButton": "Обычная Кнопка"
+		"intro1": "mRemoteNG (Multi-Remote Next Generation), сокращенно mR, — это open-source менеджер удалённых подключений с вкладками для Windows.",
+		"intro2": "Он позволяет просматривать все удалённые подключения в простом и мощном интерфейсе и поддерживает RDP, VNC, SSH, HTTP/S и другие протоколы.",
+		"sliderTitle": "Скриншоты проекта"
 	},
-	"aboutPage": {
-		"title": "О нас",
-		"heading": "О нас",
-		"text1": "Это страница о нас. Мы вымышленная компания, занимающаяся вымышленными вещами.",
-		"text2": "Наша миссия - предоставлять отличный пример содержимого для демонстрационных сайтов."
+	"feed": {
+		"title": "Блог разработчиков",
+		"empty": "Пока нет публикаций."
 	},
-	"servicesPage": {
-		"title": "Услуги",
-		"heading": "Наши Услуги",
-		"intro": "Мы предлагаем широкий спектр вымышленных услуг, включая:",
-		"service1": "Генерация текста-заполнителя",
-		"service2": "Разработка воображаемых продуктов",
-		"service3": "Концептуальные дизайнерские решения"
-	},
-	"portfolioPage": {
-		"title": "Портфолио",
-		"heading": "Портфолио",
-		"intro": "Вот некоторые из наших потрясающих вымышленных проектов:",
-		"projectAlpha": "Проект Альфа (Концептуальный)",
-		"projectBeta": "Проект Бета (Воображаемый)",
-		"projectGamma": "Проект Гамма (Пример)"
+	"downloads": {
+		"title": "Загрузки",
+		"subtitle": "Менеджер удалённых подключений Multi-Remote Next Generation",
+		"description": "Выберите подходящий канал ниже, чтобы скачать установочный или портативный пакет mRemoteNG.",
+		"stable": "Стабильная",
+		"preview": "Предварительная",
+		"nightly": "Ночная сборка",
+		"msi": "MSI",
+		"zip": "ZIP",
+		"changelog": "Список изменений",
+		"requirements": "Требования к установке"
 	},
 	"contactPage": {
-		"title": "Свяжитесь с нами",
-		"heading": "Свяжитесь с нами",
-		"intro": "Вы не можете связаться с нами, потому что это демо. Но если бы могли, здесь была бы контактная форма или данные!",
-		"formName": "Имя:",
-		"formEmail": "Эл. почта:",
-		"formMessage": "Сообщение:",
-		"formSend": "Отправить сообщение",
-		"formAlert": "Форма отправлена (не по-настоящему!)"
+		"title": "Контакты",
+		"heading": "Связаться с нами",
+		"intro": "Свяжитесь с командой разработчиков mRemoteNG.",
+		"formName": "Имя",
+		"formEmail": "Email",
+		"formMessage": "Сообщение",
+		"formSend": "Отправить",
+		"sending": "Отправка сообщения...",
+		"formAlert": "Ваше сообщение успешно отправлено на support@mremote.org!",
+		"errRequired": "Все поля (Имя, Email, Сообщение) обязательны для заполнения.",
+		"errMinWords": "Сообщение должно содержать не менее 5 слов.",
+		"errSend": "Не удалось отправить сообщение. Пожалуйста, попробуйте позже."
+	},
+	"contributePage": {
+		"title": "Поддержать mRemoteNG",
+		"heading": "Вклад и Поддержка",
+		"intro": "mRemoteNG — это открытое программное обеспечение, развиваемое сообществом. Есть много способов помочь проекту!",
+		"donateTitle": "Финансовая поддержка",
+		"donateText": "Пожертвования помогают покрывать расходы на инфраструктуру, разработку, хостинг и подписки на ИИ-инструменты разработчиков (такие как GitHub Copilot / LLM), что ускоряет создание новых функций и исправление ошибок.",
+		"donateDisclaimer": "mRemoteNG является open-source проектом, пожертвования не подлежат налоговому вычету.",
+		"paypalUSD": "Поддержать в USD ($)",
+		"paypalEUR": "Поддержать в EUR (€)",
+		"paypalGBP": "Поддержать в GBP (£)",
+		"paypalRUB": "Поддержать в RUB (₽)",
+		"kofi": "Угостить кофе на Ko-fi",
+		"codeTitle": "Код и Исправления",
+		"codeText": "Посетите наш репозиторий на GitHub, выберите задачу или ошибку и отправьте Pull Request.",
+		"translateTitle": "Перевод",
+		"translateText": "Помогите сделать mRemoteNG доступным на разных языках, переводя интерфейс и документацию.",
+		"ideasTitle": "Идеи и Предложения",
+		"ideasText": "Если у вас есть идея или предложение по улучшению, напишите нам через форму обратной связи.",
+		"ideasLink": "Связаться с нами",
+		"thanksTitle": "Огромное спасибо участникам и спонсорам!",
+		"thanksText": "Мы искренне благодарны всем, кто отправляет код, сообщает об ошибках, делает переводы и поддерживает проект финансово.",
+		"backersTitle": "Благодарность спонсорам и участникам",
+		"backersSubtitle": "Список участников и спонсоров сообщества за годы развития проекта."
 	},
 	"languages": {
 		"en": "English",
+		"de": "Deutsch",
 		"ru": "Русский",
-		"de": "Deutsch"
+		"lt": "Lietuvių"
 	},
 	"themeSwitcher": {
-		"toggleLabel": "Переключить тему",
-		"dark": "Темная",
-		"light": "Светлая"
+		"toggleLabel": "Переключить тему"
 	}
 }

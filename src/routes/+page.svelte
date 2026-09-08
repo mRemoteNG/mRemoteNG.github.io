@@ -1,15 +1,12 @@
 <script lang="ts">
-	import { base } from '$app/paths';
+	import { t } from '$lib/i18n/store';
+	import ImageSlider from '$lib/components/ImageSlider.svelte';
 </script>
 
-<section class="d-flex flex-column align-items-center" id="home">
-	<p>mRemoteNG (Multi-Remote Next Generation), abbreviated as mR, is an open-source, tabbed remote connections manager for Windows.</p>
-	<p>It allows you to view all of your remote connections in a simple yet powerful interface and supports multiple protocols including RDP, VNC, SSH, HTTP/S and more.</p>
-	<p>
-		<img
-			src="{base}/images/lightbox.png"
-			alt="Screenshot of mRemoteNG interface"
-			loading="lazy"
-		/>
-	</p>
+<section class="home py-6 space-y-4" id="home">
+	<p class="text-lg text-slate-800 dark:text-slate-200 font-medium leading-relaxed">{$t('homepage.intro1')}</p>
+	<p class="text-slate-600 dark:text-slate-300 leading-relaxed">{$t('homepage.intro2')}</p>
+
+	<h2 class="text-2xl font-bold text-slate-900 dark:text-white pt-4">{$t('homepage.sliderTitle')}</h2>
+	<ImageSlider />
 </section>
