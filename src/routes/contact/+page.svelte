@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { t } from '$lib/i18n/store.js';
+	import { t } from '$lib/i18n/store';
 
 	let name = '';
 	let email = '';

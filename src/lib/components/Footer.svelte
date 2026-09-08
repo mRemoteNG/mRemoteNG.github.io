@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { t } from '$lib/i18n/store.js';
+	import { t } from '$lib/i18n/store';
 	import { base } from '$app/paths';
 	const currentYear = new Date().getFullYear();
 </script>

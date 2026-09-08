@@ -4,7 +4,7 @@
 	import { base, assets } from '$app/paths';
 	import '../app.css'; // Import global styles
 	
-	import { t } from '$lib/i18n/store.js';
+	import { t } from '$lib/i18n/store';
 
 	let { children } = $props();
 </script>
