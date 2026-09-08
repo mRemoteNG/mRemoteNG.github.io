@@ -104,20 +104,22 @@
 					</button>
 
 					{#if isDropdownOpen}
-						<div class="absolute right-0 mt-2 w-48 bg-slate-200 dark:bg-[#0F172A] border border-slate-300 dark:border-slate-800 rounded-xl shadow-2xl py-1 z-50">
-							{#each socialLinks as link}
-								<a
-									class="flex items-center gap-3 px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-300/60 hover:text-slate-900 dark:text-slate-200 dark:hover:bg-slate-800 dark:hover:text-white transition-colors whitespace-nowrap"
-									target="_blank"
-									rel="noopener"
-									title={link.tooltip}
-									href={link.url}
-									on:click={() => (isDropdownOpen = false)}
-								>
-									<i class="{link.icon} text-blue-600 dark:text-[#f4a261]"></i>
-									<span>{link.name}</span>
-								</a>
-							{/each}
+						<div class="absolute right-0 top-full pt-1.5 w-48 z-50">
+							<div class="bg-slate-200 dark:bg-[#0F172A] border border-slate-300 dark:border-slate-800 rounded-xl shadow-2xl py-1">
+								{#each socialLinks as link}
+									<a
+										class="flex items-center gap-3 px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-300/60 hover:text-slate-900 dark:text-slate-200 dark:hover:bg-slate-800 dark:hover:text-white transition-colors whitespace-nowrap"
+										target="_blank"
+										rel="noopener"
+										title={link.tooltip}
+										href={link.url}
+										on:click={() => (isDropdownOpen = false)}
+									>
+										<i class="{link.icon} text-blue-600 dark:text-[#f4a261]"></i>
+										<span>{link.name}</span>
+									</a>
+								{/each}
+							</div>
 						</div>
 					{/if}
 				</div>

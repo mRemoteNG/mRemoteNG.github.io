@@ -54,19 +54,21 @@
 	</button>
 
 	{#if isOpen}
-		<div class="absolute right-0 mt-2 w-40 bg-slate-200 dark:bg-[#0F172A] border border-slate-300 dark:border-slate-800 rounded-xl shadow-2xl py-1 z-50">
-			{#each availableLocales as localeCode (localeCode)}
-				<button
-					type="button"
-					on:click={() => selectLocale(localeCode)}
-					class="w-full flex items-center gap-2.5 px-3 py-2 text-sm text-left transition-colors cursor-pointer {$currentLocale === localeCode ? 'bg-blue-600 text-white dark:bg-[#f4a261] dark:text-slate-900 font-semibold' : 'text-slate-700 hover:bg-slate-300/60 dark:text-slate-200 dark:hover:bg-slate-800'}"
-				>
-					{#if flags[localeCode]}
-						<img src={flags[localeCode]} alt={localeCode} class="w-5 h-3.5 object-cover rounded-xs" />
-					{/if}
-					<span>{$languageNames[localeCode]}</span>
-				</button>
-			{/each}
+		<div class="absolute right-0 top-full pt-1.5 w-40 z-50">
+			<div class="bg-slate-200 dark:bg-[#0F172A] border border-slate-300 dark:border-slate-800 rounded-xl shadow-2xl py-1">
+				{#each availableLocales as localeCode (localeCode)}
+					<button
+						type="button"
+						on:click={() => selectLocale(localeCode)}
+						class="w-full flex items-center gap-2.5 px-3 py-2 text-sm text-left transition-colors cursor-pointer {$currentLocale === localeCode ? 'bg-blue-600 text-white dark:bg-[#f4a261] dark:text-slate-900 font-semibold' : 'text-slate-700 hover:bg-slate-300/60 dark:text-slate-200 dark:hover:bg-slate-800'}"
+					>
+						{#if flags[localeCode]}
+							<img src={flags[localeCode]} alt={localeCode} class="w-5 h-3.5 object-cover rounded-xs" />
+						{/if}
+						<span>{$languageNames[localeCode]}</span>
+					</button>
+				{/each}
+			</div>
 		</div>
 	{/if}
 </div>
