@@ -32,7 +32,12 @@
     "msi": "MSI",
     "zip": "ZIP",
     "changelog": "Pakeitimų sąrašas",
-    "requirements": "Rodyti diegimo reikalavimus"
+    "requirements": "Rodyti diegimo reikalavimus",
+    "puttyTitle": "PuTTYNG Leidimai",
+    "puttySubtitle": "Pritaikytas ir pasirašytas PuTTY failas mRemoteNG SSH/Telnet ryšiams",
+    "downloadPutty": "Atsisiųsti puttyng.exe",
+    "olderPuttyReleases": "Senesni leidimai...",
+    "hideOlderPuttyReleases": "Slėpti senesnius leidimus"
   },
   "contactPage": {
     "title": "Kontaktai",

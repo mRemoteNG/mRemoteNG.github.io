@@ -32,7 +32,12 @@
 		"msi": "MSI",
 		"zip": "ZIP",
 		"changelog": "Список изменений",
-		"requirements": "Требования к установке"
+		"requirements": "Требования к установке",
+		"puttyTitle": "Релизы PuTTYNG",
+		"puttySubtitle": "Адаптированный и подписанный исполняемый файл PuTTY для SSH/Telnet в mRemoteNG",
+		"downloadPutty": "Скачать puttyng.exe",
+		"olderPuttyReleases": "Предыдущие релизы...",
+		"hideOlderPuttyReleases": "Скрыть предыдущие релизы"
 	},
 	"contactPage": {
 		"title": "Контакты",

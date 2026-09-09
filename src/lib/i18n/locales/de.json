@@ -32,7 +32,12 @@
 		"msi": "MSI",
 		"zip": "ZIP",
 		"changelog": "Änderungsprotokoll",
-		"requirements": "Systemanforderungen anzeigen"
+		"requirements": "Systemanforderungen anzeigen",
+		"puttyTitle": "PuTTYNG-Releases",
+		"puttySubtitle": "Angepasstes und signiertes PuTTY-Binary für mRemoteNG SSH/Telnet",
+		"downloadPutty": "puttyng.exe herunterladen",
+		"olderPuttyReleases": "Ältere Releases...",
+		"hideOlderPuttyReleases": "Ältere Releases ausblenden"
 	},
 	"contactPage": {
 		"title": "Kontakt",
