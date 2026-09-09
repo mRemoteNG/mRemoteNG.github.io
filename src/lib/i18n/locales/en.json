@@ -35,6 +35,8 @@
 		"requirements": "View installation requirements",
 		"puttyTitle": "PuTTYNG Releases",
 		"puttySubtitle": "Adapted & signed PuTTY binary for mRemoteNG SSH/Telnet connections",
+		"latestPutty": "Latest PuTTYNG",
+		"releaseNotes": "Release Notes",
 		"downloadPutty": "Download puttyng.exe",
 		"olderPuttyReleases": "Older releases...",
 		"hideOlderPuttyReleases": "Hide older releases"

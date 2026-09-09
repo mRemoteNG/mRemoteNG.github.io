@@ -9,17 +9,6 @@ export interface ReleaseDownload {
 	badgeType: 'stable' | 'preview' | 'nightly';
 }
 
-export interface ReleaseDownload {
-	channelKey: string;
-	title: string;
-	version: string;
-	date: string;
-	msiUrl: string;
-	zipUrl: string;
-	changelogUrl: string;
-	badgeType: 'stable' | 'preview' | 'nightly';
-}
-
 export interface PuttyRelease {
 	version: string;
 	date: string;
