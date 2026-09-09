@@ -1,3 +1,5 @@
+import { marked } from 'marked';
+
 type BlogPost = {
 	title: string;
 	date: string;
@@ -6,6 +8,8 @@ type BlogPost = {
 	slug: string;
 };
 
+marked.setOptions({ breaks: true, gfm: true });
+
 const files = import.meta.glob('/src/content/blog/*.md', {
 	eager: true,
 	query: '?raw',
@@ -13,7 +17,8 @@ const files = import.meta.glob('/src/content/blog/*.md', {
 }) as Record<string, string>;
 
 function parsePost(raw: string, path: string): BlogPost {
-	const [, frontmatterBlock = '', content = raw] = raw.match(/^---\n([\s\S]*?)\n---\n?([\s\S]*)$/) || [];
+	const normalized = raw.replace(/\r\n/g, '\n');
+	const [, frontmatterBlock = '', content = normalized] = normalized.match(/^---\n([\s\S]*?)\n---\n?([\s\S]*)$/) || [];
 	const frontmatter = Object.fromEntries(
 		frontmatterBlock
 			.split('\n')
@@ -32,7 +37,7 @@ function parsePost(raw: string, path: string): BlogPost {
 		title: frontmatter.title || slug,
 		date: frontmatter.date || '',
 		summary: frontmatter.summary || '',
-		content: content.trim(),
+		content: marked.parse(content.trim(), { async: false }),
 		slug
 	};
 }

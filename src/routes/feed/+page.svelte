@@ -21,9 +21,22 @@
 					<div class="text-xs font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400">{post.date}</div>
 					<h2 class="text-2xl font-bold text-slate-900 dark:text-white">{post.title}</h2>
 					<p class="text-slate-700 dark:text-slate-300 font-medium">{post.summary}</p>
-					<div class="text-sm text-slate-700 dark:text-slate-300 whitespace-pre-line leading-relaxed pt-2 border-t border-slate-100 dark:border-slate-700/60">{post.content}</div>
+					<div class="feed-post-content text-sm text-slate-700 dark:text-slate-300 leading-relaxed pt-2 border-t border-slate-100 dark:border-slate-700/60">{@html post.content}</div>
 				</article>
 			{/each}
 		</div>
 	{/if}
 </section>
+
+<style>
+	.feed-post-content :global(p) {
+		margin: 0.5rem 0;
+	}
+	.feed-post-content :global(a) {
+		color: rgb(37 99 235);
+		text-decoration: underline;
+	}
+	:global(.dark) .feed-post-content :global(a) {
+		color: rgb(96 165 250);
+	}
+</style>
