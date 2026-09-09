@@ -1,8 +1,38 @@
 <script lang="ts">
-	import { t } from '$lib/i18n/store';
+  import { currentLocale, t } from '$lib/i18n/store';
   import { releaseDownloads, latestPuttyRelease, olderPuttyReleases } from '$lib/config/downloads';
 
   let showOlderPutty = false;
+
+  const dateLabels = {
+    en: {
+      months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+      format: (month: string, day: number, year: number) => `${month} ${day}, ${year}`
+    },
+    de: {
+      months: ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'],
+      format: (month: string, day: number, year: number) => `${day}. ${month} ${year}`
+    },
+    ru: {
+      months: ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'],
+      format: (month: string, day: number, year: number) => `${day} ${month} ${year}`
+    },
+    lt: {
+      months: ['sausio', 'vasario', 'kovo', 'balandžio', 'gegužės', 'birželio', 'liepos', 'rugpjūčio', 'rugsėjo', 'spalio', 'lapkričio', 'gruodžio'],
+      format: (month: string, day: number, year: number) => `${year} m. ${month} ${day} d.`
+    }
+  };
+
+  function formatDownloadDate(date: string, locale: string) {
+    const labels = dateLabels[locale as keyof typeof dateLabels] ?? dateLabels.en;
+    const parsedDate = new Date(`${date}T00:00:00Z`);
+
+    return labels.format(
+      labels.months[parsedDate.getUTCMonth()],
+      parsedDate.getUTCDate(),
+      parsedDate.getUTCFullYear()
+    );
+  }
 </script>
 
 <svelte:head>
@@ -20,11 +50,14 @@
         <div>
           <div class="flex items-center justify-between mb-3">
             <span
-              class="px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full {release.badgeType === 'stable' ? 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/60 dark:text-emerald-200' : release.badgeType === 'preview' ? 'bg-amber-100 text-amber-800 dark:bg-amber-900/60 dark:text-amber-200' : 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/60 dark:text-indigo-200'}"
+              class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full {release.badgeType === 'stable' ? 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/60 dark:text-emerald-200' : release.badgeType === 'preview' ? 'bg-amber-100 text-amber-800 dark:bg-amber-900/60 dark:text-amber-200' : 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/60 dark:text-indigo-200'}"
             >
-              {$t(`downloads.${release.channelKey}`)}
+              <span aria-hidden="true" class="text-sm leading-none">
+                {release.badgeType === 'stable' ? '⛰️' : release.badgeType === 'preview' ? '🔭' : '🦉'}
+              </span>
+              <span>{$t(`downloads.${release.channelKey}`)}</span>
             </span>
-            <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">{release.date}</span>
+            <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">{formatDownloadDate(release.date, $currentLocale)}</span>
           </div>
           <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-1">{release.version}</h2>
         </div>
@@ -63,7 +96,7 @@
           <span class="px-2.5 py-0.5 text-xs font-bold uppercase rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900/60 dark:text-blue-200">
             {$t('downloads.latestPutty')}
           </span>
-          <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">{latestPuttyRelease.date}</span>
+          <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">{formatDownloadDate(latestPuttyRelease.date, $currentLocale)}</span>
         </div>
         <h3 class="text-xl font-bold text-slate-900 dark:text-white">{latestPuttyRelease.title}</h3>
         <p class="text-xs text-slate-500 dark:text-slate-400">{latestPuttyRelease.version}</p>
@@ -114,7 +147,7 @@
               </div>
 
               <div class="flex items-center justify-between sm:justify-end gap-4 shrink-0 pt-1 sm:pt-0">
-                <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">{puttyRelease.date}</span>
+                <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">{formatDownloadDate(puttyRelease.date, $currentLocale)}</span>
                 <a
                   href={puttyRelease.downloadUrl}
                   class="px-3 py-1.5 bg-blue-600 hover:bg-blue-500 text-white font-medium text-xs rounded-lg transition-colors flex items-center gap-1.5"

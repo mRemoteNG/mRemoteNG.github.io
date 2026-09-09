@@ -28,7 +28,7 @@
     "description": "Pasirinkite kanalą žemiau, kad atsisiųstumėte mRemoteNG diegimo arba nešiojamąjį (portable) paketą.",
     "stable": "Stabili",
     "preview": "Priešperžiūra",
-    "nightly": "Naktinis leidimas (Nightly)",
+    "nightly": "Naktinis leidimas",
     "msi": "MSI",
     "zip": "ZIP",
     "changelog": "Pakeitimų sąrašas",
