@@ -20,7 +20,12 @@
 	},
 	"feed": {
 		"title": "Developer blog",
-		"empty": "No posts yet."
+		"empty": "No posts yet.",
+		"searchPlaceholder": "Search posts...",
+		"noResults": "No posts match your search.",
+		"prev": "Previous",
+		"next": "Next",
+		"pageInfo": "Page {current} of {total}"
 	},
 	"downloads": {
 		"title": "Downloads",

@@ -20,7 +20,12 @@
   },
   "feed": {
     "title": "Kūrėjų tinklaraštis",
-    "empty": "Įrašų dar nėra."
+    "empty": "Įrašų dar nėra.",
+    "searchPlaceholder": "Ieškoti įrašų...",
+    "noResults": "Pagal paiešką įrašų nerasta.",
+    "prev": "Atgal",
+    "next": "Pirmyn",
+    "pageInfo": "Puslapis {current} iš {total}"
   },
   "downloads": {
     "title": "Atsisiuntimai",

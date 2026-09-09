@@ -20,7 +20,12 @@
 	},
 	"feed": {
 		"title": "Entwickler-Blog",
-		"empty": "Noch keine Beiträge vorhanden."
+		"empty": "Noch keine Beiträge vorhanden.",
+		"searchPlaceholder": "Beiträge durchsuchen...",
+		"noResults": "Keine Beiträge entsprechen der Suche.",
+		"prev": "Zurück",
+		"next": "Weiter",
+		"pageInfo": "Seite {current} von {total}"
 	},
 	"downloads": {
 		"title": "Downloads",
