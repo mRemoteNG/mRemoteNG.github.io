@@ -7,7 +7,7 @@
 		"node": ">=26.0.0"
 	},
 	"overrides": {
-		"cookie": "^1.1.1"
+		"cookie": "^2.0.0"
 	},
 	"scripts": {
 		"dev": "vite dev",
@@ -33,7 +33,7 @@
 	},
 	"dependencies": {
 		"bootstrap-icons": "^1.13.1",
-		"cookie": "^1.1.1",
+		"cookie": "^2.0.0",
 		"marked": "^18.0.12"
 	}
 }
