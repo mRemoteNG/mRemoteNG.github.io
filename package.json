@@ -6,9 +6,6 @@
 	"engines": {
 		"node": ">=26.0.0"
 	},
-	"overrides": {
-		"cookie": "^2.0.0"
-	},
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
@@ -33,7 +30,6 @@
 	},
 	"dependencies": {
 		"bootstrap-icons": "^1.13.1",
-		"cookie": "^2.0.0",
 		"marked": "^18.0.12"
 	}
 }
