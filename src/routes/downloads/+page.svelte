@@ -79,7 +79,7 @@
                     href={download.url}
                     aria-describedby={`tooltip-${release.channelKey}-${download.label.replaceAll(' ', '-').toLowerCase()}`}
                   >
-                    <i class="bi bi-download"></i>
+                    <i class="bi bi-file-earmark-zip"></i>
                     <span>{download.label}</span>
                   </a>
                   <span
