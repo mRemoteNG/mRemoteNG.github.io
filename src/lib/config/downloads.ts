@@ -1,3 +1,5 @@
+import nightlyRelease from './nightly.json';
+
 export interface ReleaseDownload {
 	channelKey: string;
 	title: string;
@@ -5,6 +7,8 @@ export interface ReleaseDownload {
 	date: string;
 	msiUrl: string;
 	zipUrl: string;
+	msiLabel?: string;
+	zipLabel?: string;
 	changelogUrl: string;
 	badgeType: 'stable' | 'preview' | 'nightly';
 }
@@ -42,11 +46,7 @@ export const releaseDownloads: ReleaseDownload[] = [
 	{
 		channelKey: 'nightly',
 		title: 'Nightly',
-		version: 'v1.77.3.1784-NB',
-		date: '2023-03-16',
-		msiUrl: 'https://github.com/mRemoteNG/mRemoteNG/releases/download/2023.03.03-v1.77.3-nb/mRemoteNG-Installer-1.77.3.nb-1784.msi',
-		zipUrl: 'https://github.com/mRemoteNG/mRemoteNG/releases/download/2022.06.13-v1.77.3-nb/Portable.-.1.77.3.NB.rar',
-		changelogUrl: 'https://github.com/mRemoteNG/mRemoteNG/releases/tag/2023.03.03-v1.77.3-nb',
+		...nightlyRelease,
 		badgeType: 'nightly'
 	}
 ];
