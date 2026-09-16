@@ -7,6 +7,8 @@ export interface ReleaseDownload {
 	date: string;
 	msiUrl: string;
 	zipUrl: string;
+	arm64FdUrl?: string;
+	arm64ScUrl?: string;
 	msiLabel?: string;
 	zipLabel?: string;
 	changelogUrl: string;

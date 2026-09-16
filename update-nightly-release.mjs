@@ -10,14 +10,16 @@ if (!/^\d+\.\d+\.\d+$/.test(version ?? '') || !/^\d+$/.test(build ?? '') || tag 
 const compactDate = tag.slice(0, 8);
 const date = `${compactDate.slice(0, 4)}-${compactDate.slice(4, 6)}-${compactDate.slice(6, 8)}`;
 const encodedTag = encodeURIComponent(tag);
-const assetPrefix = `mRemoteNG-${compactDate}-v${version}-NB-${build}-x64`;
+const assetPrefix = `mRemoteNG-${compactDate}-v${version}-NB-${build}`;
 const downloadBase = `https://github.com/mRemoteNG/mRemoteNG/releases/download/${encodedTag}`;
 
 const nightlyRelease = {
 	version: `v${version} NB ${build}`,
 	date,
-	msiUrl: `${downloadBase}/${assetPrefix}-FD.zip`,
-	zipUrl: `${downloadBase}/${assetPrefix}-SC.zip`,
+	msiUrl: `${downloadBase}/${assetPrefix}-x64-FD.zip`,
+	zipUrl: `${downloadBase}/${assetPrefix}-x64-SC.zip`,
+	arm64FdUrl: `${downloadBase}/${assetPrefix}-arm64-FD.zip`,
+	arm64ScUrl: `${downloadBase}/${assetPrefix}-arm64-SC.zip`,
 	msiLabel: 'x64 FD',
 	zipLabel: 'x64 SC',
 	changelogUrl: `https://github.com/mRemoteNG/mRemoteNG/releases/tag/${tag}`

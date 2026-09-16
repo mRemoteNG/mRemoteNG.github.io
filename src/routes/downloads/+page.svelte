@@ -65,16 +65,45 @@
         </div>
 
         <div class="space-y-3 pt-2">
-          <div class="grid grid-cols-2 gap-2">
-            <a class="px-3 py-2.5 bg-blue-600 hover:bg-blue-500 text-white font-medium text-xs rounded-xl text-center transition-colors shadow-sm flex items-center justify-center gap-1.5" href={release.msiUrl}>
-              <i class="bi bi-download"></i>
-              <span>{release.msiLabel ?? $t('downloads.msi')}</span>
-            </a>
-            <a class="px-3 py-2.5 bg-slate-100 hover:bg-slate-200 dark:bg-slate-700/80 dark:hover:bg-slate-600 text-slate-800 dark:text-slate-100 font-medium text-xs rounded-xl text-center transition-colors shadow-sm border border-slate-200 dark:border-slate-600 flex items-center justify-center gap-1.5" href={release.zipUrl}>
-              <i class="bi bi-file-earmark-zip"></i>
-              <span>{release.zipLabel ?? $t('downloads.zip')}</span>
-            </a>
-          </div>
+          {#if release.badgeType === 'nightly'}
+            <div class="grid grid-cols-2 gap-2">
+              {#each [
+                { label: 'x64 FD', url: release.msiUrl, tooltip: 'Framework-Dependent' },
+                { label: 'ARM64 FD', url: release.arm64FdUrl, tooltip: 'Framework-Dependent' },
+                { label: 'x64 SC', url: release.zipUrl, tooltip: 'Self-Contained - Portable' },
+                { label: 'ARM64 SC', url: release.arm64ScUrl, tooltip: 'Self-Contained - Portable' }
+              ] as download}
+                <span class="group relative min-w-0">
+                  <a
+                    class="px-3 py-2.5 bg-blue-600 hover:bg-blue-500 text-white font-medium text-xs rounded-xl text-center transition-colors shadow-sm flex items-center justify-center gap-1.5"
+                    href={download.url}
+                    aria-describedby={`tooltip-${release.channelKey}-${download.label.replaceAll(' ', '-').toLowerCase()}`}
+                  >
+                    <i class="bi bi-download"></i>
+                    <span>{download.label}</span>
+                  </a>
+                  <span
+                    id={`tooltip-${release.channelKey}-${download.label.replaceAll(' ', '-').toLowerCase()}`}
+                    role="tooltip"
+                    class="pointer-events-none absolute bottom-full left-1/2 z-20 mb-2 w-max max-w-48 -translate-x-1/2 rounded-md bg-slate-950 px-2.5 py-1.5 text-center text-xs font-medium normal-case text-white opacity-0 shadow-lg transition-opacity group-hover:opacity-100 group-focus-within:opacity-100"
+                  >
+                    {download.tooltip}
+                  </span>
+                </span>
+              {/each}
+            </div>
+          {:else}
+            <div class="grid grid-cols-2 gap-2">
+              <a class="px-3 py-2.5 bg-blue-600 hover:bg-blue-500 text-white font-medium text-xs rounded-xl text-center transition-colors shadow-sm flex items-center justify-center gap-1.5" href={release.msiUrl}>
+                <i class="bi bi-download"></i>
+                <span>{release.msiLabel ?? $t('downloads.msi')}</span>
+              </a>
+              <a class="px-3 py-2.5 bg-slate-100 hover:bg-slate-200 dark:bg-slate-700/80 dark:hover:bg-slate-600 text-slate-800 dark:text-slate-100 font-medium text-xs rounded-xl text-center transition-colors shadow-sm border border-slate-200 dark:border-slate-600 flex items-center justify-center gap-1.5" href={release.zipUrl}>
+                <i class="bi bi-file-earmark-zip"></i>
+                <span>{release.zipLabel ?? $t('downloads.zip')}</span>
+              </a>
+            </div>
+          {/if}
           <a class="block text-xs text-[#f4a261] dark:text-[#f4a261] hover:underline font-medium text-center pt-1" href={release.changelogUrl} target="_blank" rel="noopener">
             {$t('downloads.changelog')}
           </a>
