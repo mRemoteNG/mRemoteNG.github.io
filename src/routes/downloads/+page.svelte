@@ -49,13 +49,15 @@
       <article class="p-6 rounded-2xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/80 shadow-sm hover:shadow-md transition-all flex flex-col justify-between gap-4">
         <div>
           <div class="flex items-center justify-between mb-3">
-            <span
-              class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full {release.badgeType === 'stable' ? 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/60 dark:text-emerald-200' : release.badgeType === 'preview' ? 'bg-amber-100 text-amber-800 dark:bg-amber-900/60 dark:text-amber-200' : 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/60 dark:text-indigo-200'}"
-            >
-              <span aria-hidden="true" class="text-sm leading-none">
+            <span class="inline-flex items-center gap-1.5">
+              <span aria-hidden="true" class="text-lg leading-none">
                 {release.badgeType === 'stable' ? '⛰️' : release.badgeType === 'preview' ? '🔭' : '🦉'}
               </span>
-              <span>{$t(`downloads.${release.channelKey}`)}</span>
+              <span
+                class="px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full {release.badgeType === 'stable' ? 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/60 dark:text-emerald-200' : release.badgeType === 'preview' ? 'bg-amber-100 text-amber-800 dark:bg-amber-900/60 dark:text-amber-200' : 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/60 dark:text-indigo-200'}"
+              >
+                {$t(`downloads.${release.channelKey}`)}
+              </span>
             </span>
             <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">{formatDownloadDate(release.date, $currentLocale)}</span>
           </div>
