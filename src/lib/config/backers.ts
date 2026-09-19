@@ -5,6 +5,37 @@ export interface Backer {
 }
 
 export const backersList: Backer[] = [
+	// 2025
+	{ name: 'Matteo Menozzi', tier: 'tier1', year: 2025 },
+	{ name: 'Paweł Iżykowski', tier: 'tier3', year: 2025 },
+	{ name: 'Craig Lindstrom', tier: 'tier1', year: 2025 },
+	{ name: 'Alberto Martinez Millan', tier: 'tier1', year: 2025 },
+	{ name: 'Mathias Karlsson', tier: 'tier1', year: 2025 },
+	{ name: 'Vladyslav Chernysh', tier: 'tier1', year: 2025 },
+	{ name: 'Brilant Salihu', tier: 'tier1', year: 2025 },
+	{ name: 'Thomas Asten', tier: 'tier1', year: 2025 },
+	{ name: 'Simon Ferguson', tier: 'tier1', year: 2025 }
+	// 2024
+	{ name: 'Ivan Vaselli', tier: 'tier2', year: 2024 },
+	{ name: 'Nicolai Serup', tier: 'tier1', year: 2024 },
+	{ name: 'Joseph Orlik', tier: 'tier1', year: 2024 },
+	{ name: 'Michael J Kehrli', tier: 'tier1', year: 2024 },
+	{ name: 'Alan Graham', tier: 'tier1', year: 2024 },
+	{ name: 'Paweł Iżykowski', tier: 'tier3', year: 2024 },
+	{ name: 'Alberto Jarquin Hernandez', tier: 'tier1', year: 2024 },
+	{ name: 'Robert Harrington', tier: 'tier2', year: 2024 },
+	{ name: 'MC-Software', tier: 'tier2', year: 2024 },
+	{ name: 'Christopher Radi', tier: 'tier2', year: 2024 },
+	{ name: 'Stephen Friedl', tier: 'tier3', year: 2024 },
+	{ name: 'James Higgs Computer Services', tier: 'tier2', year: 2024 },
+	{ name: 'Denis Iakunin', tier: 'tier3', year: 2024 },
+	{ name: 'Janne Saarinen', tier: 'tier1', year: 2024 },
+	{ name: 'Raffaello Bruno Freire', tier: 'tier1', year: 2024 },
+	{ name: 'Alexander Raithel', tier: 'tier3', year: 2024 },
+	{ name: 'Volnet Odza', tier: 'tier1', year: 2024 },
+	{ name: 'Helge Weber', tier: 'tier2', year: 2024 },
+	{ name: 'Koffi Toglo', tier: 'tier1', year: 2024 },
+	{ name: 'Michael Logies', tier: 'tier1', year: 2024 }
 	// 2023
 	{ name: 'Jason Davis', tier: 'tier1', year: 2023 },
 	{ name: 'Schwarz Fabrice', tier: 'tier1', year: 2023 },
