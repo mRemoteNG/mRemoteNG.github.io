@@ -18,7 +18,7 @@ export const backersList: Backer[] = [
 	{ name: 'Alberto Martinez Millan', tier: 'tier1', year: 2025 },
 	{ name: 'Vladyslav Chernysh', tier: 'tier2', year: 2025 },
 	{ name: 'Sebastian Dooris', tier: 'tier2', year: 2025 },
-	{ name: 'James Higgs Computer Services', tier: 'tier2', year: 2024 },
+	{ name: 'James Higgs Computer Services', tier: 'tier2', year: 2025 },
 	{ name: 'Mathias Karlsson', tier: 'tier3', year: 2025 },
 	{ name: 'Craig Lindstrom', tier: 'tier3', year: 2025 },
 	{ name: 'Jonathan McCullough', tier: 'tier3', year: 2025 },
