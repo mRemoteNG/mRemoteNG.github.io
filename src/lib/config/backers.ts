@@ -6,15 +6,19 @@ export interface Backer {
 
 export const backersList: Backer[] = [
 	// 2025
+	{ name: 'Paweł Iżykowski', tier: 'tier3', year: 2024 },
 	{ name: 'Matteo Menozzi', tier: 'tier1', year: 2025 },
 	{ name: 'Paweł Iżykowski', tier: 'tier3', year: 2025 },
 	{ name: 'Craig Lindstrom', tier: 'tier1', year: 2025 },
 	{ name: 'Alberto Martinez Millan', tier: 'tier1', year: 2025 },
 	{ name: 'Mathias Karlsson', tier: 'tier1', year: 2025 },
-	{ name: 'Vladyslav Chernysh', tier: 'tier1', year: 2025 },
+	{ name: 'Vladyslav Chernysh', tier: 'tier2', year: 2025 },
+	{ name: 'Jonathan McCullough', tier: 'tier1', year: 2025 },
 	{ name: 'Brilant Salihu', tier: 'tier1', year: 2025 },
+	{ name: 'Sebastian Dooris', tier: 'tier2', year: 2025 },
 	{ name: 'Thomas Asten', tier: 'tier1', year: 2025 },
-	{ name: 'Simon Ferguson', tier: 'tier1', year: 2025 }
+	{ name: 'Hannu Kujanpää', tier: 'tier1', year: 2025 },
+	{ name: 'Simon Ferguson', tier: 'tier1', year: 2025 },
 	// 2024
 	{ name: 'Ivan Vaselli', tier: 'tier2', year: 2024 },
 	{ name: 'Nicolai Serup', tier: 'tier1', year: 2024 },
@@ -35,7 +39,7 @@ export const backersList: Backer[] = [
 	{ name: 'Volnet Odza', tier: 'tier1', year: 2024 },
 	{ name: 'Helge Weber', tier: 'tier2', year: 2024 },
 	{ name: 'Koffi Toglo', tier: 'tier1', year: 2024 },
-	{ name: 'Michael Logies', tier: 'tier1', year: 2024 }
+	{ name: 'Michael Logies', tier: 'tier1', year: 2024 },
 	// 2023
 	{ name: 'Jason Davis', tier: 'tier1', year: 2023 },
 	{ name: 'Schwarz Fabrice', tier: 'tier1', year: 2023 },
