@@ -54,9 +54,36 @@ jobs:
           git commit -m "Update nightly download to v${RELEASE_VERSION} NB ${RELEASE_BUILD}"
           git push origin HEAD:svelteKit
 
-  build:
+  build-nightly:
     needs: update-nightly-metadata
-    if: ${{ always() && (github.event_name != 'repository_dispatch' || contains(fromJson('["success","skipped"]'), needs.update-nightly-metadata.result)) }}
+    if: github.event_name == 'repository_dispatch'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+        with:
+          ref: svelteKit
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 26
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build the SvelteKit site
+        run: npm run build
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: build/
+
+  build:
+    if: github.event_name != 'repository_dispatch'
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -83,7 +110,8 @@ jobs:
           path: build/
 
   deploy:
-    needs: build
+    needs: [build, build-nightly]
+    if: ${{ always() && (needs.build.result == 'success' || needs.build-nightly.result == 'success') }}
     runs-on: ubuntu-latest
     permissions:
       pages: write
