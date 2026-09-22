@@ -6,6 +6,11 @@ const config = {
     adapter: adapter({
       fallback: '200.html'
     }),
+    csp: {
+      directives: {
+        'script-src': ['self']
+      }
+    },
     inlineStyleThreshold: 0,
     paths: {
       base: process.env.BASE_PATH || ''
