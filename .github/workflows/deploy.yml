@@ -14,7 +14,8 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build:
+  update-nightly-metadata:
+    if: github.event_name == 'repository_dispatch'
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -50,6 +51,23 @@ jobs:
           git add src/lib/config/nightly.json
           git commit -m "Update nightly download to v${RELEASE_VERSION} NB ${RELEASE_BUILD}"
           git push origin HEAD:svelteKit
+
+  build:
+    needs: update-nightly-metadata
+    if: ${{ always() && (github.event_name != 'repository_dispatch' || needs.update-nightly-metadata.result == 'success') }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.ref_name }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 26
 
       - name: Install dependencies
         run: npm ci
