@@ -109,9 +109,24 @@ jobs:
         with:
           path: build/
 
+  deploy-nightly:
+    needs: build-nightly
+    if: github.event_name == 'repository_dispatch'
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
+
   deploy:
-    needs: [build, build-nightly]
-    if: ${{ always() && (needs.build.result == 'success' || needs.build-nightly.result == 'success') }}
+    needs: build
+    if: github.event_name != 'repository_dispatch'
     runs-on: ubuntu-latest
     permissions:
       pages: write
