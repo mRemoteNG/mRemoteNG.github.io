@@ -31,5 +31,8 @@
 	"dependencies": {
 		"bootstrap-icons": "^1.13.1",
 		"marked": "^18.0.12"
+	},
+	"overrides": {
+		"cookie": "^0.7.2"
 	}
 }

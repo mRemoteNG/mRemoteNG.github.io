@@ -90,7 +90,7 @@
 				</a>
 
 				<!-- Community / Social Dropdown (Reddit, X, Element Chat) -->
-				<div class="relative" bind:this={dropdownRef} on:mouseleave={() => (isDropdownOpen = false)}>
+				<div class="relative" role="group" bind:this={dropdownRef} on:mouseleave={() => (isDropdownOpen = false)}>
 					<button
 						type="button"
 						class="px-1.5 py-1 xl:px-2 xl:py-1.5 rounded-lg text-slate-700 hover:text-slate-900 hover:bg-slate-300/60 dark:text-slate-300 dark:hover:text-white dark:hover:bg-slate-800/70 transition-colors flex items-center gap-1 text-xs xl:text-sm font-medium cursor-pointer whitespace-nowrap"

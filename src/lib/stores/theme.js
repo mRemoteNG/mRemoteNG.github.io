@@ -1,7 +1,10 @@
 import { writable } from 'svelte/store';
 
+/** @typedef {'light' | 'dark'} Theme */
+
 const isBrowser = typeof window !== 'undefined';
 
+/** @returns {Theme} */
 const getInitialTheme = () => {
     if (!isBrowser) return 'light';
 
@@ -13,6 +16,7 @@ const getInitialTheme = () => {
     return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 };
 
+/** @param {Theme} value */
 const applyTheme = (value) => {
     if (!isBrowser) return;
 

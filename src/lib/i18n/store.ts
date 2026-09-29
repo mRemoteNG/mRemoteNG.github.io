@@ -6,19 +6,24 @@ import de from './locales/de.json';
 import ru from './locales/ru.json';
 import lt from './locales/lt.json';
 
-export const locales: Record<string, typeof en> = { en, de, ru, lt };
-export const availableLocales = Object.keys(locales);
+export const locales = { en, de, ru, lt } satisfies Record<string, typeof en>;
+export type Locale = keyof typeof locales;
+export const availableLocales = Object.keys(locales) as Locale[];
 
-function getInitialLang() {
+function isLocale(value: string): value is Locale {
+	return value in locales;
+}
+
+function getInitialLang(): Locale {
 	if (!browser) return 'en';
 
 	const storedLang = localStorage.getItem('lang');
-	if (storedLang && availableLocales.includes(storedLang)) {
+	if (storedLang && isLocale(storedLang)) {
 		return storedLang;
 	}
 
 	const browserLang = navigator.language.split('-')[0];
-	if (availableLocales.includes(browserLang)) {
+	if (isLocale(browserLang)) {
 		return browserLang;
 	}
 
@@ -35,7 +40,7 @@ if (browser) {
 }
 
 export function setLocale(locale: string) {
-	if (availableLocales.includes(locale)) {
+	if (isLocale(locale)) {
 		currentLocale.set(locale);
 	}
 }

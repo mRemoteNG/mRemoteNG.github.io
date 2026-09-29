@@ -8,7 +8,10 @@ const config = {
     }),
     csp: {
       directives: {
-        'script-src': ['self']
+        'default-src': ['self'],
+        'script-src': ['self'],
+        'style-src': ['self', 'unsafe-inline'],
+        'connect-src': ['self', 'https://formsubmit.co']
       }
     },
     inlineStyleThreshold: 0,

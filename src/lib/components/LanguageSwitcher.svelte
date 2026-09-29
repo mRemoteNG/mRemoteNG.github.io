@@ -38,7 +38,7 @@
 	});
 </script>
 
-<div class="relative inline-block text-left" bind:this={dropdownRef} on:mouseleave={() => (isOpen = false)}>
+<div class="relative inline-block text-left" role="group" bind:this={dropdownRef} on:mouseleave={() => (isOpen = false)}>
 	<button
 		type="button"
 		class="flex items-center justify-between gap-2 px-3 py-1.5 min-w-[135px] whitespace-nowrap rounded-lg bg-slate-300/80 dark:bg-white/10 hover:bg-slate-300 dark:hover:bg-white/20 border border-slate-400/50 dark:border-white/20 text-slate-800 dark:text-slate-200 text-sm font-medium transition-colors cursor-pointer"
