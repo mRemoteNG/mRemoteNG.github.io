@@ -1,11 +1,11 @@
 <script lang="ts">
-	import { currentLocale, setLocale, availableLocales, languageNames } from '$lib/i18n/store';
+	import { currentLocale, setLocale, availableLocales, languageNames } from '#lib/i18n/store.ts';
 	import { onMount } from 'svelte';
 
-	import flagEn from '$lib/i18n/flags/flag_great_britain.png';
-	import flagDe from '$lib/i18n/flags/flag_germany.png';
-	import flagRu from '$lib/i18n/flags/flag_russia.png';
-	import flagLt from '$lib/i18n/flags/flag_lithuania.png';
+	import flagEn from '#lib/i18n/flags/flag_great_britain.png';
+	import flagDe from '#lib/i18n/flags/flag_germany.png';
+	import flagRu from '#lib/i18n/flags/flag_russia.png';
+	import flagLt from '#lib/i18n/flags/flag_lithuania.png';
 
 	export let dropUp = false;
 

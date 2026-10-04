@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { base } from '$app/paths';
 
 	const imageModules = import.meta.glob('../../../static/images/slider/*.{png,jpg,jpeg,webp,gif,avif}', {
 		eager: true,
@@ -45,7 +44,7 @@
 
 <section class="image-slider rounded-2xl overflow-hidden border border-[#cbdce7] dark:border-slate-700/60 bg-white dark:bg-slate-800/40 shadow-lg">
 	{#if orderedImages.length > 0}
-		<img src="{orderedImages[currentIndex].replace('/static', base)}" alt="mRemoteNG screenshot" loading="lazy" class="w-full h-auto min-h-[220px] object-cover block" />
+		<img src={orderedImages[currentIndex]} alt="mRemoteNG screenshot" loading="lazy" class="w-full h-auto min-h-[220px] object-cover block" />
 	{:else}
 		<div class="slider-empty p-12 text-center text-slate-500 dark:text-slate-400">Add images to /static/images/slider</div>
 	{/if}

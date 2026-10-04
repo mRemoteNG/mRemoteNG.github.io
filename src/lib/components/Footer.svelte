@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { t } from '$lib/i18n/store';
-	import { base } from '$app/paths';
+	import { asset } from '$app/paths';
+	import { t } from '#lib/i18n/store.ts';
 	const currentYear = new Date().getFullYear();
 </script>
 
@@ -10,7 +10,7 @@
 			<p>&copy; {currentYear} {$t('footer.rights')} &bull; Released under <a class="text-blue-600 dark:text-[#f4a261] hover:underline" href="https://www.gnu.org/licenses/old-licenses/gpl-2.0-standalone.html" target="_blank" rel="noopener">GNU GPL v2</a>.</p>
 		</div>
 		<div id="ssl-seal" class="shrink-0">
-			<img class="h-10 w-auto cursor-pointer" src="{base}/images/certum_pl_dv.svg" alt="Certum SSL Seal">
+			<img class="h-10 w-auto cursor-pointer" src={asset('images/certum_pl_dv.svg')} alt="Certum SSL Seal">
 		</div>
 	</div>
 </footer>

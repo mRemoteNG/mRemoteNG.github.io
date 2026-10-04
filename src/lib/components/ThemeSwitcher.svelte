@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { theme, toggleTheme } from '$lib/stores/theme';
-	import { t } from '$lib/i18n/store';
+	import { theme, toggleTheme } from '#lib/stores/theme.js';
+	import { t } from '#lib/i18n/store.ts';
 </script>
 
 <button

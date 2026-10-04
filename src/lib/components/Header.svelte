@@ -1,17 +1,23 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import { base } from '$app/paths';
+	import { resolve } from '$app/paths';
 	import { onMount } from 'svelte';
 	import ThemeSwitcher from './ThemeSwitcher.svelte';
 	import LanguageSwitcher from './LanguageSwitcher.svelte';
-	import { t } from '$lib/i18n/store';
+	import { t } from '#lib/i18n/store.ts';
 
 	const menuItems = [
-		{ titleKey: 'header.about', path: `/` },
-		{ titleKey: 'header.feed', path: `/feed` },
-		{ titleKey: 'header.contribute', path: `/contribute` },
-		{ titleKey: 'header.contact', path: `/contact` }
+		{ titleKey: 'header.about', path: resolve('/') },
+		{ titleKey: 'header.feed', path: resolve('/feed') },
+		{ titleKey: 'header.contribute', path: resolve('/contribute') },
+		{ titleKey: 'header.contact', path: resolve('/contact') }
 	];
+	const homePath = resolve('/');
+	const downloadsPath = resolve('/downloads');
+
+	function isActive(path: string) {
+		return page.url.pathname === path || page.url.pathname === path.replace(/\/$/, '');
+	}
 
 	let mobileMenuOpen = false;
 	let isDropdownOpen = false;
@@ -55,7 +61,7 @@
 			<!-- Left Side: Brand + Left Menu -->
 			<div class="flex items-center gap-1 lg:gap-1.5 xl:gap-2 shrink-0">
 				<!-- Brand Logo -->
-				<a href="{base}/" class="group brand-font text-2xl tracking-wide flex items-center gap-0.5 whitespace-nowrap shrink-0 pr-1 lg:pr-2" on:click={closeMobileMenu}>
+				<a href={homePath} class="group brand-font text-2xl tracking-wide flex items-center gap-0.5 whitespace-nowrap shrink-0 pr-1 lg:pr-2" on:click={closeMobileMenu}>
 					<span class="text-blue-600 dark:text-[#f4a261] group-hover:text-blue-500 dark:group-hover:text-[#f6b27d] transition-colors">m</span><span class="text-slate-900 dark:text-white group-hover:text-blue-400 dark:group-hover:text-[#f8c499] transition-colors">RemoteNG</span>
 				</a>
 
@@ -63,11 +69,11 @@
 				<nav class="hidden lg:flex items-center gap-0">
 					{#each menuItems as item}
 						<a
-							href="{base}{item.path}"
+							href={item.path}
 							class="px-1.5 py-1 xl:px-2 xl:py-1.5 rounded-lg text-xs xl:text-sm font-medium text-slate-700 hover:text-slate-900 hover:bg-slate-300/60 dark:text-slate-300 dark:hover:text-white dark:hover:bg-slate-800/70 transition-colors whitespace-nowrap"
-							class:text-blue-600={page.url.pathname === (base + item.path).replace(/\/$/, '') || (page.url.pathname === base && item.path === '/')}
-							class:dark:text-[#f4a261]={page.url.pathname === (base + item.path).replace(/\/$/, '') || (page.url.pathname === base && item.path === '/')}
-							class:font-semibold={page.url.pathname === (base + item.path).replace(/\/$/, '') || (page.url.pathname === base && item.path === '/')}
+							class:text-blue-600={isActive(item.path)}
+							class:dark:text-[#f4a261]={isActive(item.path)}
+							class:font-semibold={isActive(item.path)}
 						>
 							{$t(item.titleKey)}
 						</a>
@@ -78,7 +84,7 @@
 			<!-- Right Side Actions Menu -->
 			<div class="hidden lg:flex items-center gap-0.5 xl:gap-1 shrink-0">
 				<!-- Download -->
-				<a rel="noopener" class="px-1.5 py-1 xl:px-2 xl:py-1.5 rounded-lg text-slate-700 hover:text-slate-900 hover:bg-slate-300/60 dark:text-slate-300 dark:hover:text-white dark:hover:bg-slate-800/70 transition-colors flex items-center gap-1 text-xs xl:text-sm font-medium whitespace-nowrap" href="{base}/downloads" title="Download">
+				<a rel="noopener" class="px-1.5 py-1 xl:px-2 xl:py-1.5 rounded-lg text-slate-700 hover:text-slate-900 hover:bg-slate-300/60 dark:text-slate-300 dark:hover:text-white dark:hover:bg-slate-800/70 transition-colors flex items-center gap-1 text-xs xl:text-sm font-medium whitespace-nowrap" href={downloadsPath} title="Download">
 					<i class="bi bi-download text-base xl:text-lg text-blue-600 dark:text-[#f4a261]"></i>
 					<span>{$t('header.downloads')}</span>
 				</a>
@@ -168,11 +174,11 @@
 			<nav class="flex flex-col gap-1">
 				{#each menuItems as item}
 					<a
-						href="{base}{item.path}"
+						href={item.path}
 						on:click={closeMobileMenu}
 						class="px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-300/60 dark:text-slate-200 dark:hover:bg-slate-800 transition-colors"
-						class:text-blue-600={page.url.pathname === (base + item.path).replace(/\/$/, '') || (page.url.pathname === base && item.path === '/')}
-						class:dark:text-[#f4a261]={page.url.pathname === (base + item.path).replace(/\/$/, '') || (page.url.pathname === base && item.path === '/')}
+						class:text-blue-600={isActive(item.path)}
+						class:dark:text-[#f4a261]={isActive(item.path)}
 					>
 						{$t(item.titleKey)}
 					</a>
@@ -180,7 +186,7 @@
 			</nav>
 
 			<div class="pt-3 border-t border-slate-300 dark:border-slate-800 flex flex-col gap-2">
-				<a rel="noopener" class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-700 hover:bg-slate-300/60 dark:text-slate-200 dark:hover:bg-slate-800" href="{base}/downloads" on:click={closeMobileMenu}>
+				<a rel="noopener" class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-700 hover:bg-slate-300/60 dark:text-slate-200 dark:hover:bg-slate-800" href={downloadsPath} on:click={closeMobileMenu}>
 					<i class="bi bi-download text-lg text-blue-600 dark:text-[#f4a261]"></i>
 					<span>{$t('header.downloads')}</span>
 				</a>

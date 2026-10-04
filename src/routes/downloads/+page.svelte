@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { currentLocale, t } from '$lib/i18n/store';
-  import { releaseDownloads, latestPuttyRelease, olderPuttyReleases } from '$lib/config/downloads';
+  import { currentLocale, t } from '#lib/i18n/store.ts';
+  import { releaseDownloads, latestPuttyRelease, olderPuttyReleases } from '#lib/config/downloads.ts';
 
   let showOlderPutty = false;
 

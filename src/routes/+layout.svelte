@@ -1,10 +1,10 @@
 <script lang="ts">
-	import Header from '$lib/components/Header.svelte';
-	import Footer from '$lib/components/Footer.svelte';
-	import { base, assets } from '$app/paths';
+	import Header from '#lib/components/Header.svelte';
+	import Footer from '#lib/components/Footer.svelte';
+	import { asset } from '$app/paths';
 	import '../app.css'; // Import global styles
 	
-	import { t } from '$lib/i18n/store';
+	import { t } from '#lib/i18n/store.ts';
 
 	let { children } = $props();
 </script>
@@ -19,7 +19,7 @@
 
 	<link 
 		rel="preload" 
-		href="{base}/fonts/HandelGotDBol/HandelGotDBol.woff2" 
+		href={asset('fonts/HandelGotDBol/HandelGotDBol.woff2')}
 		as="font" 
 		type="font/woff2" 
 		crossorigin="anonymous"
@@ -28,43 +28,43 @@
 	<link 
 		rel="icon" 
 		type="image/png" 
-		href="{assets}/favicon/favicon-96x96.png" 
+		href={asset('favicon/favicon-96x96.png')}
 		sizes="96x96" 
 	/>
 	<link 
 		rel="icon" 
 		type="image/svg+xml" 
-		href="{assets}/favicon/favicon.svg" 
+		href={asset('favicon/favicon.svg')}
 	/>
 	<link 
 		rel="icon" 
 		type="image/x-icon" 
-		href="{assets}/favicon/favicon.ico" 
+		href={asset('favicon/favicon.ico')}
 	/> 
 	<link 
 		rel="shortcut icon" 
-		href="{assets}/favicon/favicon.ico" 
+		href={asset('favicon/favicon.ico')}
 	/>
 	<link 
 		rel="apple-touch-icon" 
 		sizes="180x180" 
-		href="{assets}/favicon/apple-touch-icon.png" 
+		href={asset('favicon/apple-touch-icon.png')}
 	/>
 	<link 
 		rel="manifest" 
-		href="{assets}/favicon/site.webmanifest" 
+		href={asset('favicon/site.webmanifest')}
 	/>
 
 	<!-- Preload for faster execution -->
   	<link 
 		rel="preload" 
-		href="{base}/js/theme-loader.js" 
+		href={asset('js/theme-loader.js')}
 		as="script"
 	/>
   
   	<!-- Load with async to avoid render-blocking -->
   	<script 
-		src="{base}/js/theme-loader.js" 
+		src={asset('js/theme-loader.js')}
 		async>
 	</script>
 </svelte:head>

@@ -1,38 +1,39 @@
-# sv
-!
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+# mRemoteNG Website
 
-## Creating a project
+The source for [mremoteng.org](https://mremoteng.org), built with SvelteKit and deployed as a static site to GitHub Pages.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Requirements
 
-```bash
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
-```
+- Node.js 26 or newer
+- npm
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Install the locked dependencies and start the development server:
 
 ```bash
+npm ci
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
+## Validating
 
-To create a production version of your app:
+Run diagnostics and create the static production output in `build/`:
 
 ```bash
+npm run check
 npm run build
 ```
 
-You can preview the production build with `npm run preview`.
+Preview the production build locally with `npm run preview`.
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+Set `BASE_PATH` when validating a deployment under a subpath:
+
+```powershell
+$env:BASE_PATH = '/example'
+npm run build
+```
+
+## Deployment
+
+The workflow in `.github/workflows/deploy.yml` validates, builds, and deploys the site from the `svelteKit` branch. It also handles `nightly-release` repository dispatch events and updates `src/lib/config/nightly.json` before deploying.

@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { t } from '$lib/i18n/store';
-	import ImageSlider from '$lib/components/ImageSlider.svelte';
+	import { t } from '#lib/i18n/store.ts';
+	import ImageSlider from '#lib/components/ImageSlider.svelte';
 </script>
 
 <section class="home py-6 space-y-4" id="home">

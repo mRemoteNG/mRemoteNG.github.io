@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { t } from '$lib/i18n/store';
-	import { base } from '$app/paths';
-	import { backersList, type Backer } from '$lib/config/backers';
+	import { resolve } from '$app/paths';
+	import { t } from '#lib/i18n/store.ts';
+	import { backersList, type Backer } from '#lib/config/backers.ts';
 
 	// Group backers by year descending (e.g. 2023, 2022, 2021)
 	const years = Array.from(new Set(backersList.map((b) => b.year))).sort((a, b) => b - a);
@@ -164,7 +164,7 @@
 			</div>
 			<div class="pt-2 border-t border-slate-100 dark:border-slate-700/50">
 				<a
-					href="{base}/contact"
+					href={resolve('/contact')}
 					class="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 dark:text-[#f4a261] hover:underline"
 				>
 					<i class="bi bi-envelope-fill text-base"></i>
